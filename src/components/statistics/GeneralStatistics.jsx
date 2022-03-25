@@ -22,13 +22,17 @@ function GeneralStatistics() {
             </svg>
           </div>
           <div>
-            <p className="text-gray-700 text-sm">Payments</p>
-            <p className="font-bold text-darkblue text-base">145</p>
+            <p className="text-gray-700 text-sm">My Balance</p>
+
+            <p className="font-bold text-darkblue text-base">
+              200,000<span className="text-xs">Rwf</span>
+            </p>
           </div>
         </div>
         <div className="flex space-x-3">
           <div className="py-1 px-2.5 rounded-circle bg-darkblue 0 flex items-center">
             <svg
+              className="w-5"
               width="32"
               height="32"
               viewBox="0 0 32 32"
@@ -54,6 +58,7 @@ function GeneralStatistics() {
         <div className="flex space-x-3">
           <div className="py-1 px-2.5 rounded-circle bg-darkerblue flex items-center">
             <svg
+              className="w-5"
               width="23"
               height="23"
               viewBox="0 0 23 23"

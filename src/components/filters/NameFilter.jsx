@@ -8,10 +8,11 @@ function NameFilter({ searchText, setSearchText }) {
         name="searchtxt"
         type="searchtxt"
         onChange={(e) => setSearchText(e.target.value)}
+        placeholder="search name"
         required
-        className="appearance-none rounded-none relative block w-full px-3 py-2 placeholder-darkblue text-gray-900 rounded-t-md focus:outline-none focus:ring-lightgreen focus:border-lightgreen focus:z-10 sm:text-sm"
+        className="appearance-none rounded-sm relative block w-full px-3 py-2 placeholder-darkblue text-gray-900 rounded-t-md focus:outline-none focus:ring-darkblue focus:border-darkblue focus:z-10 sm:text-sm"
       />
-      <button className="text-sm bg-lightgreen hover:opacity-70 px-3">
+      <button className="text-sm bg-darkblue rounded-sm hover:opacity-70 px-3">
         <ImSearch className="text-white" />
       </button>
     </div>

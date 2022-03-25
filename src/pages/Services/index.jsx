@@ -58,24 +58,24 @@ function Services() {
                     key={index}
                   >
                     {/* <td className="font-bold text-xs  py-4 text-blue-500"> {(payment.created_at&&payment.created_at.substring(0, 10))??"-"}</td> */}
-                    <td className="font-bold text-xs py-4 text-gray-600">
+                    <td className="font-bold text-xs py-3 text-gray-600">
                       00{service?.id}
                     </td>
-                    <td className="font-bold text-xs py-4 text-gray-600">
+                    <td className="font-bold text-xs py-3 text-gray-600">
                       {service?.staff_name}
                     </td>
-                    <td className="font-bold text-xs py-4 text-gray-600">
+                    <td className="font-bold text-xs py-3 text-gray-600">
                       {service?.service}
                     </td>
 
-                    <td className="font-bold text-xs py-4 text-gray-600">
+                    <td className="font-bold text-xs py-3 text-gray-600">
                       {service?.amount} Rwf
                     </td>
                     <td
                       className={
                         (service?.status === "paid"
                           ? " text-lightgreen "
-                          : " text-red-500 ") + "font-bold text-xs py-4"
+                          : " text-red-500 ") + "font-bold text-xs py-3"
                       }
                     >
                       {service?.status}

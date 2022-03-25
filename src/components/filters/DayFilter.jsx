@@ -7,7 +7,7 @@ function DayFilter({ selectedDate, setSelectedDate }) {
     setDatePickerIsOpen(!datePickerIsOpen);
   };
   return (
-    <div className="flex space-x-3 bg-white py-2 rounded-2 items-center px-3">
+    <div className="flex space-x-3 bg-white py-0.5 rounded-2 items-center px-3">
       <DatePicker
         dateFormat="yyyy/MM/dd"
         selected={selectedDate}
