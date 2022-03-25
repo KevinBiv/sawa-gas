@@ -1,6 +1,6 @@
 import React from "react";
 import { IoCloseCircle } from "react-icons/io5";
-function OrderFuel({ handleCloseOrder }) {
+function OrderFuel({ handleCloseOrder, handleClose }) {
   return (
     <div className="bg-paleindigo space-y-8 p-5 ">
       <div className="flex justify-between">
@@ -91,6 +91,54 @@ function OrderFuel({ handleCloseOrder }) {
           <IoCloseCircle className="text-ligherdarkblue text-4xl" />
         </button>
       </div>
+      <form className="space-y-2">
+        <div className=" bg-white  rounded-1 ">
+          <label htmlFor="staff" className="sr-only">
+            Select Staff
+          </label>
+          <select
+            id="staff"
+            className="text-xs px-3 py-3 border text-lightgray w-100 focus:outline-none focus:ring-darkblue focus:border-darkblue focus:z-10"
+          >
+            <option className="text-xs text-lightgray" selected>
+              Select Staff
+            </option>
+            <option className="text-xs text-lightgray" value="blue">
+              Staff1
+            </option>
+            <option className="text-xs text-lightgray" value="black">
+              Staff1
+            </option>
+            <option className="text-xs text-lightgray" value="white">
+              Staff1
+            </option>
+          </select>
+        </div>
+
+        <div className="flex items-center bg-white pl-3 rounded-1">
+          <label htmlFor="amount" className="sr-only">
+            Enter amount to pop up
+          </label>
+          <input
+            type="text"
+            name="amount"
+            id="amount"
+            autoComplete="amount"
+            className="flex-1 appearance-none rounded-none relative block w-full px-3 py-3 placeholder-lightgray text-lightgray rounded-b-md focus:outline-none focus:ring-darkblue focus:border-darkblue focus:z-10 sm:text-xs"
+            placeholder="Enter amount to pop up"
+          />
+        </div>
+        <button
+          type="button"
+          onClick={() => {
+            handleCloseOrder();
+            handleClose();
+          }}
+          className="bg-ligherdarkblue py-2 w-100 text-white text-sm"
+        >
+          Confirm Order
+        </button>
+      </form>
     </div>
   );
 }

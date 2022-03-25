@@ -3,9 +3,15 @@ import { useDispatch, useSelector } from "react-redux";
 import NameFilter from "../../components/filters/NameFilter";
 import TableRowShimmers from "../../components/loaders/TableRowShimmers";
 import { useHistory } from "react-router-dom";
+import { Modal } from "react-bootstrap";
+import AddMember from "../../components/people/AddMember";
 function People() {
   const { people, isFetchingPeople } = useSelector(({ People }) => People);
   const [searchText, setSearchText] = useState(null);
+  const [openModal, setOpenModal] = useState(false);
+  const handleClose = () => {
+    setOpenModal(false);
+  };
   const dispatch = useDispatch();
   const history = useHistory();
   return (
@@ -102,10 +108,9 @@ function People() {
                           remove
                         </button>
                         <button
-                          // onClick={() => {
-                          //   // dispatch(onSetSelectedNurse(person));
-                          //   // history.push("/dashboard/people/" + person?.id);
-                          // }}
+                          onClick={() => {
+                            setOpenModal(true);
+                          }}
                           className="w-100 text-sm bg-darkblue text-white hover:opacity-70 rounded-sm py-1"
                         >
                           update
@@ -124,6 +129,9 @@ function People() {
           ) : null}
         </div>
       </div>
+      <Modal show={openModal} onHide={handleClose}>
+        <AddMember handleClose={handleClose} />
+      </Modal>
     </div>
   );
 }

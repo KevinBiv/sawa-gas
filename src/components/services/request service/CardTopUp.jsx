@@ -1,7 +1,7 @@
 import React from "react";
 import { Form } from "react-bootstrap";
 import { IoCloseCircle } from "react-icons/io5";
-function CardTopUp({ handleCloseOrder }) {
+function CardTopUp({ handleCloseOrder, handleClose }) {
   return (
     <div className="bg-paleindigo space-y-8 p-5 ">
       <div className="flex justify-between">
@@ -77,7 +77,14 @@ function CardTopUp({ handleCloseOrder }) {
             placeholder="Enter amount"
           />
         </div>
-        <button className="bg-ligherdarkblue py-2 w-100 text-white text-sm">
+        <button
+          type="button"
+          onClick={() => {
+            handleCloseOrder();
+            handleClose();
+          }}
+          className="bg-ligherdarkblue py-2 w-100 text-white text-sm"
+        >
           Confirm Order
         </button>
       </form>
