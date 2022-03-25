@@ -1,0 +1,184 @@
+/* register */
+.form-check-input:checked {
+  background-color: #34beb9;
+  border-color: #34beb9;
+}
+.step-navigator {
+  position: relative;
+}
+.step-navigator::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 5px;
+  background: #1e355c;
+  left: 100%;
+  top: 50%;
+  position: absolute;
+}
+/* Dashboard */
+/* Summary */
+.summary-banner::before {
+  content: url("../../images/summary-banner-bg.png");
+  left: 0;
+  top: 0;
+}
+.DayPicker-Weekday {
+  color: #273238;
+  font-weight: 700;
+  line-height: 18px;
+  font-size: 12px;
+}
+.DayPicker-Caption {
+  color: #273238;
+  font-weight: 700;
+  line-height: 27px;
+  font-size: 18px;
+}
+/* .DayPicker-NavButton--next {
+  background-image: url("");
+  font-weight: 700;
+} */
+.DayPicker-Day {
+  border: 1px solid #d5d9e0;
+  color: #8694af;
+  font-size: 13px;
+  line-height: 20px;
+  font-weight: 400;
+  border-radius: inherit;
+}
+.DayPicker-Day--today {
+  color: #34beb9;
+}
+.DayPicker-Day--selected:not(.DayPicker-Day--disabled):not(.DayPicker-Day--outside) {
+  background-color: #34beb9;
+}
+/* Report */
+.report-btn::before {
+  content: url("../../images/report-btn-before.png");
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+/* Profile */
+.profile .nav {
+  @media only screen and (max-width: 640px) {
+    flex-direction: row;
+  }
+}
+.profile .nav-pills .nav-link.active {
+  color: #34beb9;
+  background-color: transparent;
+}
+.profile .nav-pills .nav-link .arrow-next {
+  color: white;
+}
+.profile .nav-pills .nav-link:hover .arrow-next {
+  color: #34beb9;
+}
+.profile .nav-pills .nav-link.active .arrow-next {
+  color: #34beb9;
+}
+/* .profile .nav-pills .nav-link.active::after {
+  content: url("../../images/arrow-next.png");
+} */
+
+/* Table */
+.table thead {
+  border-bottom: 15px solid rgba(230, 237, 254, 0.37) !important;
+}
+.table tbody {
+  border-top: 15px solid rgba(230, 237, 254, 0.37) !important;
+}
+/* .table td:last-child {
+  border-right-width: 1px;
+} */
+/* .table {
+  width: 100%;
+  margin-bottom: 1rem;
+  color: #858796;
+}
+.table td,
+.table th {
+  padding: 0.75rem;
+  vertical-align: top;
+  border-top: 1px solid #e3e6f0;
+}
+.table thead th {
+  vertical-align: bottom;
+  border-bottom: 2px solid #e3e6f0;
+}
+.table tbody + tbody {
+  border-top: 2px solid #e3e6f0;
+}
+.table-hover tbody tr:hover {
+  color: #bce1d2;
+ 
+  background-color: #fbfdfd;
+} */
+
+/* Dte picker */
+.react-datepicker__day--today,
+.react-datepicker__month-text--today,
+.react-datepicker__quarter-text--today,
+.react-datepicker__year-text--today {
+  background-color: rgba(52, 190, 185, 1) !important;
+}
+.react-datepicker__day--selected {
+  background-color: rgba(30, 53, 92, 1) !important;
+}
+.react-datepicker-popper {
+  z-index: 10;
+}
+/* Plan */
+.plan .form-title::before {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 5px;
+  background: #34beb9;
+  left: 100%;
+  top: 50%;
+  position: absolute;
+}
+.plan .form-title::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 5px;
+  background: #34beb9;
+  right: 100%;
+  top: 50%;
+  position: absolute;
+}
+.plan .list-title::before {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: #34beb9;
+  left: 100%;
+  top: 50%;
+  position: absolute;
+}
+.plan .list-title::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: #34beb9;
+  right: 100%;
+  top: 50%;
+  position: absolute;
+}
+
+/* Home */
+.latest-invoice::before {
+  background-color: rgba(255, 255, 255, 0.1);
+  content: "";
+  display: block;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+}
