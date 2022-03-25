@@ -1,10 +1,8 @@
 import React from "react";
-import LatestMessages from "../../components/messages/LatestMessages";
-import LatestPatients from "../../components/patients/LatestPatients";
-import LatestReports from "../../components/report/LatestReports";
+
 import RecentServices from "../../components/services/RecentServices";
 import GeneralStatistics from "../../components/statistics/GeneralStatistics";
-import IncomeStatistics from "../../components/statistics/IncomeStatistics";
+
 import LatestExpenses from "../../components/statistics/LatestExpenses";
 import ServiceUsage from "../../components/statistics/ServiceUsage";
 

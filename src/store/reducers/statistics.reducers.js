@@ -20,6 +20,12 @@ const initialState = {
     labels: ["21", "22", "23", "24", "25", "26"],
     income_numbers: [200, 150, 200, 300, 100, 50],
   },
+  totalExpensesStatistics: {
+    total_expenses: 145,
+    labels: ["cab", "taxi", "bus", "bike", "fuel", "taxi"],
+    income_numbers: [20, 10, 20, 30, 10, 50],
+  },
+
   isFetchingGeneralStatistics: false,
   isFetchingIncomesStatistics: false,
   isFetchingPatientsStatistics: false,

@@ -2,11 +2,17 @@ import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import moment from "moment";
 import TableRowShimmers from "../../components/loaders/TableRowShimmers";
+import { Modal } from "react-bootstrap";
+import SelectService from "../../components/services/request service/SelectService";
 function Services() {
   const { services, isFetchingServices } = useSelector(
     ({ Services }) => Services
   );
   const [selectedDate, setSelectedDate] = useState(new Date());
+  const [showModal, setShowModal] = useState(false);
+  const handleClose = () => {
+    setShowModal(false);
+  };
   return (
     <div className="pt-20 pb-6  mx-10 space-y-6 service">
       <div className="flex justify-between items-center flex-wrap">
@@ -16,7 +22,10 @@ function Services() {
           </h5>
         </div>
         <div className="flex md:space-x-4 items-center flex-wrap ">
-          <button className="text-whitecolor bg-ligherdarkblue px-3 py-2 text-sm">
+          <button
+            onClick={() => setShowModal(true)}
+            className="text-whitecolor bg-ligherdarkblue px-3 py-2 text-sm"
+          >
             Request a service
           </button>
         </div>
@@ -92,6 +101,9 @@ function Services() {
           ) : null}
         </div>
       </div>
+      <Modal show={showModal} onHide={handleClose}>
+        <SelectService handleClose={handleClose} />
+      </Modal>
     </div>
   );
 }

@@ -1,10 +1,15 @@
 import React from "react";
+import { Doughnut } from "react-chartjs-2";
+import { useSelector } from "react-redux";
 
 function TotalExpenses() {
+  const { totalExpensesStatistics } = useSelector(
+    ({ Statistics }) => Statistics
+  );
   return (
-    <div className="space-y-4 bg-white rounded-sm">
+    <div className="space-y-4 bg-white rounded-sm flex flex-col">
       <div className="bg-ligherdarkblue p-2 flex justify-between">
-        <div className="flex items-center">
+        <div className="flex items-center space-x-2">
           {" "}
           <svg
             width="11"
@@ -24,7 +29,88 @@ function TotalExpenses() {
           <span className="text-xs font-light align-text-top">Rwf</span>350,000
         </p>
       </div>
-      <div></div>
+      <div className="p-3 relative w-80 h-80 align-self-center">
+        <Doughnut
+          data={{
+            labels: totalExpensesStatistics?.labels,
+
+            datasets: [
+              {
+                label: "Expenses",
+                //data: [12, 19, 3, 5, 2, 3,6],
+                data: totalExpensesStatistics?.income_numbers,
+                display: false,
+                backgroundColor: [
+                  "rgba(254, 185, 19, 1)",
+                  "rgba(122, 204, 241, 1)",
+                  "rgba(0, 63, 107, 1)",
+                  "rgba(220, 65, 73, 1)",
+                  "rgba(52, 190, 185, 1)",
+                  "rgba(246, 130, 31, 1)",
+                ],
+                tension: 0.3,
+                //pointRadius:0,
+                // fill: true,
+                borderColor: "rgba(255, 255, 255, 1)",
+                color: "rgba(64, 137, 237, 1)",
+              },
+            ],
+          }}
+          height={300}
+          width={400}
+          style={{ position: "relative" }}
+          options={{
+            maintainAspectRatio: false,
+            responsive: true,
+            cutout: 80,
+            rotation: Math.PI * 5,
+            animation: {
+              animateScale: true,
+            },
+
+            plugins: {
+              tooltip: {
+                callbacks: {
+                  label: function (context) {
+                    var label = context.label;
+                    var currentValue = context.raw;
+
+                    return currentValue + " %";
+                  },
+                },
+              },
+              legend: {
+                position: "bottom",
+              },
+              //   datalabels: {
+              //     labels: {
+              //       title: {
+              //         color: "blue",
+              //       },
+              //     },
+              //   },
+            },
+          }}
+        />
+        <div className="absolute top-1/3 left-1/3 flex flex-col ">
+          <svg
+            className="align-self-center"
+            width="49"
+            height="46"
+            viewBox="0 0 49 46"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M46.2154 25.5573C46.648 25.0012 46.8581 24.2844 46.6665 23.5532L40.9878 2.02897C40.6583 0.784868 39.3791 0.0393039 38.1371 0.36883L1.85083 9.93627C0.61293 10.2638 -0.134735 11.547 0.190685 12.789L5.86941 34.3112C6.19483 35.5532 7.48009 36.2989 8.72218 35.9734L21.544 32.5914V39.7984C21.544 43.8293 28.2237 45.9385 34.8272 45.9385C41.4267 45.9385 48.1146 43.8293 48.1146 39.7985V28.8694C48.1145 27.5573 47.3957 26.4533 46.2154 25.5573ZM42.1062 18.1381L42.6994 20.3791L35.4862 22.2844L34.8971 20.0393L42.1062 18.1381ZM37.9208 3.95896L39.0475 8.22676L27.7787 11.201L26.652 6.9332L37.9208 3.95896ZM32.8642 20.5748L33.441 22.7663C30.7736 22.8858 28.1784 23.3513 26.0939 24.1463L25.6531 22.482L32.8642 20.5748ZM7.75194 29.5964L7.16288 27.3595L14.374 25.4522L14.9671 27.7014L7.75194 29.5964ZM16.407 24.9188L23.614 23.0135L24.1598 25.0671C23.9847 25.1742 23.82 25.2854 23.6593 25.3987L16.9961 27.1577L16.407 24.9188ZM45.7088 39.6211C45.7088 41.9713 40.8396 43.8745 34.8272 43.8745C28.8211 43.8745 23.9477 41.9693 23.9477 39.6211V36.9744C23.9477 36.8858 23.9992 36.8055 24.0136 36.7211C24.3575 38.9498 29.0414 40.717 34.8272 40.717C40.6151 40.717 45.301 38.9497 45.6429 36.7211C45.6573 36.8055 45.7088 36.8859 45.7088 36.9744V39.6211ZM45.7088 34.4141C45.7088 36.7623 40.8396 38.6654 34.8272 38.6654C28.8211 38.6654 23.9477 36.7623 23.9477 34.4141V31.7674C23.9477 31.6809 23.9992 31.5985 24.0136 31.5141C24.3575 33.7407 29.0414 35.512 34.8272 35.512C40.6151 35.512 45.301 33.7407 45.6429 31.5141C45.6573 31.5985 45.7088 31.6809 45.7088 31.7674V34.4141ZM34.8272 33.1186C28.821 33.1186 23.9476 31.2154 23.9476 28.8693C23.9476 26.5233 28.8209 24.6201 34.8272 24.6201C40.8395 24.6201 45.7087 26.5233 45.7087 28.8693C45.7088 31.2154 40.8395 33.1186 34.8272 33.1186Z"
+              fill="#2E8BC0"
+            />
+          </svg>
+          <p className=" text-darkblue font-bold text-sm">
+            Expenses Statistics
+          </p>
+        </div>
+      </div>
       <div className="space-y-2 p-3">
         <div className="flex justify-between bg-paleblue p-2 rounded-sm">
           <div className="flex items-center space-x-3">

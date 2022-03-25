@@ -4,18 +4,10 @@ import BlankLayout from "../layout/BlankLayout";
 import DashboardLayout from "../layout/DashboardLayout";
 import Home from "../pages/Home";
 
-import Charts from "../pages/charts";
-import Reports from "../pages/reports";
-import Income from "../pages/Income";
-import Nurses from "../pages/Nurses";
-import NurseDetails from "../pages/Nurses/NurseDetails";
-import Pending from "../pages/Pending";
-import Patients from "../pages/Patients";
 import {
   requiresAuthentication,
   requiresNoAuthentication,
 } from "../store/middleware";
-import Pricing from "../pages/Pricing";
 import Signin from "../pages/auth/SignIn";
 import SignUp from "../pages/auth/SignUp";
 import ServicesPreferences from "../components/registerSteps/ServicesPreferences";
@@ -62,19 +54,6 @@ const routes = [
             path: "/dashboard/finances",
             exact: true,
             component: Finances,
-          },
-          {
-            name: "Charts page",
-            path: "/dashboard/charts",
-            exact: true,
-            component: Charts,
-          },
-
-          {
-            name: "Patients Profile ",
-            path: "/dashboard/patients",
-            exact: true,
-            component: Patients,
           },
         ],
       },

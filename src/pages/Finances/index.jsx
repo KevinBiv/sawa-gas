@@ -44,12 +44,13 @@ function Finances() {
         </div>
       </div>
 
-      <div className=" rounded-1 grid grid-cols-1 md:grid-cols-3 md:space-x-8">
+      <div className=" rounded-1 grid grid-cols-1 lg:grid-cols-3 md:space-x-8">
         <TotalExpenses />
+
         <div className="  overflow-auto col-span-2">
           <table className="table table-borderless  space-y-2 ">
-            <thead className="bg-darkblue rounded-2 ">
-              <tr className="border-b-15 border-paleblue">
+            <thead className="bg-darkblue rounded-md ">
+              <tr className="border-b-15 rounded-md border-paleblue">
                 <td className="text-white text-sm py-4">Date</td>
                 <td className="text-white text-sm py-4">Expense</td>
                 <td className="text-white text-sm py-4">Volume</td>
@@ -130,6 +131,12 @@ function Finances() {
               no finances yet !
             </p>
           ) : null}
+          <div className="bg-white rounded-md p-3 flex justify-center">
+            <button className="px-10 py-2 bg-ligherdarkblue hover:opacity-70 text-white text-sm rounded-md ">
+              {" "}
+              Generate Report
+            </button>
+          </div>
         </div>
       </div>
     </div>
