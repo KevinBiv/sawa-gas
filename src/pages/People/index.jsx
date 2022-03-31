@@ -5,6 +5,8 @@ import TableRowShimmers from "../../components/loaders/TableRowShimmers";
 import { useHistory } from "react-router-dom";
 import { Modal } from "react-bootstrap";
 import AddMember from "../../components/people/AddMember";
+import useTable from "../../utils/useTable";
+import TablePageFilter from "../../components/filters/TablePageFilter";
 function People() {
   const { people, isFetchingPeople } = useSelector(({ People }) => People);
   const [searchText, setSearchText] = useState(null);
@@ -12,6 +14,8 @@ function People() {
   const handleClose = () => {
     setOpenModal(false);
   };
+  const [page, setPage] = useState(1);
+  const { slice, range } = useTable(people, page, 6);
   const dispatch = useDispatch();
   const history = useHistory();
   return (
@@ -64,7 +68,7 @@ function People() {
               ) : (
                 people &&
                 people.length !== 0 &&
-                people.map((person, index) => (
+                slice.map((person, index) => (
                   <tr
                     className={
                       (index === 0
@@ -129,6 +133,14 @@ function People() {
           ) : null}
         </div>
       </div>
+      {people?.length > 6 && (
+        <TablePageFilter
+          range={range}
+          slice={slice}
+          setPage={setPage}
+          page={page}
+        />
+      )}
       <Modal show={openModal} onHide={handleClose}>
         <AddMember handleClose={handleClose} />
       </Modal>

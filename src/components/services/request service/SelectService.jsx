@@ -67,7 +67,7 @@ function SelectService({ handleClose }) {
         </button>
         <button
           onClick={() => setOpenCarOderModel(true)}
-          className="flex justify-between items-center w-100"
+          className="flex justify-between items-center w-100 hover:bg-whitecolor"
         >
           <p className="text-sm text-gray-500">Rent an instant Car</p>
           <img src={carImg} className="object-cover -mr-4" alt="Car" />

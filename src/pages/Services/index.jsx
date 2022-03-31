@@ -4,12 +4,16 @@ import moment from "moment";
 import TableRowShimmers from "../../components/loaders/TableRowShimmers";
 import { Modal } from "react-bootstrap";
 import SelectService from "../../components/services/request service/SelectService";
+import TablePageFilter from "../../components/filters/TablePageFilter";
+import useTable from "../../utils/useTable";
 function Services() {
   const { services, isFetchingServices } = useSelector(
     ({ Services }) => Services
   );
   const [selectedDate, setSelectedDate] = useState(new Date());
   const [showModal, setShowModal] = useState(false);
+  const [page, setPage] = useState(1);
+  const { slice, range } = useTable(services, page, 6);
   const handleClose = () => {
     setShowModal(false);
   };
@@ -55,7 +59,7 @@ function Services() {
               ) : (
                 services &&
                 services.length !== 0 &&
-                services.map((service, index) => (
+                slice.map((service, index) => (
                   <tr
                     className={
                       (index === 0 ? " border-t-8 border-paleblue " : " ") +
@@ -101,6 +105,14 @@ function Services() {
           ) : null}
         </div>
       </div>
+      {services?.length > 6 && (
+        <TablePageFilter
+          range={range}
+          slice={slice}
+          setPage={setPage}
+          page={page}
+        />
+      )}
       <Modal show={showModal} onHide={handleClose}>
         <SelectService handleClose={handleClose} />
       </Modal>

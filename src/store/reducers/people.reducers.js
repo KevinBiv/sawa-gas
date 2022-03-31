@@ -44,6 +44,13 @@ const initialState = {
       department: "Marketing",
       gender: "female",
     },
+    {
+      id: "007",
+      full_names: "Kamikazi Sarah",
+      age: "28 Years",
+      department: "Marketing",
+      gender: "female",
+    },
   ],
   isFetchingPeople: false,
   errors: null,
