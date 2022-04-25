@@ -25,11 +25,11 @@ function LatestExpenses() {
       <h2 className="font-bold text-darkblue text-base my-2">
         Latest Expenses
       </h2>
-      <div className="grid grid-cols-5 gap-2">
+      <div className="grid grid-cols-1 md:grid-cols-5 gap-2 ">
         {isFetchingIncomesStatistics ? (
           <Shimmers height="300px" width="400px" className="overflow-hidden" />
         ) : (
-          <div className="col-span-3">
+          <div className="col-span-3 p-6 bg-white">
             <div className=" flex">
               <WeeklyFilter
                 weeklyDate={weeklyDate}

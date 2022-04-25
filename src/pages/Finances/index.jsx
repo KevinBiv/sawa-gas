@@ -2,33 +2,38 @@ import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import NameFilter from "../../components/filters/NameFilter";
 import TableRowShimmers from "../../components/loaders/TableRowShimmers";
-
+import { Modal } from "react-bootstrap";
 import { BsFillStarFill } from "react-icons/bs";
 import { useHistory } from "react-router-dom";
 import DayFilter from "../../components/filters/DayFilter";
 import TotalExpenses from "../../components/statistics/TotalExpenses";
+import FilterReport from "../../components/finances/FilterReport";
 function Finances() {
   const { finances, isFetchingFinances } = useSelector(
     ({ Finances }) => Finances
   );
   const [searchText, setSearchText] = useState(null);
   const [selectedDate, setSelectedDate] = useState(new Date());
+  const [showModal, setShowModal] = useState(false);
+  const handleClose = () => {
+    setShowModal(false);
+  };
   const dispatch = useDispatch();
   const history = useHistory();
   return (
-    <div className="pt-20 pb-6  mx-10 space-y-6">
+    <div className="md:pt-20 pb-6  mx-10 space-y-6">
       <div className="flex justify-between items-center flex-wrap">
         <div>
           <h5 className="text-lg text-darkblue font-bold">Finances</h5>
           <p className="text-sm text-gray-500">Team Consuptions</p>
         </div>
-        <div className="flex md:space-x-4 items-center flex-wrap ">
+        <div className="sm:flex items-center sm:space-x-3 space-y-2 md:space-y-0 ">
           <DayFilter
             selectedDate={selectedDate}
             setSelectedDate={setSelectedDate}
           />
           <div>
-            <select className=" rounded-sm relative block w-full px-3 py-2 placeholder-darkblue text-gray-900 rounded-t-md focus:outline-none focus:ring-lightgreen focus:border-lightgreen focus:z-10 sm:text-sm">
+            <select className="rounded-sm relative block w-full px-3 py-2 placeholder-darkblue text-gray-900 rounded-t-md focus:outline-none focus:ring-lightgreen focus:border-lightgreen focus:z-10 sm:text-sm">
               <option selected className="text-sm text-gray-500">
                 Sort Department
               </option>
@@ -132,13 +137,21 @@ function Finances() {
             </p>
           ) : null}
           <div className="bg-white rounded-md p-3 flex justify-center">
-            <button className="px-10 py-2 bg-ligherdarkblue hover:opacity-70 text-white text-sm rounded-md ">
+            <button
+              onClick={() => setShowModal(true)}
+              className="px-10 py-2 bg-ligherdarkblue hover:opacity-70 text-white text-sm rounded-md "
+            >
               {" "}
               Generate Report
             </button>
           </div>
         </div>
       </div>
+      <Modal show={showModal} onHide={handleClose}>
+        <Modal.Body className="bg-indigo-100 ">
+          <FilterReport handleClose={handleClose} />
+        </Modal.Body>
+      </Modal>
     </div>
   );
 }

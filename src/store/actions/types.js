@@ -121,6 +121,8 @@ const actionTypes = {
   getPatientsStatistics: "GET PATIENTS STATISTICS",
   getPatientsStatisticsSuccess: "GET PATIENTS STATISTICS SUCCESSFUL",
   getPatientsStatisticsFail: "GET PATIENTS STATISTICS FAILED",
+  //Styles
+  setShowSidebar: "SET SHOW SIDEBAR",
 };
 
 export default actionTypes;

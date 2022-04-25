@@ -30,7 +30,7 @@ function SelectService({ handleClose }) {
       <div className="space-y-2">
         <button
           onClick={() => setOpenToUpOderModel(true)}
-          className="flex justify-between items-center w-100"
+          className="flex justify-between items-center w-100 bg-whitecolor p-2.5 hover:bg-blue-200 rounded-md"
         >
           <p className="text-sm text-gray-500">
             Top up employee Transport Card
@@ -67,14 +67,14 @@ function SelectService({ handleClose }) {
         </button>
         <button
           onClick={() => setOpenCarOderModel(true)}
-          className="flex justify-between items-center w-100 hover:bg-whitecolor"
+          className="flex justify-between items-center w-100 bg-whitecolor p-2.5 hover:bg-blue-200 rounded-md"
         >
           <p className="text-sm text-gray-500">Rent an instant Car</p>
           <img src={carImg} className="object-cover -mr-4" alt="Car" />
         </button>
         <button
           onClick={() => setOpenFuelOderModel(true)}
-          className="flex justify-between items-center w-100"
+          className="flex justify-between items-center w-100 bg-whitecolor p-2.5 hover:bg-blue-200 rounded-md"
         >
           <p className="text-sm text-gray-500">Top up Employee Fuel card</p>
           <svg
@@ -160,7 +160,7 @@ function SelectService({ handleClose }) {
         </button>
         <button
           onClick={() => setOpenBusOderModel(true)}
-          className="flex justify-between items-center w-100"
+          className="flex justify-between items-center w-100 bg-whitecolor p-2.5 hover:bg-blue-200 rounded-md"
         >
           <p className="text-sm text-gray-500">
             Rent a bus for Mass Transportation

@@ -1,7 +1,7 @@
 /* register */
 .form-check-input:checked {
-  background-color: #34beb9;
-  border-color: #34beb9;
+  background-color: #2e8bc0;
+  border-color: #2e8bc0;
 }
 .step-navigator {
   position: relative;
@@ -117,12 +117,28 @@
   background-color: #fbfdfd;
 } */
 
-/* Dte picker */
+/* Date picker */
+.react-datepicker__header {
+  background-color: #ffffff;
+  border-bottom: 10px solid #e6e8ff;
+}
+.react-datepicker {
+  border: 0px solid #fff;
+}
+.react-datepicker__day-name {
+  color: #273238;
+}
+
+.react-datepicker__day,
+.react-datepicker__time-name {
+  color: #8694af;
+}
+
 .react-datepicker__day--today,
 .react-datepicker__month-text--today,
 .react-datepicker__quarter-text--today,
 .react-datepicker__year-text--today {
-  background-color: rgba(52, 190, 185, 1) !important;
+  background-color: rgba(30, 53, 92, 1) !important;
 }
 .react-datepicker__day--selected {
   background-color: rgba(30, 53, 92, 1) !important;
