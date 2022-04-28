@@ -104,7 +104,7 @@ function Finances() {
                         //   // dispatch(onSetSelectedNurse(finance));
                         //   // history.push("/dashboard/finances/" + finance?.id);
                         // }}
-                        className=" flex items-center justify-center px-6 text-sm text-white hover:opacity-70 rounded-xl py-1 bg-ligherdarkblue"
+                        className=" flex items-center justify-center px-6 text-sm text-white bg-ligherdarkblue opacity-80 hover:opacity-100  rounded-xl py-1 "
                       >
                         <svg
                           width="16"
@@ -139,7 +139,7 @@ function Finances() {
           <div className="bg-white rounded-md p-3 flex justify-center">
             <button
               onClick={() => setShowModal(true)}
-              className="px-10 py-2 bg-ligherdarkblue hover:opacity-70 text-white text-sm rounded-md "
+              className="px-10 py-2 bg-ligherdarkblue opacity-80 hover:opacity-100  text-white text-sm rounded-md "
             >
               {" "}
               Generate Report

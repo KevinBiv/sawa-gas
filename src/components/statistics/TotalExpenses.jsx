@@ -23,7 +23,7 @@ function TotalExpenses() {
               fill="white"
             />
           </svg>
-          <p className="text-xs text-white">Total Expenses</p>
+          <p className="text-sm font-bold text-white">Total Expenses</p>
         </div>
         <p className="text-lg text-white font-bold">
           <span className="text-xs font-light align-text-top">Rwf</span>350,000
@@ -115,6 +115,7 @@ function TotalExpenses() {
         <div className="flex justify-between bg-paleblue p-2 rounded-sm">
           <div className="flex items-center space-x-3">
             <svg
+              className="h-4 w-7"
               width="24"
               height="24"
               viewBox="0 0 24 24"
@@ -159,6 +160,7 @@ function TotalExpenses() {
         <div className="flex justify-between bg-paleblue p-2 rounded-sm">
           <div className="flex items-center space-x-3">
             <svg
+              className="h-4 w-7"
               width="30"
               height="22"
               viewBox="0 0 30 22"
@@ -180,6 +182,7 @@ function TotalExpenses() {
         <div className="flex justify-between bg-paleblue p-2 rounded-sm">
           <div className="flex items-center space-x-3">
             <svg
+              className="h-4 w-7"
               width="24"
               height="22"
               viewBox="0 0 24 22"
@@ -201,6 +204,7 @@ function TotalExpenses() {
         <div className="flex justify-between bg-paleblue p-2 rounded-sm">
           <div className="flex items-center space-x-3">
             <svg
+              className="h-4 w-7"
               width="32"
               height="31"
               viewBox="0 0 32 31"
@@ -290,6 +294,7 @@ function TotalExpenses() {
         <div className="flex justify-between bg-paleblue p-2 rounded-sm">
           <div className="flex items-center space-x-3">
             <svg
+              className="w-7"
               width="37"
               height="15"
               viewBox="0 0 37 15"

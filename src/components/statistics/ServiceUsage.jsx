@@ -25,15 +25,16 @@ function ServiceUsage() {
   });
   return (
     <div className="col-span-3">
+      <h2 className="font-bold text-darkblue text-base my-2">Services Usage</h2>
       {isFetchingPatientsStatistics ? (
         <Shimmers height="300px" width="400px" className="overflow-hidden" />
       ) : (
-        <div className="relative">
-          <div className="absolute top-10 left-1/3 ">
-            <p className=" text-darkblue font-bold text-base text-center">
+        <div className="relative bg-white space-y-6 px-3.5 py-10 ">
+          <div className=" ">
+            {/* <p className=" text-darkblue font-bold text-base text-center">
               Services Usage
-            </p>
-            <p className=" text-gray-500 text-xs text-center ">
+            </p> */}
+            <p className="px-3 text-gray-500 text-xs ">
               My Team’s Sawa Services Consuption Rates
             </p>
           </div>
@@ -69,15 +70,15 @@ function ServiceUsage() {
                 responsive: true,
                 scales: {
                   y: {
-                    display: false,
+                    display: true,
                     beginAtZero: true,
                     min: 0,
                     suggestedMax: 10,
                     grid: {
-                      display: false,
+                      display: true,
                     },
                     ticks: {
-                      display: false,
+                      display: true,
                       callback: function (value, index, ticks) {
                         return value + "";
                       },

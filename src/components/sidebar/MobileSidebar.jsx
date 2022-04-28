@@ -18,7 +18,7 @@ function MobileSidebar() {
             <MdClose className="text-darkblue" />
           </button>
 
-          <div className=" space-y-3 flex-1 my-10">
+          <div className=" space-y-6 mt-32 flex-1 my-10">
             <div className="flex">
               <NavLink
                 to="/dashboard"
@@ -48,7 +48,7 @@ function MobileSidebar() {
                 to="/dashboard/services"
                 onClick={() => dispatch(setShowSidebar(false))}
                 exact
-                className="w-100 px-10 flex items-center space-x-2 text-gray-600 hover:border-r-4 hover:border-ligherdarkblue hover:text-ligherdarkblue hover:no-underline "
+                className="w-100 pl-10 flex items-center space-x-2 text-gray-600 hover:border-r-4 hover:border-ligherdarkblue hover:text-ligherdarkblue hover:no-underline "
                 activeClassName="text-ligherdarkblue no-underline border-r-4 border-ligherdarkblue"
               >
                 <svg
@@ -74,7 +74,7 @@ function MobileSidebar() {
                 to="/dashboard/people"
                 onClick={() => dispatch(setShowSidebar(false))}
                 exact
-                className="w-100 px-10 flex items-center space-x-2 text-gray-600 hover:border-r-4 hover:border-ligherdarkblue hover:text-ligherdarkblue hover:no-underline "
+                className="w-100 pl-10 flex items-center space-x-2 text-gray-600 hover:border-r-4 hover:border-ligherdarkblue hover:text-ligherdarkblue hover:no-underline "
                 activeClassName="text-ligherdarkblue no-underline border-r-4 border-ligherdarkblue "
               >
                 <svg
@@ -197,8 +197,10 @@ function MobileSidebar() {
               </NavLink>
             </div>
           </div>
+        </div>
+        <div className="absolute bottom-0 left-10">
           <div className="flex justify-center">
-            <hr className="w-1/3 text-gray-600" />
+            <hr className="w-32 text-gray-600" />
           </div>
 
           <div className="flex justify-center items-center my-4">

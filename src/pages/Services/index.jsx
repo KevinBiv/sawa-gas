@@ -28,7 +28,7 @@ function Services() {
         <div className="flex md:space-x-4 items-center flex-wrap ">
           <button
             onClick={() => setShowModal(true)}
-            className="text-whitecolor bg-ligherdarkblue px-3 py-2 text-sm"
+            className="text-whitecolor bg-ligherdarkblue opacity-80 hover:opacity-100 rounded-sm px-3 py-2 text-sm"
           >
             Request a service
           </button>

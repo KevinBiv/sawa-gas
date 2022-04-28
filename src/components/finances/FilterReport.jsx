@@ -9,6 +9,7 @@ function FilterReport() {
     { name: "month", checked: false },
     { name: "year", checked: false },
   ]);
+  const [hidePicker, setHidePicker] = useState(false);
   const [selectedSortDuration, setSelectedSortDuration] = useState("week");
   const [dateSelected, setDateSelected] = useState({
     startDate: new Date(),
@@ -41,6 +42,7 @@ function FilterReport() {
       weekDays: days,
     });
   }
+  console.log("ddddddddddd", hidePicker);
   return (
     <div className="p-6 sm:p-10 space-y-6">
       <h5 className="font-black text-darkblue text-lg text-center">
@@ -56,7 +58,11 @@ function FilterReport() {
             value="day"
             selected={selectedSortDuration === "day" ? true : false}
             required
-            onChange={(e) => setSelectedSortDuration(e.target.value)}
+            // onChange={(e) => setSelectedSortDuration(e.target.value)}
+            onChange={(e) => {
+              setHidePicker(false);
+              setSelectedSortDuration(e.target.value);
+            }}
           />
           <label className="form-check-label text-base text-darkblue" for="day">
             day
@@ -71,7 +77,11 @@ function FilterReport() {
             value="week"
             selected={selectedSortDuration === "week" ? true : false}
             required
-            onChange={(e) => setSelectedSortDuration(e.target.value)}
+            // onChange={(e) => setSelectedSortDuration(e.target.value)}
+            onChange={(e) => {
+              setHidePicker(false);
+              setSelectedSortDuration(e.target.value);
+            }}
           />
           <label
             className="form-check-label text-base text-darkblue"
@@ -89,7 +99,11 @@ function FilterReport() {
             value="month"
             selected={selectedSortDuration === "month" ? true : false}
             required
-            onChange={(e) => setSelectedSortDuration(e.target.value)}
+            // onChange={(e) => setSelectedSortDuration(e.target.value)}
+            onChange={(e) => {
+              setHidePicker(false);
+              setSelectedSortDuration(e.target.value);
+            }}
           />
           <label
             className="form-check-label text-base text-darkblue"
@@ -107,7 +121,10 @@ function FilterReport() {
             value="year"
             selected={selectedSortDuration === "year" ? true : false}
             required
-            onChange={(e) => setSelectedSortDuration(e.target.value)}
+            onChange={(e) => {
+              setHidePicker(false);
+              setSelectedSortDuration(e.target.value);
+            }}
           />
           <label
             className="form-check-label text-base text-darkblue"
@@ -118,39 +135,52 @@ function FilterReport() {
         </div>
       </div>
       <div className="flex justify-center">
-        <DatePicker
-          selected={dateSelected?.startDate}
-          onChange={changeStartDate}
-          startDate={
-            selectedSortDuration === "week"
-              ? dateSelected.weekRange && dateSelected.weekRange.from
-              : dateSelected?.startDate
-          }
-          endDate={
-            selectedSortDuration === "week"
-              ? dateSelected.weekRange && dateSelected.weekRange.to
-              : null
-          }
-          showMonthYearPicker={selectedSortDuration === "month" ? true : false}
-          showYearPicker={selectedSortDuration === "year" ? true : false}
-          dateFormat={(() => {
-            switch (selectedSortDuration !== null && selectedSortDuration) {
-              case "day":
-                return "yyyy/MM/dd";
-
-              case "week":
-                return "yyyy/MM/dd";
-              case "month":
-                return "MM/yyyy";
-              case "year":
-                return "yyyy";
-
-              default:
-                return "";
+        {!hidePicker ? (
+          <DatePicker
+            selected={dateSelected?.startDate}
+            onChange={(date) => {
+              if (selectedSortDuration === "year") {
+                changeStartDate(date);
+                setHidePicker(true);
+              } else {
+                changeStartDate(date);
+              }
+            }}
+            startDate={
+              selectedSortDuration === "week"
+                ? dateSelected.weekRange && dateSelected.weekRange.from
+                : dateSelected?.startDate
             }
-          })()}
-          inline
-        />
+            endDate={
+              selectedSortDuration === "week"
+                ? dateSelected.weekRange && dateSelected.weekRange.to
+                : null
+            }
+            showMonthYearPicker={
+              selectedSortDuration === "month" ? true : false
+            }
+            showYearPicker={selectedSortDuration === "year" ? true : false}
+            dateFormat={(() => {
+              switch (selectedSortDuration !== null && selectedSortDuration) {
+                case "day":
+                  return "yyyy/MM/dd";
+
+                case "week":
+                  return "yyyy/MM/dd";
+                case "month":
+                  return "MM/yyyy";
+                case "year":
+                  return "yyyy";
+
+                default:
+                  return "";
+              }
+            })()}
+            inline
+          />
+        ) : selectedSortDuration === "year" && dateSelected?.dateSelected ? (
+          <p>{moment(dateSelected?.dateSelected).format("YYYY")}</p>
+        ) : null}
       </div>
       <button
         //   onClick={() => setShowModal(true)}

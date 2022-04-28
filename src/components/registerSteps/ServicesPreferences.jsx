@@ -15,8 +15,8 @@ function ServicesPreferences() {
       <h2 className="text-sm  text-darkblue font-bold">
         Please Select a service you need to begin with on sawa Mobility
       </h2>
-      <div className="bg-white rounded-xl grid grid-cols-2 md:grid-cols-3 gap-4 p-10  ">
-        <div className="border-t border-b-2 border-l border-r border-blue-50 rounded-sm">
+      <div className="bg-white rounded-xl py-10  px-3.5 md:px-10 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-4 p-10  ">
+        <button className="border-t border-b-2 border-l border-r border-blue-50 rounded-sm text-gray-800 hover:text-ligherdarkblue hover:shadow-2xl">
           <div className="">
             <img
               src={choiceImg1}
@@ -25,12 +25,10 @@ function ServicesPreferences() {
             />
           </div>
           <div className="p-2">
-            <p className="text-sm text-darkblue font-bold text-center">
-              Public Bus
-            </p>
+            <p className="text-sm font-bold text-center">Public Bus</p>
           </div>
-        </div>
-        <div className="border-t border-b-2 border-l border-r border-blue-50 rounded-sm">
+        </button>
+        <button className="border-t border-b-2 border-l border-r border-blue-50 rounded-sm text-gray-800 hover:text-ligherdarkblue hover:shadow-2xl">
           <div className="">
             <img
               src={choiceImg2}
@@ -39,10 +37,10 @@ function ServicesPreferences() {
             />
           </div>
           <div className="p-2">
-            <p className="text-sm text-darkblue font-bold text-center">Taxi</p>
+            <p className="text-sm font-bold text-center">Taxi</p>
           </div>
-        </div>
-        <div className="border-t border-b-2 border-l border-r border-blue-50 rounded-sm">
+        </button>
+        <button className="border-t border-b-2 border-l border-r border-blue-50 rounded-sm text-gray-800 hover:text-ligherdarkblue hover:shadow-2xl">
           <div className="">
             <img
               src={choiceImg3}
@@ -51,10 +49,10 @@ function ServicesPreferences() {
             />
           </div>
           <div className="p-2">
-            <p className="text-sm text-darkblue font-bold text-center">Fuel</p>
+            <p className="text-sm font-bold text-center">Fuel</p>
           </div>
-        </div>
-        <div className="border-t border-b-2 border-l border-r border-blue-50 rounded-sm">
+        </button>
+        <button className="border-t border-b-2 border-l border-r border-blue-50 rounded-sm text-gray-800 hover:text-ligherdarkblue hover:shadow-2xl">
           <div className="">
             <img
               src={choiceImg4}
@@ -63,12 +61,10 @@ function ServicesPreferences() {
             />
           </div>
           <div className="p-2">
-            <p className="text-sm text-darkblue font-bold text-center">
-              School Bus
-            </p>
+            <p className="text-sm font-bold text-center">School Bus</p>
           </div>
-        </div>
-        <div className="border-t border-b-2 border-l border-r border-blue-50 rounded-sm">
+        </button>
+        <button className="border-t border-b-2 border-l border-r border-blue-50 rounded-sm text-gray-800 hover:text-ligherdarkblue hover:shadow-2xl">
           <div className="">
             <img
               src={choiceImg5}
@@ -77,12 +73,10 @@ function ServicesPreferences() {
             />
           </div>
           <div className="p-2">
-            <p className="text-sm text-darkblue font-bold text-center">
-              Bicycle
-            </p>
+            <p className="text-sm e font-bold text-center">Bicycle</p>
           </div>
-        </div>
-        <div className="border-t border-b-2 border-l border-r border-blue-50 rounded-sm">
+        </button>
+        <button className="border-t border-b-2 border-l border-r border-blue-50 rounded-sm text-gray-800 hover:text-ligherdarkblue hover:shadow-2xl">
           <div className="">
             <img
               src={choiceImg6}
@@ -91,9 +85,9 @@ function ServicesPreferences() {
             />
           </div>
           <div className="p-2">
-            <p className="text-sm text-darkblue font-bold text-center">Cab</p>
+            <p className="text-sm  font-bold text-center">Cab</p>
           </div>
-        </div>
+        </button>
       </div>
       <button
         type="submit"

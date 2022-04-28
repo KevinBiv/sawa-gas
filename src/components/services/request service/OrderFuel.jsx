@@ -6,6 +6,7 @@ function OrderFuel({ handleCloseOrder, handleClose }) {
       <div className="flex justify-between">
         <div className="space-x-2 flex items-center">
           <svg
+            className="h-6 w-6"
             width="58"
             height="57"
             viewBox="0 0 58 57"
@@ -87,8 +88,11 @@ function OrderFuel({ handleCloseOrder, handleClose }) {
           </svg>
           <h5 className="text-darkblue font-bold text-lg"> Top up a card</h5>
         </div>
-        <button className="" onClick={() => handleCloseOrder()}>
-          <IoCloseCircle className="text-ligherdarkblue text-4xl" />
+        <button
+          className="text-ligherdarkblue text-opacity-80 hover:text-opacity-100"
+          onClick={() => handleCloseOrder()}
+        >
+          <IoCloseCircle className=" text-4xl" />
         </button>
       </div>
       <form className="space-y-2">
@@ -134,7 +138,7 @@ function OrderFuel({ handleCloseOrder, handleClose }) {
             handleCloseOrder();
             handleClose();
           }}
-          className="bg-ligherdarkblue py-2 w-100 text-white text-sm"
+          className="bg-ligherdarkblue opacity-80 hover:opacity-100 rounded-sm py-2 w-100 text-white text-sm"
         >
           Confirm Order
         </button>

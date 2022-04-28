@@ -55,7 +55,7 @@ function GeneralStatistics() {
       </div>
 
       <div className="flex space-x-3">
-        <div className="py-1 px-2.5 rounded-circle bg-darkerblue flex items-center">
+        <div className="py-1 px-2.5 rounded-circle bg-lighdeepblue flex items-center">
           <svg
             className="w-5"
             width="23"

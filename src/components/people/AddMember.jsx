@@ -3,8 +3,8 @@ import { IoCloseCircle } from "react-icons/io5";
 function AddMember({ handleClose }) {
   return (
     <div className="bg-paleindigo space-y-8 p-5 ">
-      <div className="flex justify-between">
-        <h5 className="text-darkblue font-bold text-lg"> Select a service</h5>
+      <div className="flex justify-between items-center">
+        <h5 className="text-darkblue font-bold text-base"> Add a member</h5>
         <button type="button" className="" onClick={() => handleClose()}>
           <IoCloseCircle className="text-ligherdarkblue text-4xl" />
         </button>
@@ -42,7 +42,7 @@ function AddMember({ handleClose }) {
           </label>
           <select
             id="sex"
-            className="text-xs px-3 py-3 border text-lightgray w-100 focus:outline-none focus:ring-darkblue focus:border-darkblue focus:z-10"
+            className="text-xs px-7 py-3 border text-lightgray w-100 focus:outline-none focus:ring-darkblue focus:border-darkblue focus:z-10"
           >
             <option className="text-xs text-lightgray" selected>
               Sex

@@ -1,16 +1,19 @@
 import React from "react";
 import { IoCloseCircle } from "react-icons/io5";
-import vanImg from "../../../assets/images/van 1.png";
+import vanImg from "../../../assets/images/van.png";
 function OrderBus({ handleCloseOrder, handleClose }) {
   return (
     <div className="bg-paleindigo space-y-8 p-5 ">
       <div className="flex justify-between">
         <div className="space-x-2 flex items-center">
-          <img src={vanImg} className="object-cover" alt="bus" />
+          <img src={vanImg} className="object-cover h-6 w-6" alt="bus" />
           <h5 className="text-darkblue font-bold text-lg"> Top up a card</h5>
         </div>
-        <button className="" onClick={() => handleCloseOrder()}>
-          <IoCloseCircle className="text-ligherdarkblue text-4xl" />
+        <button
+          className="text-ligherdarkblue text-opacity-80 hover:text-opacity-100"
+          onClick={() => handleCloseOrder()}
+        >
+          <IoCloseCircle className=" text-4xl" />
         </button>
       </div>
       <form className="space-y-2">
@@ -133,7 +136,7 @@ function OrderBus({ handleCloseOrder, handleClose }) {
             handleCloseOrder();
             handleClose();
           }}
-          className="bg-ligherdarkblue py-2 w-100 text-white text-sm"
+          className="bg-ligherdarkblue opacity-80 hover:opacity-100 rounded-sm py-2 w-100 text-white text-sm"
         >
           Confirm Order
         </button>

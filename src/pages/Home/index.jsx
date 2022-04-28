@@ -13,7 +13,7 @@ function Home() {
         <h2 className="font-bold text-darkblue text-lg ">Dashboard</h2>
         <GeneralStatistics />
         <LatestExpenses />
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 ">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 lg:gap-4 ">
           <RecentServices />
           <ServiceUsage />
         </div>

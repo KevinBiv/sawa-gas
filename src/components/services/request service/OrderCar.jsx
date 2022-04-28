@@ -7,11 +7,14 @@ function OrderCar({ handleClose, handleCloseOrder }) {
     <div className="bg-paleindigo space-y-8 p-5 ">
       <div className="flex justify-between">
         <div className="space-x-2 flex items-center">
-          <img src={carImg} className="object-cover -mr-4" alt="Car" />
+          <img src={carImg} className="object-cover h-6 w-6" alt="Car" />
           <h5 className="text-darkblue font-bold text-lg"> Top up a card</h5>
         </div>
-        <button className="" onClick={() => handleCloseOrder()}>
-          <IoCloseCircle className="text-ligherdarkblue text-4xl" />
+        <button
+          className="text-ligherdarkblue text-opacity-80 hover:text-opacity-100"
+          onClick={() => handleCloseOrder()}
+        >
+          <IoCloseCircle className=" text-4xl" />
         </button>
       </div>
       <form className="space-y-2">
@@ -41,7 +44,9 @@ function OrderCar({ handleClose, handleCloseOrder }) {
           <button
             type="button"
             className={
-              (!ordercarDriver ? " bg-ligherdarkblue " : " bg-whitecolor") +
+              (!ordercarDriver
+                ? " bg-ligherdarkblue text-whitecolor"
+                : " bg-whitecolor text-lightgray") +
               " text-sm w-100 rounded-md py-2"
             }
             onClick={() => setOrderCarDriver(false)}
@@ -51,7 +56,9 @@ function OrderCar({ handleClose, handleCloseOrder }) {
           <button
             type="button"
             className={
-              (ordercarDriver ? " bg-ligherdarkblue " : " bg-whitecolor") +
+              (ordercarDriver
+                ? " bg-ligherdarkblue text-whitecolor"
+                : " bg-whitecolor text-lightgray") +
               " text-sm w-100 rounded-md py-2"
             }
             onClick={() => setOrderCarDriver(true)}
@@ -134,7 +141,7 @@ function OrderCar({ handleClose, handleCloseOrder }) {
             handleCloseOrder();
             handleClose();
           }}
-          className="bg-ligherdarkblue py-2 w-100 text-white text-sm"
+          className="bg-ligherdarkblue opacity-80 hover:opacity-100 rounded-sm py-2 w-100 text-white text-sm"
         >
           Confirm Order
         </button>

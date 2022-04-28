@@ -13,6 +13,8 @@
     "chart.js": "^3.7.1",
     "chartjs-plugin-datalabels": "^2.0.0",
     "cors": "^2.8.5",
+    "html2pdf.js": "^0.10.1",
+    "jspdf": "^2.5.1",
     "moment": "^2.29.1",
     "path": "^0.12.7",
     "react": "^17.0.2",

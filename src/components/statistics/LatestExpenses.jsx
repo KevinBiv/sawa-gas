@@ -46,12 +46,12 @@ function LatestExpenses() {
                       label: "Expenses statistics",
                       data: expensesStatistics?.income_numbers,
                       display: false,
-                      backgroundColor: "rgba(52, 190, 185, 0.15)",
+                      backgroundColor: "rgba(46, 139, 192, 0.15)",
                       tension: 0.3,
                       //pointRadius:0,
                       fill: true,
-                      borderColor: "#34BEB9",
-                      color: "#34BEB9",
+                      borderColor: "#2E8BC0",
+                      color: "#2E8BC0",
                     },
                   ],
                 }}
@@ -132,7 +132,7 @@ function LatestExpenses() {
               <hr className="w-10 text-white pt-0.5 " />
             </div>
 
-            <div className="flex justify-between relative latest-invoice ">
+            <div className="flex justify-between flex-wrap relative latest-invoice ">
               <div className="p-6">
                 <p className="text-white font-bold text-sm">Station Kobil</p>
                 <span className="text-center text-white text-xs">
@@ -141,7 +141,7 @@ function LatestExpenses() {
               </div>
               <p className="text-white font-bold text-sm p-6">24,500Rwf</p>
             </div>
-            <div className="flex justify-between relative latest-invoice ">
+            <div className="flex justify-between flex-wrap relative latest-invoice ">
               <div className="p-6">
                 <p className="text-white font-bold text-sm">Tap & Go</p>
                 <span className="text-center text-white text-xs">

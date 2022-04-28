@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import carImg from "../../../assets/images/car 2.png";
-import vanImg from "../../../assets/images/van 1.png";
+import vanImg from "../../../assets/images/van.png";
 import { IoCloseCircle } from "react-icons/io5";
 import { Modal } from "react-bootstrap";
 import OrderCar from "./OrderCar";
@@ -23,19 +23,21 @@ function SelectService({ handleClose }) {
     <div className="bg-paleindigo space-y-8 p-5 ">
       <div className="flex justify-between">
         <h5 className="text-darkblue font-bold text-lg"> Select a service</h5>
-        <button className="" onClick={() => handleClose()}>
-          <IoCloseCircle className="text-ligherdarkblue text-4xl" />
+        <button
+          className="text-ligherdarkblue text-opacity-80 hover:text-opacity-100"
+          onClick={() => handleClose()}
+        >
+          <IoCloseCircle className=" text-4xl" />
         </button>
       </div>
       <div className="space-y-2">
         <button
           onClick={() => setOpenToUpOderModel(true)}
-          className="flex justify-between items-center w-100 bg-whitecolor p-2.5 hover:bg-blue-200 rounded-md"
+          className="flex justify-between items-center w-100 bg-whitecolor p-2.5 px-6 hover:bg-black text-gray-500 hover:text-white rounded-md"
         >
-          <p className="text-sm text-gray-500">
-            Top up employee Transport Card
-          </p>
+          <p className="text-sm ">Top up employee Transport Card</p>
           <svg
+            className="h-14 w-14"
             width="70"
             height="51"
             viewBox="0 0 70 51"
@@ -67,17 +69,18 @@ function SelectService({ handleClose }) {
         </button>
         <button
           onClick={() => setOpenCarOderModel(true)}
-          className="flex justify-between items-center w-100 bg-whitecolor p-2.5 hover:bg-blue-200 rounded-md"
+          className="flex justify-between items-center w-100 bg-whitecolor p-2.5 px-6 hover:bg-black text-gray-500 hover:text-white rounded-md"
         >
-          <p className="text-sm text-gray-500">Rent an instant Car</p>
-          <img src={carImg} className="object-cover -mr-4" alt="Car" />
+          <p className="text-sm ">Rent an instant Car</p>
+          <img src={carImg} className="object-cover h-14 w-14" alt="Car" />
         </button>
         <button
           onClick={() => setOpenFuelOderModel(true)}
-          className="flex justify-between items-center w-100 bg-whitecolor p-2.5 hover:bg-blue-200 rounded-md"
+          className="flex justify-between items-center w-100 bg-whitecolor p-2.5 px-6 hover:bg-black text-gray-500 hover:text-white rounded-md"
         >
-          <p className="text-sm text-gray-500">Top up Employee Fuel card</p>
+          <p className="text-sm ">Top up Employee Fuel card</p>
           <svg
+            className="h-14 w-14"
             width="58"
             height="57"
             viewBox="0 0 58 57"
@@ -160,12 +163,10 @@ function SelectService({ handleClose }) {
         </button>
         <button
           onClick={() => setOpenBusOderModel(true)}
-          className="flex justify-between items-center w-100 bg-whitecolor p-2.5 hover:bg-blue-200 rounded-md"
+          className="flex justify-between items-center w-100 bg-whitecolor p-2.5 px-6 hover:bg-black text-gray-500 hover:text-white rounded-md"
         >
-          <p className="text-sm text-gray-500">
-            Rent a bus for Mass Transportation
-          </p>
-          <img src={vanImg} className="object-cover" alt="bus" />
+          <p className="text-sm">Rent a bus for Mass Transportation</p>
+          <img src={vanImg} className="object-cover h-14 w-14" alt="bus" />
         </button>
       </div>
       <Modal show={openCarOderModel} onHide={handleCloseOrder}>
