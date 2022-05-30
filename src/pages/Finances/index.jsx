@@ -13,7 +13,7 @@ function Finances() {
     ({ Finances }) => Finances
   );
   const [searchText, setSearchText] = useState(null);
-  const [selectedDate, setSelectedDate] = useState(new Date());
+  const [selectedDate, setSelectedDate] = useState(null);
   const [showModal, setShowModal] = useState(false);
   const handleClose = () => {
     setShowModal(false);
@@ -21,11 +21,13 @@ function Finances() {
   const dispatch = useDispatch();
   const history = useHistory();
   return (
-    <div className="md:pt-20 pb-6  mx-10 space-y-6">
+    <div className="md:pt-14 pb-6  mx-10 space-y-6">
       <div className="flex justify-between items-center flex-wrap">
         <div>
-          <h5 className="text-lg text-darkblue font-bold">Finances</h5>
-          <p className="text-sm text-gray-500">Team Consuptions</p>
+          <h5 className="text-3xl text-darkblue font-bold">Finances</h5>
+          <p className="text-sm text-gray-500 mb-3.5 lg:mb-0">
+            Team Consuptions
+          </p>
         </div>
         <div className="sm:flex items-center sm:space-x-3 space-y-2 md:space-y-0 ">
           <DayFilter
@@ -33,7 +35,7 @@ function Finances() {
             setSelectedDate={setSelectedDate}
           />
           <div>
-            <select className="rounded-sm relative block w-full px-3 py-2 placeholder-darkblue text-gray-900 rounded-t-md focus:outline-none focus:ring-lightgreen focus:border-lightgreen focus:z-10 sm:text-sm">
+            <select className=" rounded-sm relative block w-full px-3 py-2 placeholder-gray-500 text-gray-500 rounded-t-md focus:outline-none focus:ring-lightgreen focus:border-lightgreen focus:z-10 sm:text-sm">
               <option selected className="text-sm text-gray-500">
                 Sort Department
               </option>
@@ -49,12 +51,12 @@ function Finances() {
         </div>
       </div>
 
-      <div className=" rounded-1 grid grid-cols-1 lg:grid-cols-3 md:space-x-8">
+      <div className=" rounded-1 grid grid-cols-1 lg:grid-cols-3 gap-y-6 lg:gay-y-0 lg:gap-x-8">
         <TotalExpenses />
 
         <div className="  overflow-auto col-span-2">
           <table className="table table-borderless  space-y-2 ">
-            <thead className="bg-darkblue rounded-md ">
+            <thead className="bg-darkblue rounded-md border-l-15 border-r-15 border-darkblue">
               <tr className="border-b-15 rounded-md border-paleblue">
                 <td className="text-white text-sm py-4">Date</td>
                 <td className="text-white text-sm py-4">Expense</td>
@@ -63,7 +65,7 @@ function Finances() {
                 <td className="text-white text-sm py-4"></td>
               </tr>
             </thead>
-            <tbody className="bg-white rounded-2 border-r-15 border-white border-l-15 border-b-15">
+            <tbody className="bg-white rounded-2 border-white border-b-15 border-l-15 border-r-15">
               {isFetchingFinances ? (
                 <TableRowShimmers cols={6} />
               ) : (
@@ -71,20 +73,29 @@ function Finances() {
                 finances.length !== 0 &&
                 finances.map((finance, index) => (
                   <tr
+                    // className={
+                    //   (index === 0
+                    //     ? " border-t-8 border-paleblue "
+                    //     : " border-l-15 border-r-15  ") +
+                    //   (index % 2 == 0
+                    //     ? " bg-whitecolor "
+                    //     : " bg-paleblue rounded-xl ") +
+                    //   "items-center"
+                    // }
                     className={
                       (index === 0
                         ? " border-t-8 border-paleblue "
-                        : " border-l-15 border-r-15  ") +
-                      (index % 2 == 0
-                        ? " bg-whitecolor "
-                        : " bg-paleblue rounded-xl ") +
-                      "items-center"
+                        : " border-t-2 ") +
+                      // (index % 2 == 0
+                      //   ? " bg-whitecolor "
+                      //   : "  bg-whitecolor") +
+                      "items-center bg-whitecolor rounded-xl"
                     }
                     key={index}
                   >
                     {/* <td className="font-bold text-xs  py-4 text-blue-500"> {(payment.created_at&&payment.created_at.substring(0, 10))??"-"}</td> */}
 
-                    <td className="font-bold text-xs py-3 text-gray-500 ">
+                    <td className="font-bold text-xs py-3 text-gray-700 ">
                       {finance?.date}
                     </td>
                     <td className="font-bold text-xs py-3 text-gray-500 ">
@@ -94,7 +105,7 @@ function Finances() {
                       {finance?.volume}
                     </td>
 
-                    <td className="font-bold text-xs py-3 text-darkblue">
+                    <td className="font-bold text-xs py-3 text-ligherdarkblue">
                       {finance?.amount} Rwf
                     </td>
 
@@ -104,7 +115,7 @@ function Finances() {
                         //   // dispatch(onSetSelectedNurse(finance));
                         //   // history.push("/dashboard/finances/" + finance?.id);
                         // }}
-                        className=" flex items-center justify-center px-6 text-sm text-white bg-ligherdarkblue opacity-80 hover:opacity-100  rounded-xl py-1 "
+                        className=" flex items-center justify-center px-6 text-sm text-white bg-ligherdarkblue opacity-80 hover:opacity-100  rounded-md py-1 "
                       >
                         <svg
                           width="16"

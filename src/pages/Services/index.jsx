@@ -18,10 +18,10 @@ function Services() {
     setShowModal(false);
   };
   return (
-    <div className="md:pt-20 pb-6  mx-10 space-y-6 service">
+    <div className="md:pt-14 pb-6  mx-10 space-y-6 service">
       <div className="flex justify-between items-center flex-wrap">
         <div>
-          <h5 className="text-lg text-darkblue font-bold">
+          <h5 className="text-3xl text-darkblue font-bold">
             My Transport Services
           </h5>
         </div>

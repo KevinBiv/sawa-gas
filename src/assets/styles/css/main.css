@@ -90,6 +90,30 @@
 .table tbody {
   border-top: 15px solid rgba(230, 237, 254, 0.37) !important;
 }
+.table thead tr td:first-child {
+  border-top-left-radius: 5px;
+}
+.table thead tr td:last-child {
+  border-top-right-radius: 5px;
+}
+.table thead tr td:first-child {
+  border-bottom-left-radius: 5px;
+}
+.table thead tr td:last-child {
+  border-bottom-right-radius: 5px;
+}
+.table tbody tr:first-child td:first-child {
+  border-top-left-radius: 5px;
+}
+.table tbody tr:first-child td:last-child {
+  border-top-right-radius: 5px;
+}
+.table tbody tr:last-child td:first-child {
+  border-bottom-left-radius: 5px;
+}
+.table tbody tr:last-child td:last-child {
+  border-bottom-right-radius: 5px;
+}
 /* .table td:last-child {
   border-right-width: 1px;
 } */

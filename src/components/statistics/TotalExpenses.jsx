@@ -8,7 +8,7 @@ function TotalExpenses() {
   );
   return (
     <div className="space-y-4 bg-white rounded-sm flex flex-col">
-      <div className="bg-ligherdarkblue p-2 flex justify-between">
+      <div className="bg-ligherdarkblue p-2 flex justify-between rounded-md">
         <div className="flex items-center space-x-2">
           {" "}
           <svg

@@ -26,10 +26,10 @@ function People() {
   const dispatch = useDispatch();
   const history = useHistory();
   return (
-    <div className="md:pt-20 pb-6  mx-10 space-y-6">
+    <div className="md:pt-14 pb-6  mx-10 space-y-6">
       <div className="flex justify-between items-center flex-wrap">
         <div>
-          <h5 className="text-lg text-darkblue font-bold">My People</h5>
+          <h5 className="text-3xl text-darkblue font-bold">My People</h5>
           <p className="text-sm text-gray-500">All members</p>
         </div>
         <div className="flex md:space-x-4 items-center flex-wrap ">

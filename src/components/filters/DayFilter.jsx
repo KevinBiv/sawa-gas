@@ -15,7 +15,8 @@ function DayFilter({ selectedDate, setSelectedDate }) {
         onClickOutside={openDatePicker}
         open={datePickerIsOpen}
         shouldCloseOnSelect={true}
-        placeholderText="Filter"
+        placeholderText="Sort by date"
+        className="text-sm text-gray-500 placeholder-gray-500"
       />
       {/* <FaRegCalendar className="text-gray-500 cursor-pointer" /> */}
       <svg
