@@ -91,6 +91,11 @@ body {
 .table thead {
   box-shadow: 15px 0px #1e355c, -15px 0px #1e355c;
 }
+.expenses.table thead,
+.services.table thead {
+  box-shadow: 15px 0px #ffffff, -15px 0px #ffffff;
+}
+
 .table tbody {
   box-shadow: 15px 0px #ffffff, -15px 0px #ffffff;
 }

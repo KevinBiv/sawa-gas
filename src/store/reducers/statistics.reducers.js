@@ -8,8 +8,8 @@ const initialState = {
     reports: 12,
   },
   incomesStatistics: {
-    labels: ["21", "22", "23", "24", "25", "26"],
-    income_numbers: [1200, 190, 300, 500, 200, 300],
+    labels: ["Bus", "Bike", "Taxi", "Fuel", "Cab", "Bicycle", "School Bus"],
+    income_numbers: [56, 85, 28, 32, 9, 3, 27],
   },
   expensesStatistics: {
     labels: ["Mon", "Tue", "Wed", "Thur", "Fri", "Sat", "Sun"],

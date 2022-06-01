@@ -13,9 +13,9 @@ function RecentServices() {
         Recent used services
       </h2>
       <div className=" rounded-1">
-        <div className="  overflow-auto ">
-          <table className="table table-borderless  space-y-2 ">
-            <thead className="bg-white rounded-2 border-r-15 border-white border-l-15">
+        <div className="overflow-auto p-3">
+          <table className="expenses table table-borderless  space-y-2 ">
+            <thead className="bg-white rounded-2  border-white  ">
               <tr>
                 <td className="text-gray-600 text-sm py-2">Date</td>
                 <td className="text-gray-600 text-sm py-2">Employee Name</td>
@@ -23,7 +23,7 @@ function RecentServices() {
                 <td className="text-gray-600 text-sm py-2">Service</td>
               </tr>
             </thead>
-            <tbody className="bg-white rounded-2 border-r-15 border-white border-l-15 border-b-15">
+            <tbody className="bg-white rounded-2  relative top-5">
               {isFetchingServices ? (
                 <TableRowShimmers cols={4} />
               ) : (
@@ -32,11 +32,10 @@ function RecentServices() {
                 services.map((service, index) => (
                   <tr
                     className={
-                      (index === 0 ? " border-t-8 border-paleblue " : " ") +
                       (index % 2 == 0
-                        ? " bg-whitecolor "
-                        : " bg-paleblue rounded-xl ") +
-                      "items-center"
+                        ? " "
+                        : " bg-whitecolor border-t-2 border-paleblue rounded-xl ") +
+                      " bg-whitecolor items-center"
                     }
                     key={index}
                   >

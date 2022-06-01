@@ -23,6 +23,28 @@ function ServiceUsage() {
     weekDays: {},
     datePickerIsOpen: false,
   });
+
+  let width, height, gradient;
+  function getGradient(ctx, chartArea) {
+    const chartWidth = chartArea.right - chartArea.left;
+    const chartHeight = chartArea.bottom - chartArea.top;
+    if (gradient === null || width !== chartWidth || height !== chartHeight) {
+      // Create the gradient because this is either the first render
+      // or the size of the chart has changed
+      width = chartWidth;
+      height = chartHeight;
+      gradient = ctx.createLinearGradient(
+        0,
+        chartArea.bottom,
+        0,
+        chartArea.top
+      );
+      gradient.addColorStop(1, " #2E8BC0");
+      gradient.addColorStop(0, "rgba(46, 139, 192, 0)");
+    }
+
+    return gradient;
+  }
   return (
     <div className="col-span-3">
       <h2 className="font-bold text-darkblue text-base my-2">Services Usage</h2>
@@ -40,6 +62,7 @@ function ServiceUsage() {
           </div>
           <div>
             <Bar
+              id="canvas"
               data={{
                 labels: incomesStatistics?.labels,
                 datasets: [
@@ -48,7 +71,18 @@ function ServiceUsage() {
                     //data: [12, 19, 3, 5, 2, 3,6],
                     data: incomesStatistics?.income_numbers,
                     display: false,
-                    backgroundColor: "rgba(46, 139, 192, 1)",
+                    // backgroundColor: "rgba(46, 139, 192, 1)",
+                    // backgroundColor: gradient,
+                    backgroundColor: function (context) {
+                      const chart = context.chart;
+                      const { ctx, chartArea } = chart;
+
+                      if (!chartArea) {
+                        // This case happens on initial chart load
+                        return null;
+                      }
+                      return getGradient(ctx, chartArea);
+                    },
                     tension: 0.3,
                     //pointRadius:0,
                     // fill: true,
@@ -72,6 +106,7 @@ function ServiceUsage() {
                   y: {
                     display: true,
                     beginAtZero: true,
+                    max: 100,
                     min: 0,
                     suggestedMax: 10,
                     grid: {
@@ -80,7 +115,7 @@ function ServiceUsage() {
                     ticks: {
                       display: true,
                       callback: function (value, index, ticks) {
-                        return value + "";
+                        return value + "%";
                       },
                     },
                     title: {
@@ -122,7 +157,7 @@ function ServiceUsage() {
                         var label = context.label;
                         var currentValue = context.raw;
 
-                        return currentValue + " patients";
+                        return currentValue + " % services";
                       },
                     },
                   },

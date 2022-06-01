@@ -36,9 +36,9 @@ function Services() {
       </div>
 
       <div className=" rounded-1">
-        <div className="  overflow-auto ">
-          <table className="table table-borderless  space-y-2 ">
-            <thead className="bg-white rounded-2 border-r-15 border-white border-l-15">
+        <div className="  overflow-auto p-3">
+          <table className="services table table-borderless  space-y-2 ">
+            <thead className="bg-white rounded-2 border-white ">
               <tr>
                 <td className="text-darkblue font-bold text-sm py-4">ID</td>
                 <td className="text-darkblue font-bold text-sm py-4">
@@ -53,7 +53,7 @@ function Services() {
                 <td className="text-darkblue font-bold text-sm py-4">Status</td>
               </tr>
             </thead>
-            <tbody className="bg-white rounded-2 border-r-15 border-white border-l-15 border-b-15">
+            <tbody className="bg-white rounded-2 border-b-20 border-whitecolor relative top-3">
               {isFetchingServices ? (
                 <TableRowShimmers cols={6} />
               ) : (
@@ -62,11 +62,9 @@ function Services() {
                 slice.map((service, index) => (
                   <tr
                     className={
-                      (index === 0 ? " border-t-8 border-paleblue " : " ") +
                       (index % 2 == 0
                         ? " bg-whitecolor "
-                        : " bg-paleblue rounded-xl ") +
-                      "items-center"
+                        : " bg-paleblue rounded-xl ") + "items-center"
                     }
                     key={index}
                   >
