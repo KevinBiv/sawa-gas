@@ -7,7 +7,7 @@ function TotalExpenses() {
     ({ Statistics }) => Statistics
   );
   return (
-    <div className="space-y-4 bg-white rounded-sm flex flex-col">
+    <div className="space-y-4 bg-white rounded-sm flex flex-col my-6 lg:my-3.5">
       <div className="bg-ligherdarkblue p-2 flex justify-between rounded-md">
         <div className="flex items-center space-x-2">
           {" "}
@@ -23,7 +23,7 @@ function TotalExpenses() {
               fill="white"
             />
           </svg>
-          <p className="text-sm font-bold text-white">Total Expenses</p>
+          <p className="text-xs font-bold text-white">Total Expenses</p>
         </div>
         <p className="text-lg text-white font-bold">
           <span className="text-xs font-light align-text-top">Rwf</span>350,000
@@ -92,7 +92,7 @@ function TotalExpenses() {
             },
           }}
         />
-        <div className="absolute top-1/3 left-1/3 flex flex-col ">
+        <div className="absolute top-1/3 left-24 flex flex-col ">
           <svg
             className="align-self-center"
             width="49"
@@ -150,7 +150,7 @@ function TotalExpenses() {
                 </clipPath>
               </defs>
             </svg>
-            <p className="text-sm text-darkblue font-bold">Bus</p>
+            <p className="text-sm text-ligherdarkblue font-bold">Bus</p>
           </div>
           <p className="text-base text-ligherdarkblue font-bold">
             <span className="text-xs font-light align-text-top">Rwf</span>
@@ -172,7 +172,7 @@ function TotalExpenses() {
                 fill="#003F6B"
               />
             </svg>
-            <p className="text-sm text-darkblue font-bold">Bike</p>
+            <p className="text-sm text-ligherdarkblue font-bold">Bike</p>
           </div>
           <p className="text-base text-ligherdarkblue font-bold">
             <span className="text-xs font-light align-text-top">Rwf</span>
@@ -194,7 +194,7 @@ function TotalExpenses() {
                 fill="#003F6B"
               />
             </svg>
-            <p className="text-sm text-darkblue font-bold">Taxi</p>
+            <p className="text-sm text-ligherdarkblue font-bold">Taxi</p>
           </div>
           <p className="text-base text-ligherdarkblue font-bold">
             <span className="text-xs font-light align-text-top">Rwf</span>
@@ -284,7 +284,7 @@ function TotalExpenses() {
               />
             </svg>
 
-            <p className="text-sm text-darkblue font-bold">Fuel</p>
+            <p className="text-sm text-ligherdarkblue font-bold">Fuel</p>
           </div>
           <p className="text-base text-ligherdarkblue font-bold">
             <span className="text-xs font-light align-text-top">Rwf</span>
@@ -314,7 +314,7 @@ function TotalExpenses() {
                 fill="#003F6B"
               />
             </svg>
-            <p className="text-sm text-darkblue font-bold">Cab</p>
+            <p className="text-sm text-ligherdarkblue font-bold">Cab</p>
           </div>
           <p className="text-base text-ligherdarkblue font-bold">
             <span className="text-xs font-light align-text-top">Rwf</span>

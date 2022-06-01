@@ -1,3 +1,7 @@
+/* Body */
+body {
+  font-family: "Poppins", sans-serif;
+}
 /* register */
 .form-check-input:checked {
   background-color: #2e8bc0;
@@ -85,10 +89,10 @@
 
 /* Table */
 .table thead {
-  border-bottom: 15px solid rgba(230, 237, 254, 0.37) !important;
+  box-shadow: 15px 0px #1e355c, -15px 0px #1e355c;
 }
 .table tbody {
-  border-top: 15px solid rgba(230, 237, 254, 0.37) !important;
+  box-shadow: 15px 0px #ffffff, -15px 0px #ffffff;
 }
 .table thead tr td:first-child {
   border-top-left-radius: 5px;
@@ -114,32 +118,6 @@
 .table tbody tr:last-child td:last-child {
   border-bottom-right-radius: 5px;
 }
-/* .table td:last-child {
-  border-right-width: 1px;
-} */
-/* .table {
-  width: 100%;
-  margin-bottom: 1rem;
-  color: #858796;
-}
-.table td,
-.table th {
-  padding: 0.75rem;
-  vertical-align: top;
-  border-top: 1px solid #e3e6f0;
-}
-.table thead th {
-  vertical-align: bottom;
-  border-bottom: 2px solid #e3e6f0;
-}
-.table tbody + tbody {
-  border-top: 2px solid #e3e6f0;
-}
-.table-hover tbody tr:hover {
-  color: #bce1d2;
- 
-  background-color: #fbfdfd;
-} */
 
 /* Date picker */
 .react-datepicker__header {
