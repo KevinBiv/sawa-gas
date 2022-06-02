@@ -9,7 +9,7 @@ import ServiceUsage from "../../components/statistics/ServiceUsage";
 function Home() {
   return (
     <div className=" min-h-screen">
-      <div className="col-span-2 md:pt-14 pb-6 space-y-6 mx-10">
+      <div className="col-span-2 md:pt-14 pb-6 space-y-6 mx-6 sm:mx-10">
         <h2 className="font-bold text-darkblue text-2xl ">Dashboard</h2>
         <GeneralStatistics />
         <LatestExpenses />

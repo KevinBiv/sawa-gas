@@ -6,7 +6,7 @@ import { setShowSidebar } from "../store/actions";
 function Navbar() {
   const dispatch = useDispatch();
   return (
-    <div className="flex py-6 mx-10 space-x-6 items-center md:hidden">
+    <div className="flex py-6 mx-6 sm:mx-10 space-x-6 items-center md:hidden">
       <button onClick={() => dispatch(setShowSidebar(true))}>
         <IoMenu className="text-4xl" />
       </button>

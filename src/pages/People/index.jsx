@@ -26,7 +26,7 @@ function People() {
   const dispatch = useDispatch();
   const history = useHistory();
   return (
-    <div className="md:pt-14 pb-6  mx-10 space-y-6">
+    <div className="md:pt-14 pb-6 mx-6 sm:mx-10 space-y-6">
       <div className="flex justify-between items-center flex-wrap">
         <div>
           <h5 className="text-2xl text-darkblue font-bold">My People</h5>
@@ -35,16 +35,16 @@ function People() {
           </p>
         </div>
         <div className="flex md:space-x-4 items-center flex-wrap ">
-          <p className="text-white py-2 px-3 bg-ligherdarkblue font-bold text-sm rounded-sm">
+          <p className="text-white py-2 px-3 bg-ligherdarkblue font-bold text-sm rounded-sm my-1 mx-2 md:mx-0 lg:my-0">
             45 members
           </p>
           <button
             onClick={() => setOpenAddMemberModal(true)}
-            className="text-white py-2 px-3 bg-ligherdarkblue opacity-80 hover:opacity-100 font-bold text-sm rounded-sm"
+            className="text-white py-2 px-3 bg-ligherdarkblue opacity-80 hover:opacity-100 font-bold text-sm rounded-sm my-1 mx-2 md:mx-0 lg:my-0"
           >
             Add
           </button>
-          <div>
+          <div className="my-1 mx-2 md:mx-0 lg:my-0">
             <select className=" rounded-sm relative block w-full px-3 py-2 placeholder-lightgray text-lightgray rounded-t-md focus:outline-none focus:ring-lightgreen focus:border-lightgreen focus:z-10 sm:text-sm">
               <option selected className="text-sm text-lightgray">
                 Department

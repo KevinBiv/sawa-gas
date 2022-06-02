@@ -21,7 +21,7 @@ function Finances() {
   const dispatch = useDispatch();
   const history = useHistory();
   return (
-    <div className="md:pt-14 pb-6  mx-10 ">
+    <div className="md:pt-14 pb-6 mx-6 sm:mx-10 ">
       <div className="flex justify-between items-center flex-wrap">
         <div>
           <h5 className="text-3xl text-darkblue font-bold">Finances</h5>
