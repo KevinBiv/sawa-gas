@@ -29,8 +29,10 @@ function People() {
     <div className="md:pt-14 pb-6  mx-10 space-y-6">
       <div className="flex justify-between items-center flex-wrap">
         <div>
-          <h5 className="text-3xl text-darkblue font-bold">My People</h5>
-          <p className="text-sm text-gray-500">All members</p>
+          <h5 className="text-2xl text-darkblue font-bold">My People</h5>
+          <p className="text-sm text-lightergray font-semibold mt-1">
+            All members
+          </p>
         </div>
         <div className="flex md:space-x-4 items-center flex-wrap ">
           <p className="text-white py-2 px-3 bg-ligherdarkblue font-bold text-sm rounded-sm">
@@ -43,14 +45,14 @@ function People() {
             Add
           </button>
           <div>
-            <select className=" rounded-sm relative block w-full px-3 py-2 placeholder-darkblue text-gray-900 rounded-t-md focus:outline-none focus:ring-lightgreen focus:border-lightgreen focus:z-10 sm:text-sm">
-              <option selected className="text-sm text-gray-500">
+            <select className=" rounded-sm relative block w-full px-3 py-2 placeholder-lightgray text-lightgray rounded-t-md focus:outline-none focus:ring-lightgreen focus:border-lightgreen focus:z-10 sm:text-sm">
+              <option selected className="text-sm text-lightgray">
                 Department
               </option>
-              <option className="text-sm text-gray-500" value="Marketing">
+              <option className="text-sm text-lightgray" value="Marketing">
                 Marketing
               </option>
-              <option className="text-sm text-gray-500" value="Production">
+              <option className="text-sm text-lightgray" value="Production">
                 Production
               </option>
             </select>
@@ -95,21 +97,21 @@ function People() {
                     key={index}
                   >
                     {/* <td className="font-bold text-xs  py-4 text-blue-500"> {(payment.created_at&&payment.created_at.substring(0, 10))??"-"}</td> */}
-                    <td className="font-bold text-xs py-3 text-darkblue">
+                    <td className="font-bold text-xs py-3 text-boldgray">
                       00{person?.id}
                     </td>
 
                     <td className="font-bold text-xs py-3 text-darkblue">
                       {person?.full_names}
                     </td>
-                    <td className="font-bold text-xs py-3 text-darkblue">
+                    <td className="font-bold text-xs py-3 text-boldgray">
                       {person?.department}
                     </td>
-                    <td className="font-bold text-xs py-3 text-darkblue">
+                    <td className="font-bold text-xs py-3 text-boldgray">
                       {person?.age}
                     </td>
 
-                    <td className="font-bold text-xs py-3 text-darkblue">
+                    <td className="font-bold text-xs py-3 text-boldgray">
                       {person?.gender}
                     </td>
 
@@ -119,7 +121,7 @@ function People() {
                           onClick={() => {
                             setOpenDeleteMemberModal(true);
                           }}
-                          className="w-100 text-sm  bg-red-500 opacity-90 hover:bg-red-600 text-white  rounded-sm py-1"
+                          className="w-100 text-sm  bg-red-500 opacity-90 hover:bg-red-600 text-white  rounded-sm py-1 px-3"
                         >
                           remove
                         </button>
@@ -127,7 +129,7 @@ function People() {
                           onClick={() => {
                             setOpenUpdateMemberModal(true);
                           }}
-                          className="w-100 text-sm bg-ligherdarkblue text-white opacity-80 hover:opacity-100 rounded-sm py-1"
+                          className="w-100 text-sm bg-ligherdarkblue text-white opacity-80 hover:opacity-100 rounded-sm py-1 px-3"
                         >
                           update
                         </button>
@@ -139,7 +141,7 @@ function People() {
             </tbody>
           </table>
           {people && people.length === 0 && !isFetchingPeople ? (
-            <p className=" my-20 bg-gray-300 py-3 text-sm  text-center w-100">
+            <p className=" my-20 bg-boldgray py-3 text-sm  text-center w-100">
               no people yet !
             </p>
           ) : null}

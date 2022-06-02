@@ -7,7 +7,7 @@ function OrderBus({ handleCloseOrder, handleClose }) {
       <div className="flex justify-between">
         <div className="space-x-2 flex items-center">
           <img src={vanImg} className="object-cover h-6 w-6" alt="bus" />
-          <h5 className="text-darkblue font-bold text-lg"> Top up a card</h5>
+          <h5 className="text-darkblue font-bold text-lg"> Rent a bus</h5>
         </div>
         <button
           className="text-ligherdarkblue text-opacity-80 hover:text-opacity-100"
@@ -23,18 +23,18 @@ function OrderBus({ handleCloseOrder, handleClose }) {
           </label>
           <select
             id="bus-type"
-            className="text-xs px-3 py-2 border text-lightgray w-100 focus:outline-none focus:ring-darkblue focus:border-darkblue focus:z-10"
+            className="text-xs px-3 py-3 border text-boldgray w-100 focus:outline-none focus:ring-darkblue focus:border-darkblue focus:z-10"
           >
-            <option className="text-xs text-lightgray" selected>
+            <option className="text-xs text-boldgray" selected>
               Select bus Type
             </option>
-            <option className="text-xs text-lightgray" value="blue">
+            <option className="text-xs text-boldgray" value="blue">
               bus 1
             </option>
-            <option className="text-xs text-lightgray" value="black">
+            <option className="text-xs text-boldgray" value="black">
               bus 2
             </option>
-            <option className="text-xs text-lightgray" value="white">
+            <option className="text-xs text-boldgray" value="white">
               bus 3
             </option>
           </select>
@@ -45,24 +45,24 @@ function OrderBus({ handleCloseOrder, handleClose }) {
           </label>
           <select
             id="people"
-            className="text-xs px-3 py-2 border text-lightgray w-100 focus:outline-none focus:ring-darkblue focus:border-darkblue focus:z-10"
+            className="text-xs px-3 py-3 border text-boldgray w-100 focus:outline-none focus:ring-darkblue focus:border-darkblue focus:z-10"
           >
-            <option className="text-xs text-lightgray" selected>
+            <option className="text-xs text-boldgray" selected>
               Select people to tranport
             </option>
-            <option className="text-xs text-lightgray" value="blue">
+            <option className="text-xs text-boldgray" value="blue">
               person 1
             </option>
-            <option className="text-xs text-lightgray" value="black">
+            <option className="text-xs text-boldgray" value="black">
               person 2
             </option>
-            <option className="text-xs text-lightgray" value="white">
+            <option className="text-xs text-boldgray" value="white">
               person 3
             </option>
           </select>
         </div>
         <div className="flex items-end bg-white pl-3 rounded-1">
-          <label htmlFor="start-date" className="text-sm text-lightgray pt-1">
+          <label htmlFor="start-date" className="text-sm text-boldgray pt-1">
             when do you need it
           </label>
           <input
@@ -70,7 +70,7 @@ function OrderBus({ handleCloseOrder, handleClose }) {
             name="start-date"
             id="start-date"
             autoComplete="start-date"
-            className="flex-1 bg-white appearance-none rounded-none relative block w-full px-3 py-2 placeholder-lightgray text-lightgray rounded-b-md focus:outline-none focus:ring-darkblue focus:border-darkblue focus:z-10 sm:text-xs"
+            className="flex-1 bg-white appearance-none rounded-none relative block w-full px-3 py-3 placeholder-boldgray text-boldgray rounded-b-md focus:outline-none focus:ring-darkblue focus:border-darkblue focus:z-10 sm:text-xs"
             placeholder="Start Date"
           />
         </div>
@@ -84,7 +84,7 @@ function OrderBus({ handleCloseOrder, handleClose }) {
               name="from"
               id="from"
               autoComplete="from"
-              className="flex-1 bg-white appearance-none rounded-none relative block w-full px-3 py-2 placeholder-lightgray text-lightgray rounded-b-md focus:outline-none focus:ring-darkblue focus:border-darkblue focus:z-10 sm:text-xs"
+              className="flex-1 bg-white appearance-none rounded-none relative block w-full px-3 py-3 placeholder-boldgray text-boldgray rounded-b-md focus:outline-none focus:ring-darkblue focus:border-darkblue focus:z-10 sm:text-xs"
               placeholder="From"
             />
           </div>
@@ -97,7 +97,7 @@ function OrderBus({ handleCloseOrder, handleClose }) {
               name="to"
               id="to"
               autoComplete="to"
-              className="flex-1 appearance-none bg-white rounded-none relative block w-full px-3 py-2 placeholder-lightgray text-lightgray rounded-b-md focus:outline-none focus:ring-darkblue focus:border-darkblue focus:z-10 sm:text-xs"
+              className="flex-1 appearance-none bg-white rounded-none relative block w-full px-3 py-3 placeholder-boldgray text-boldgray rounded-b-md focus:outline-none focus:ring-darkblue focus:border-darkblue focus:z-10 sm:text-xs"
               placeholder="To"
             />
           </div>
@@ -108,24 +108,24 @@ function OrderBus({ handleCloseOrder, handleClose }) {
           </label>
           <select
             id="provider"
-            className="text-xs px-3 py-2 border text-lightgray w-100 focus:outline-none focus:ring-darkblue focus:border-darkblue focus:z-10"
+            className="text-xs px-3 py-3 border text-boldgray w-100 focus:outline-none focus:ring-darkblue focus:border-darkblue focus:z-10"
           >
-            <option className="text-xs text-lightgray" selected>
+            <option className="text-xs text-boldgray" selected>
               select a bus Provider
             </option>
-            <option className="text-xs text-lightgray" value="blue">
+            <option className="text-xs text-boldgray" value="blue">
               provider1
             </option>
-            <option className="text-xs text-lightgray" value="black">
+            <option className="text-xs text-boldgray" value="black">
               provider2
             </option>
-            <option className="text-xs text-lightgray" value="white">
+            <option className="text-xs text-boldgray" value="white">
               provider3
             </option>
           </select>
         </div>
-        <div className="flex items-center justify-between bg-white px-3 rounded-1">
-          <label class="text-xs text-lightgray py-0.5" for="exampleCheck1">
+        <div className="flex items-center justify-between bg-white px-3 py-3 rounded-1">
+          <label class="text-xs text-boldgray py-0.5" for="exampleCheck1">
             Accept quotations
           </label>
           <input type="checkbox" className="" id="exampleCheck1" />
@@ -136,7 +136,7 @@ function OrderBus({ handleCloseOrder, handleClose }) {
             handleCloseOrder();
             handleClose();
           }}
-          className="bg-ligherdarkblue opacity-80 hover:opacity-100 rounded-sm py-2 w-100 text-white text-sm"
+          className="bg-ligherdarkblue opacity-80 hover:opacity-100 rounded-sm py-3 w-100 text-white text-sm"
         >
           Confirm Order
         </button>

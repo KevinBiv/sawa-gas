@@ -21,7 +21,7 @@ function Services() {
     <div className="md:pt-14 pb-6  mx-10 space-y-6 service">
       <div className="flex justify-between items-center flex-wrap">
         <div>
-          <h5 className="text-3xl text-darkblue font-bold">
+          <h5 className="text-2xl text-darkblue font-bold">
             My Transport Services
           </h5>
         </div>
@@ -69,17 +69,17 @@ function Services() {
                     key={index}
                   >
                     {/* <td className="font-bold text-xs  py-4 text-blue-500"> {(payment.created_at&&payment.created_at.substring(0, 10))??"-"}</td> */}
-                    <td className="font-bold text-xs py-3 text-gray-600">
+                    <td className="font-semibold text-xs py-3 text-boldgray">
                       00{service?.id}
                     </td>
-                    <td className="font-bold text-xs py-3 text-gray-600">
+                    <td className="font-semibold text-xs py-3 text-boldgray">
                       {service?.staff_name}
                     </td>
-                    <td className="font-bold text-xs py-3 text-gray-600">
+                    <td className="font-semibold text-xs py-3 text-boldgray">
                       {service?.service}
                     </td>
 
-                    <td className="font-bold text-xs py-3 text-gray-600">
+                    <td className="font-semibold text-xs py-3 text-boldgray">
                       {service?.amount} Rwf
                     </td>
                     <td

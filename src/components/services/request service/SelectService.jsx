@@ -33,7 +33,7 @@ function SelectService({ handleClose }) {
       <div className="space-y-2">
         <button
           onClick={() => setOpenToUpOderModel(true)}
-          className="flex justify-between items-center w-100 bg-whitecolor p-2.5 px-6 hover:bg-black text-gray-500 hover:text-white rounded-md"
+          className="flex justify-between items-center w-100 bg-whitecolor p-2.5 px-6 hover:bg-black  text-boldgray hover:text-white font-medium rounded-md"
         >
           <p className="text-sm ">Top up employee Transport Card</p>
           <svg
@@ -69,14 +69,14 @@ function SelectService({ handleClose }) {
         </button>
         <button
           onClick={() => setOpenCarOderModel(true)}
-          className="flex justify-between items-center w-100 bg-whitecolor p-2.5 px-6 hover:bg-black text-gray-500 hover:text-white rounded-md"
+          className="flex justify-between items-center w-100 bg-whitecolor p-2.5 px-6 hover:bg-black text-boldgray hover:text-white font-medium rounded-md"
         >
           <p className="text-sm ">Rent an instant Car</p>
           <img src={carImg} className="object-cover h-14 w-14" alt="Car" />
         </button>
         <button
           onClick={() => setOpenFuelOderModel(true)}
-          className="flex justify-between items-center w-100 bg-whitecolor p-2.5 px-6 hover:bg-black text-gray-500 hover:text-white rounded-md"
+          className="flex justify-between items-center w-100 bg-whitecolor p-2.5 px-6 hover:bg-black text-boldgray hover:text-white font-medium rounded-md"
         >
           <p className="text-sm ">Top up Employee Fuel card</p>
           <svg
@@ -163,7 +163,7 @@ function SelectService({ handleClose }) {
         </button>
         <button
           onClick={() => setOpenBusOderModel(true)}
-          className="flex justify-between items-center w-100 bg-whitecolor p-2.5 px-6 hover:bg-black text-gray-500 hover:text-white rounded-md"
+          className="flex justify-between items-center w-100 bg-whitecolor p-2.5 px-6 hover:bg-black text-boldgray hover:text-white font-medium rounded-md"
         >
           <p className="text-sm">Rent a bus for Mass Transportation</p>
           <img src={vanImg} className="object-cover h-14 w-14" alt="bus" />

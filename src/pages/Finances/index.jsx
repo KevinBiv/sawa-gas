@@ -25,7 +25,7 @@ function Finances() {
       <div className="flex justify-between items-center flex-wrap">
         <div>
           <h5 className="text-3xl text-darkblue font-bold">Finances</h5>
-          <p className="text-sm text-gray-500 mb-3.5 xl:mb-0">
+          <p className="text-sm text-lightergray font-semibold mb-3.5 xl:mb-0">
             Team Consuptions
           </p>
         </div>
@@ -35,14 +35,14 @@ function Finances() {
             setSelectedDate={setSelectedDate}
           />
           <div>
-            <select className=" rounded-sm relative block w-full px-3 py-2 placeholder-gray-500 text-gray-500 rounded-t-md focus:outline-none focus:ring-lightgreen focus:border-lightgreen focus:z-10 sm:text-sm">
-              <option selected className="text-sm text-gray-500">
+            <select className=" rounded-sm relative block w-full px-3 py-2 placeholder-lightgray text-lightgray rounded-t-md focus:outline-none focus:ring-lightgreen focus:border-lightgreen focus:z-10 sm:text-sm">
+              <option selected className="text-sm text--lightgray">
                 Sort Department
               </option>
-              <option className="text-sm text-gray-500" value="Marketing">
+              <option className="text-sm text-lightgray" value="Marketing">
                 Marketing
               </option>
-              <option className="text-sm text-gray-500" value="Production">
+              <option className="text-sm text-lightgray" value="Production">
                 Production
               </option>
             </select>
@@ -57,7 +57,7 @@ function Finances() {
         <div className="col-span-2 ">
           <div className=" px-3 py-3.5 lg:py-4 overflow-auto ">
             <table className="table table-borderless  space-y-2 ">
-              <thead className="bg-darkblue rounded-md  border-darkblue relative">
+              <thead className="bg-darkblue rounded-md  border-darkblue ">
                 {/* relative */}
                 <tr className=" rounded-md border-paleblue">
                   <td className="text-white text-sm py-4">Date</td>
@@ -67,7 +67,7 @@ function Finances() {
                   <td className="text-white text-sm py-4"></td>
                 </tr>
               </thead>
-              <tbody className="bg-white rounded-2 border-white relative z-30 w-100 top-5">
+              <tbody className="bg-white rounded-2 border-white relative w-100 top-5">
                 {/* relative z-30 w-100 top-8 */}
                 {isFetchingFinances ? (
                   <TableRowShimmers cols={6} />
@@ -99,10 +99,10 @@ function Finances() {
                       <td className="font-bold text-xs py-3 text-gray-700 ">
                         {finance?.date}
                       </td>
-                      <td className="font-bold text-xs py-3 text-gray-500 ">
+                      <td className="font-bold text-xs py-3 text-boldgray ">
                         {finance?.expense}
                       </td>
-                      <td className="font-bold text-xs py-3 text-gray-500 ">
+                      <td className="font-bold text-xs py-3 text-boldgray ">
                         {finance?.volume}
                       </td>
 
@@ -144,7 +144,7 @@ function Finances() {
               </tbody>
             </table>
             {finances && finances.length === 0 && !isFetchingFinances ? (
-              <p className=" my-20 bg-gray-300 py-3 text-sm  text-center w-100">
+              <p className=" my-20 bg-boldgray py-3 text-sm  text-center w-100">
                 no finances yet !
               </p>
             ) : null}

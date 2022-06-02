@@ -24,7 +24,7 @@ function MobileSidebar() {
                 to="/dashboard"
                 onClick={() => dispatch(setShowSidebar(false))}
                 exact
-                className="w-100 px-10 flex items-center  space-x-2 text-gray-600 hover:border-r-4 hover:border-ligherdarkblue hover:text-ligherdarkblue hover:no-underline "
+                className="w-100 px-10 flex items-center  space-x-2 text-lightergray hover:border-r-4 hover:border-ligherdarkblue hover:text-ligherdarkblue hover:no-underline "
                 activeClassName="text-ligherdarkblue no-underline border-r-4 border-ligherdarkblue"
               >
                 <svg
@@ -40,7 +40,7 @@ function MobileSidebar() {
                     fill="currentColor"
                   />
                 </svg>
-                <p className="text-sm">Dashboard</p>
+                <p className="text-xs font-semibold">Dashboard</p>
               </NavLink>
             </div>
             <div className="flex">
@@ -48,7 +48,7 @@ function MobileSidebar() {
                 to="/dashboard/services"
                 onClick={() => dispatch(setShowSidebar(false))}
                 exact
-                className="w-100 pl-10 flex items-center space-x-2 text-gray-600 hover:border-r-4 hover:border-ligherdarkblue hover:text-ligherdarkblue hover:no-underline "
+                className="w-100 pl-10 flex items-center space-x-2 text-lightergray hover:border-r-4 hover:border-ligherdarkblue hover:text-ligherdarkblue hover:no-underline "
                 activeClassName="text-ligherdarkblue no-underline border-r-4 border-ligherdarkblue"
               >
                 <svg
@@ -64,7 +64,7 @@ function MobileSidebar() {
                     fill="currentColor"
                   />
                 </svg>
-                <p className="text-sm">My services</p>
+                <p className="text-xs font-semibold">My services</p>
 
                 {/* <BsChat /> */}
               </NavLink>
@@ -74,7 +74,7 @@ function MobileSidebar() {
                 to="/dashboard/people"
                 onClick={() => dispatch(setShowSidebar(false))}
                 exact
-                className="w-100 pl-10 flex items-center space-x-2 text-gray-600 hover:border-r-4 hover:border-ligherdarkblue hover:text-ligherdarkblue hover:no-underline "
+                className="w-100 pl-10 flex items-center space-x-2 text-lightergray hover:border-r-4 hover:border-ligherdarkblue hover:text-ligherdarkblue hover:no-underline "
                 activeClassName="text-ligherdarkblue no-underline border-r-4 border-ligherdarkblue "
               >
                 <svg
@@ -94,14 +94,14 @@ function MobileSidebar() {
                     fill="currentColor"
                   />
                 </svg>
-                <p className="text-sm">My people</p>
+                <p className="text-xs font-semibold">My people</p>
               </NavLink>
             </div>
             <div className="flex">
               <NavLink
                 to="/dashboard/finances"
                 onClick={() => dispatch(setShowSidebar(false))}
-                className="w-100 px-10 flex items-center space-x-2 text-gray-600 hover:border-r-4 hover:border-ligherdarkblue hover:text-ligherdarkblue hover:no-underline "
+                className="w-100 px-10 flex items-center space-x-2 text-lightergray hover:border-r-4 hover:border-ligherdarkblue hover:text-ligherdarkblue hover:no-underline "
                 activeClassName="text-ligherdarkblue no-underline border-r-4 border-ligherdarkblue"
               >
                 <svg
@@ -117,14 +117,14 @@ function MobileSidebar() {
                     fill="currentColor"
                   />
                 </svg>
-                <p className="text-sm">Finances</p>
+                <p className="text-xs font-semibold">Finances</p>
               </NavLink>
             </div>
             <div className="flex">
               <NavLink
                 to="/dashboard/nurses"
                 onClick={() => dispatch(setShowSidebar(false))}
-                className="w-100 px-10 flex items-center space-x-2 text-gray-600 hover:border-r-4 hover:border-ligherdarkblue hover:text-ligherdarkblue hover:no-underline "
+                className="w-100 px-10 flex items-center space-x-2 text-lightergray hover:border-r-4 hover:border-ligherdarkblue hover:text-ligherdarkblue hover:no-underline "
                 activeClassName="text-ligherdarkblue no-underline border-r-4 border-ligherdarkblue"
               >
                 <svg
@@ -193,14 +193,14 @@ function MobileSidebar() {
                   </defs>
                 </svg>
 
-                <p className="text-sm">Our fleet</p>
+                <p className="text-xs font-semibold">Our fleet</p>
               </NavLink>
             </div>
           </div>
         </div>
         <div className="absolute bottom-0 left-10">
           <div className="flex justify-center">
-            <hr className="w-32 text-gray-600" />
+            <hr className="w-32 text-paleblue" />
           </div>
 
           <div className="flex justify-center items-center my-4">

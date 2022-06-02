@@ -4,7 +4,7 @@ import DayFilter from "../filters/DayFilter";
 function GeneralStatistics() {
   const [selectedDate, setSelectedDate] = useState(new Date());
   return (
-    <div className=" col-span-2 grid grid-cols-1 md:grid-cols-3 gap-2 p-2 bg-white rounded-2">
+    <div className=" col-span-2 grid grid-cols-1 md:grid-cols-3 gap-2 p-2 bg-white rounded-3">
       <div className="flex space-x-3">
         <div className="py-1 px-2 rounded-circle bg-ligherdarkblue flex items-center">
           <svg
@@ -21,9 +21,9 @@ function GeneralStatistics() {
           </svg>
         </div>
         <div>
-          <p className="text-gray-700 text-sm">My Balance</p>
+          <p className="text-lightergray font-semibold text-xs">My Balance</p>
 
-          <p className="font-bold text-darkblue text-base">
+          <p className="font-bold text-darkblue text-xl">
             200,000<span className="text-xs">Rwf</span>
           </p>
         </div>
@@ -49,8 +49,8 @@ function GeneralStatistics() {
           </svg>
         </div>
         <div>
-          <p className="text-gray-700 text-sm">My People</p>
-          <p className="font-bold text-darkblue text-base">87</p>
+          <p className="text-lightergray font-semibold text-xs">My People</p>
+          <p className="font-bold text-darkblue text-xl">87</p>
         </div>
       </div>
 
@@ -71,8 +71,8 @@ function GeneralStatistics() {
           </svg>
         </div>
         <div>
-          <p className="text-gray-700 text-sm">Expenses</p>
-          <p className="font-bold text-darkblue text-base">
+          <p className="text-lightergray font-semibold text-xs">Expenses</p>
+          <p className="font-bold text-darkblue text-xl">
             180,000<span className="text-xs">Rwf</span>
           </p>
         </div>

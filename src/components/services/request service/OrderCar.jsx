@@ -8,7 +8,7 @@ function OrderCar({ handleClose, handleCloseOrder }) {
       <div className="flex justify-between">
         <div className="space-x-2 flex items-center">
           <img src={carImg} className="object-cover h-6 w-6" alt="Car" />
-          <h5 className="text-darkblue font-bold text-lg"> Top up a card</h5>
+          <h5 className="text-darkblue font-bold text-lg">Rent a car</h5>
         </div>
         <button
           className="text-ligherdarkblue text-opacity-80 hover:text-opacity-100"
@@ -24,18 +24,18 @@ function OrderCar({ handleClose, handleCloseOrder }) {
           </label>
           <select
             id="staff"
-            className="text-xs px-3 py-2 border text-lightgray w-100 focus:outline-none focus:ring-darkblue focus:border-darkblue focus:z-10"
+            className="text-xs px-3 py-3 border text-boldgray w-100 focus:outline-none focus:ring-darkblue focus:border-darkblue focus:z-10"
           >
-            <option className="text-xs text-lightgray" selected>
+            <option className="text-xs text-boldgray" selected>
               Select Car Type
             </option>
-            <option className="text-xs text-lightgray" value="blue">
+            <option className="text-xs text-boldgray" value="blue">
               car1
             </option>
-            <option className="text-xs text-lightgray" value="black">
+            <option className="text-xs text-boldgray" value="black">
               car2
             </option>
-            <option className="text-xs text-lightgray" value="white">
+            <option className="text-xs text-boldgray" value="white">
               car3
             </option>
           </select>
@@ -46,8 +46,8 @@ function OrderCar({ handleClose, handleCloseOrder }) {
             className={
               (!ordercarDriver
                 ? " bg-ligherdarkblue text-whitecolor"
-                : " bg-whitecolor text-lightgray") +
-              " text-sm w-100 rounded-md py-2"
+                : " bg-whitecolor text-boldgray") +
+              " text-sm w-100 rounded-md py-3"
             }
             onClick={() => setOrderCarDriver(false)}
           >
@@ -58,7 +58,7 @@ function OrderCar({ handleClose, handleCloseOrder }) {
             className={
               (ordercarDriver
                 ? " bg-ligherdarkblue text-whitecolor"
-                : " bg-whitecolor text-lightgray") +
+                : " bg-whitecolor text-boldgray") +
               " text-sm w-100 rounded-md py-2"
             }
             onClick={() => setOrderCarDriver(true)}
@@ -75,13 +75,13 @@ function OrderCar({ handleClose, handleCloseOrder }) {
             name="going-to"
             id="going-to"
             autoComplete="going-to"
-            className="flex-1 appearance-none rounded-none relative block w-full px-3 py-2 placeholder-lightgray text-lightgray rounded-b-md focus:outline-none focus:ring-darkblue focus:border-darkblue focus:z-10 sm:text-xs"
+            className="flex-1 appearance-none rounded-none relative block w-full px-3 py-3 placeholder-boldgray text-boldgray rounded-b-md focus:outline-none focus:ring-darkblue focus:border-darkblue focus:z-10 sm:text-xs"
             placeholder="Going to"
           />
         </div>
         <div className="grid grid-cols-2 gap-2">
           <div className="flex flex-col rounded-1">
-            <label htmlFor="start-date" className="text-xs text-lightgray">
+            <label htmlFor="start-date" className="text-xs text-boldgray">
               Start Date
             </label>
             <input
@@ -89,12 +89,12 @@ function OrderCar({ handleClose, handleCloseOrder }) {
               name="start-date"
               id="start-date"
               autoComplete="start-date"
-              className="flex-1 bg-white appearance-none rounded-none relative block w-full px-3 py-2 placeholder-lightgray text-lightgray rounded-b-md focus:outline-none focus:ring-darkblue focus:border-darkblue focus:z-10 sm:text-xs"
+              className="flex-1 bg-white appearance-none rounded-none relative block w-full px-3 py-3 placeholder-boldgray text-boldgray rounded-b-md focus:outline-none focus:ring-darkblue focus:border-darkblue focus:z-10 sm:text-xs"
               placeholder="Start Date"
             />
           </div>
           <div className="flex flex-col   rounded-1">
-            <label htmlFor="end-date" className="text-xs text-lightgray">
+            <label htmlFor="end-date" className="text-xs text-boldgray">
               End Date
             </label>
             <input
@@ -102,7 +102,7 @@ function OrderCar({ handleClose, handleCloseOrder }) {
               name="end-date"
               id="end-date"
               autoComplete="end-date"
-              className="flex-1 appearance-none bg-white rounded-none relative block w-full px-3 py-2 placeholder-lightgray text-lightgray rounded-b-md focus:outline-none focus:ring-darkblue focus:border-darkblue focus:z-10 sm:text-xs"
+              className="flex-1 appearance-none bg-white rounded-none relative block w-full px-3 py-3 placeholder-boldgray text-boldgray rounded-b-md focus:outline-none focus:ring-darkblue focus:border-darkblue focus:z-10 sm:text-xs"
               placeholder="End Date"
             />
           </div>
@@ -113,24 +113,24 @@ function OrderCar({ handleClose, handleCloseOrder }) {
           </label>
           <select
             id="provider"
-            className="text-xs px-3 py-2 border text-lightgray w-100 focus:outline-none focus:ring-darkblue focus:border-darkblue focus:z-10"
+            className="text-xs px-3 py-3 border text-boldgray w-100 focus:outline-none focus:ring-darkblue focus:border-darkblue focus:z-10"
           >
-            <option className="text-xs text-lightgray" selected>
+            <option className="text-xs text-boldgray" selected>
               select a car Provider
             </option>
-            <option className="text-xs text-lightgray" value="blue">
+            <option className="text-xs text-boldgray" value="blue">
               provider1
             </option>
-            <option className="text-xs text-lightgray" value="black">
+            <option className="text-xs text-boldgray" value="black">
               provider2
             </option>
-            <option className="text-xs text-lightgray" value="white">
+            <option className="text-xs text-boldgray" value="white">
               provider3
             </option>
           </select>
         </div>
-        <div className="flex items-center justify-between bg-white px-3 rounded-1">
-          <label class="text-xs text-lightgray py-0.5" for="exampleCheck1">
+        <div className="flex items-center justify-between bg-white px-3 py-3 rounded-1">
+          <label class="text-xs text-boldgray py-0.5" for="exampleCheck1">
             Receive Proposals
           </label>
           <input type="checkbox" className="" id="exampleCheck1" />
@@ -141,7 +141,7 @@ function OrderCar({ handleClose, handleCloseOrder }) {
             handleCloseOrder();
             handleClose();
           }}
-          className="bg-ligherdarkblue opacity-80 hover:opacity-100 rounded-sm py-2 w-100 text-white text-sm"
+          className="bg-ligherdarkblue opacity-80 hover:opacity-100 rounded-sm py-3 w-100 text-white text-sm"
         >
           Confirm Order
         </button>

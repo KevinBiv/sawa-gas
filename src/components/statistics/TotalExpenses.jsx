@@ -81,6 +81,9 @@ function TotalExpenses() {
               },
               legend: {
                 position: "bottom",
+                labels: {
+                  color: "#8E9AAD",
+                },
               },
               //   datalabels: {
               //     labels: {

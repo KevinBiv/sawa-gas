@@ -39,7 +39,8 @@ function ServiceUsage() {
         0,
         chartArea.top
       );
-      gradient.addColorStop(1, " #2E8BC0");
+      gradient.addColorStop(1, "rgba(46, 139, 192, 1)");
+      gradient.addColorStop(0.5, "rgba(46, 139, 192, 1)");
       gradient.addColorStop(0, "rgba(46, 139, 192, 0)");
     }
 
@@ -47,16 +48,15 @@ function ServiceUsage() {
   }
   return (
     <div className="col-span-3">
-      <h2 className="font-bold text-darkblue text-base my-2">Services Usage</h2>
+      <h2 className="font-bold text-darkblue text-lg mt-2 mb-3.5">
+        Services Usage
+      </h2>
       {isFetchingPatientsStatistics ? (
         <Shimmers height="300px" width="400px" className="overflow-hidden" />
       ) : (
-        <div className="relative bg-white space-y-6 px-3.5 py-10 ">
+        <div className="relative bg-white space-y-6 px-3.5 py-10 rounded-3">
           <div className=" ">
-            {/* <p className=" text-darkblue font-bold text-base text-center">
-              Services Usage
-            </p> */}
-            <p className="px-3 text-gray-500 text-xs ">
+            <p className="px-3 text-lightergray font-semibold text-xs ">
               My Team’s Sawa Services Consuption Rates
             </p>
           </div>
@@ -114,6 +114,7 @@ function ServiceUsage() {
                     },
                     ticks: {
                       display: true,
+                      color: "#8694AF",
                       callback: function (value, index, ticks) {
                         return value + "%";
                       },
@@ -127,6 +128,9 @@ function ServiceUsage() {
                   x: {
                     grid: {
                       display: false,
+                    },
+                    ticks: {
+                      color: "#003F6B",
                     },
                   },
                 },

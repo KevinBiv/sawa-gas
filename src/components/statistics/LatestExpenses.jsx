@@ -22,14 +22,12 @@ function LatestExpenses() {
   });
   return (
     <div>
-      <h2 className="font-bold text-darkblue text-base my-2">
-        Latest Expenses
-      </h2>
+      <h2 className="font-bold text-darkblue text-lg my-2">Latest Expenses</h2>
       <div className="grid grid-cols-1 md:grid-cols-5 gap-2 ">
         {isFetchingIncomesStatistics ? (
           <Shimmers height="300px" width="400px" className="overflow-hidden" />
         ) : (
-          <div className="col-span-3 p-6 bg-white">
+          <div className="col-span-3 p-6 bg-white rounded-3">
             <div className=" flex">
               <WeeklyFilter
                 weeklyDate={weeklyDate}
@@ -47,7 +45,7 @@ function LatestExpenses() {
                       data: expensesStatistics?.income_numbers,
                       display: false,
                       backgroundColor: "rgba(46, 139, 192, 0.15)",
-                      tension: 0.3,
+                      tension: 0.6,
                       //pointRadius:0,
                       fill: true,
                       borderColor: "#2E8BC0",
@@ -72,6 +70,7 @@ function LatestExpenses() {
                       },
                       ticks: {
                         display: true,
+                        color: "#8694AF",
                         callback: function (value, index, ticks) {
                           if (value === 1000) {
                             return value + " M";
@@ -85,6 +84,9 @@ function LatestExpenses() {
                       display: true,
                       grid: {
                         display: false,
+                      },
+                      ticks: {
+                        color: "#8694AF",
                       },
                     },
                   },
@@ -126,7 +128,7 @@ function LatestExpenses() {
         {isFetchingPatientsStatistics ? (
           <Shimmers height="300px" width="400px" className="overflow-hidden" />
         ) : (
-          <div className="bg-ligherdarkblue p-6 space-y-6 col-span-2">
+          <div className="bg-ligherdarkblue p-6 space-y-6 col-span-2 rounded-3">
             <div>
               <h5 className=" text-white font-bold text-lg">Latest Invoices</h5>
               <hr className="w-10 text-white pt-0.5 " />

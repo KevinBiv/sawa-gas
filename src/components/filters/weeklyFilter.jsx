@@ -75,7 +75,7 @@ function WeeklyFilter({ weeklyDate, setweeklyDate }) {
     <div className="flex space-x-3">
       <div>
         <FaRegCalendar
-          className="text-gray-500 cursor-pointer"
+          className="text-lightgray cursor-pointer"
           onClick={() => openDatePicker()}
         />
         {weeklyDate.datePickerIsOpen ? (
@@ -88,6 +88,7 @@ function WeeklyFilter({ weeklyDate, setweeklyDate }) {
             shouldCloseOnSelect={false}
             startDate={weeklyDate.weekRange && weeklyDate.weekRange.from}
             endDate={weeklyDate.weekRange && weeklyDate.weekRange.to}
+
             //onCalendarClose={openDatePicker}
             //onCalendarOpen={openDatePicker}
           />
@@ -95,12 +96,19 @@ function WeeklyFilter({ weeklyDate, setweeklyDate }) {
           ""
         )}
       </div>
-      <p className="text-darkblue text-xs pb-4">
-        {moment(weeklyDate.weekRange && weeklyDate.weekRange.from).format(
-          "YYYY Do MM"
+      <p className="text-lightgray text-xs pb-4">
+        {moment(weeklyDate.weekRange && weeklyDate.weekRange.from).format("Do")}{" "}
+        -
+        {moment(weeklyDate.weekRange && weeklyDate.weekRange.to).format(
+          "Do MM"
         )}
+        ,
+        <span className="text-gray-800 font-bold text-xs ">
+          {moment(weeklyDate.weekRange && weeklyDate.weekRange.from).format(
+            "YYYY "
+          )}
+        </span>
       </p>
-      <p className="text-xs text-gray-500"></p>
     </div>
   );
 }

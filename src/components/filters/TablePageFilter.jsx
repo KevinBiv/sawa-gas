@@ -24,7 +24,9 @@ function TablePageFilter({ range, setPage, page, slice }) {
             key={index}
             className={
               " px-1.5 rounded-circle text-xs font-bold" +
-              (page === el ? " text-whitecolor bg-darkblue" : " text-darkblue")
+              (page === el
+                ? " text-whitecolor bg-ligherdarkblue"
+                : " text-darkblue")
             }
             onClick={() => setPage(el)}
           >

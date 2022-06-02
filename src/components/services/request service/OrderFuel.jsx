@@ -86,7 +86,7 @@ function OrderFuel({ handleCloseOrder, handleClose }) {
               stroke-linecap="round"
             />
           </svg>
-          <h5 className="text-darkblue font-bold text-lg"> Top up a card</h5>
+          <h5 className="text-darkblue font-bold text-lg"> Fuel Card</h5>
         </div>
         <button
           className="text-ligherdarkblue text-opacity-80 hover:text-opacity-100"
@@ -102,18 +102,18 @@ function OrderFuel({ handleCloseOrder, handleClose }) {
           </label>
           <select
             id="staff"
-            className="text-xs px-3 py-3 border text-lightgray w-100 focus:outline-none focus:ring-darkblue focus:border-darkblue focus:z-10"
+            className="text-xs px-3 py-3 border text-boldgray w-100 focus:outline-none focus:ring-darkblue focus:border-darkblue focus:z-10"
           >
-            <option className="text-xs text-lightgray" selected>
+            <option className="text-xs text-boldgray" selected>
               Select Staff
             </option>
-            <option className="text-xs text-lightgray" value="blue">
+            <option className="text-xs text-boldgray" value="blue">
               Staff1
             </option>
-            <option className="text-xs text-lightgray" value="black">
+            <option className="text-xs text-boldgray" value="black">
               Staff1
             </option>
-            <option className="text-xs text-lightgray" value="white">
+            <option className="text-xs text-boldgray" value="white">
               Staff1
             </option>
           </select>
@@ -128,7 +128,7 @@ function OrderFuel({ handleCloseOrder, handleClose }) {
             name="amount"
             id="amount"
             autoComplete="amount"
-            className="flex-1 appearance-none rounded-none relative block w-full px-3 py-3 placeholder-lightgray text-lightgray rounded-b-md focus:outline-none focus:ring-darkblue focus:border-darkblue focus:z-10 sm:text-xs"
+            className="flex-1 appearance-none rounded-none relative block w-full px-3 py-3 placeholder-boldgray text-boldgray rounded-b-md focus:outline-none focus:ring-darkblue focus:border-darkblue focus:z-10 sm:text-xs"
             placeholder="Enter amount to pop up"
           />
         </div>
@@ -138,7 +138,7 @@ function OrderFuel({ handleCloseOrder, handleClose }) {
             handleCloseOrder();
             handleClose();
           }}
-          className="bg-ligherdarkblue opacity-80 hover:opacity-100 rounded-sm py-2 w-100 text-white text-sm"
+          className="bg-ligherdarkblue opacity-80 hover:opacity-100 rounded-sm py-3 w-100 text-white text-sm"
         >
           Confirm Order
         </button>

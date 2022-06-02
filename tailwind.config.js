@@ -28,6 +28,9 @@ module.exports = {
       pink: colors.pink,
       whitecolor: "#FFFFFF",
       darkwhite: "#FAFAFF",
+      lightgray: "#8694AF",
+      lightergray: "rgba(30, 53, 92, 0.5)",
+      boldgray: "rgba(115, 128, 149, 1)",
       lighdeepblue: "#145DA0",
       darkblue: "#1E355C",
       darkerblue: "#0C2D48",
@@ -35,7 +38,6 @@ module.exports = {
       paleblue: "#F1F5FF",
       paleindigo: "#E6EDFE",
       lightgreen: "#34BEB9",
-      lightgray: "#8694AF",
     },
     spacing: {
       px: "1px",
