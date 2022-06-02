@@ -41,7 +41,7 @@ function ServiceUsage() {
       );
       gradient.addColorStop(1, "rgba(46, 139, 192, 1)");
       gradient.addColorStop(0.5, "rgba(46, 139, 192, 1)");
-      gradient.addColorStop(0, "rgba(46, 139, 192, 0)");
+      gradient.addColorStop(0, "rgba(46, 139, 192, 0.4)");
     }
 
     return gradient;

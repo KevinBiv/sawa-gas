@@ -25,7 +25,7 @@ function Sidebar() {
           <img src={curvedCircleImg} alt="logo" className="absolute top-0" />
         </div>
         <div className="flex justify-center">
-          <hr className="w-1/2 text-paleblue" />
+          <hr className="w-1/2 text-gray-600" />
         </div>
 
         <div className=" space-y-4 flex-1 my-10">
@@ -204,7 +204,7 @@ function Sidebar() {
         </div>
         <div className="absolute bottom-0 left-10">
           <div className="flex justify-center">
-            <hr className=" text-paleblue w-32" />
+            <hr className=" text-gray-600 w-32" />
           </div>
 
           <div className="flex justify-center items-center my-4">

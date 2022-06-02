@@ -200,7 +200,7 @@ function MobileSidebar() {
         </div>
         <div className="absolute bottom-0 left-10">
           <div className="flex justify-center">
-            <hr className="w-32 text-paleblue" />
+            <hr className="w-32 text-gray-600" />
           </div>
 
           <div className="flex justify-center items-center my-4">
