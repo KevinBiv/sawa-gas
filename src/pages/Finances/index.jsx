@@ -35,14 +35,14 @@ function Finances() {
             setSelectedDate={setSelectedDate}
           />
           <div>
-            <select className=" rounded-sm relative block w-full px-3 py-2 placeholder-lightgray text-lightgray rounded-t-md focus:outline-none focus:ring-lightgreen focus:border-lightgreen focus:z-10 sm:text-sm">
-              <option selected className="text-sm text--lightgray">
+            <select className=" rounded-sm relative block w-full px-3 py-2 placeholder-lightgray text-lightgray rounded-t-md focus:outline-none focus:ring-lightgreen focus:border-lightgreen focus:z-10 text-xs">
+              <option selected className="text-xs text--lightgray">
                 Sort Department
               </option>
-              <option className="text-sm text-lightgray" value="Marketing">
+              <option className="text-xs text-lightgray" value="Marketing">
                 Marketing
               </option>
-              <option className="text-sm text-lightgray" value="Production">
+              <option className="text-xs text-lightgray" value="Production">
                 Production
               </option>
             </select>
