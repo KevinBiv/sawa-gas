@@ -66,7 +66,7 @@ function ServicesPreferences() {
                     <div className="">
                       <img
                         src={choiceImg1}
-                        alt="bus image"
+                        alt="Public bus image"
                         className="w-100  object-cover"
                       />
                     </div>
@@ -77,7 +77,7 @@ function ServicesPreferences() {
                     <div className="">
                       <img
                         src={choiceImg2}
-                        alt="bus image"
+                        alt="taxi image"
                         className="w-100  object-cover"
                       />
                     </div>
@@ -88,7 +88,7 @@ function ServicesPreferences() {
                     <div className="">
                       <img
                         src={choiceImg3}
-                        alt="bus image"
+                        alt="Fuel image"
                         className="w-100  object-cover"
                       />
                     </div>
@@ -99,7 +99,7 @@ function ServicesPreferences() {
                     <div className="">
                       <img
                         src={choiceImg4}
-                        alt="bus image"
+                        alt="School bus image"
                         className="w-100 object-cover"
                       />
                     </div>
@@ -110,7 +110,7 @@ function ServicesPreferences() {
                     <div className="">
                       <img
                         src={choiceImg5}
-                        alt="bus image"
+                        alt="bicycle image"
                         className="w-100 object-cover"
                       />
                     </div>
@@ -120,7 +120,7 @@ function ServicesPreferences() {
                     <div className="">
                       <img
                         src={choiceImg6}
-                        alt="bus image"
+                        alt="cab image"
                         className="w-100 object-cover"
                       />
                     </div>

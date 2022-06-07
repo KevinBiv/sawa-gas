@@ -16,7 +16,7 @@ function Sidebar() {
   const history = useHistory();
   return (
     <div className="md:relative">
-      <div className=" hidden md:block h-screen sticky top-0 z-20 flex flex-col">
+      <div className=" hidden md:block h-screen sticky top-0 z-20 flex flex-col w-52">
         <div className="flex justify-center m-2  relative">
           <div className="p-14">
             <img src={imgLogo} alt="logo" className="w-20" />
@@ -81,8 +81,8 @@ function Sidebar() {
             <NavLink
               to="/dashboard/people"
               exact
-              className="w-100 px-10 flex items-center space-x-2 text-lightergray hover:border-r-4 hover:border-ligherdarkblue hover:text-ligherdarkblue hover:no-underline "
-              activeClassName="text-ligherdarkblue no-underline border-r-4 border-ligherdarkblue "
+              className="w-100 px-10 flex items-center  space-x-2 text-lightergray hover:border-r-4 hover:border-ligherdarkblue hover:text-ligherdarkblue hover:no-underline "
+              activeClassName="text-ligherdarkblue no-underline border-r-4 border-ligherdarkblue"
             >
               <svg
                 width="24"

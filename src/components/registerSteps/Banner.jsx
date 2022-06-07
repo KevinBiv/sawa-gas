@@ -7,25 +7,21 @@ import circleImg from "../../assets/images/circleImg.png";
 function Banner() {
   return (
     <div className="register bg-ligherdarkblue relative  justify-center items-center hidden md:flex overflow-hidden">
-      <img
-        src={topCircle1}
-        alt="Nurse "
-        className="absolute top-0 left-0 w-20"
-      />
+      <img src={topCircle1} alt="Icon" className="absolute top-0 left-0 w-20" />
       <img
         src={topCircle2}
-        alt="Nurse "
+        alt="Icon"
         className="absolute w-32 top-16 left-9"
       />
 
       <div className="w-1/2  relative flex justify-center items-center ">
-        <img src={circleImg} alt="Nurse " className="relative " />
-        <img src={carImg} alt="Nurse " className="absolute left-4" />
+        <img src={circleImg} alt="Icon" className="relative " />
+        <img src={carImg} alt="Car Icon" className="absolute left-4" />
       </div>
 
       <img
         src={bottomDots}
-        alt="Nurse "
+        alt="Icon"
         className="absolute bottom-0 right-0 w-100"
       />
     </div>

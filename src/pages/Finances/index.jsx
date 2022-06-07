@@ -161,7 +161,7 @@ function Finances() {
         </div>
       </div>
       <Modal show={showModal} onHide={handleClose}>
-        <Modal.Body className="bg-indigo-100 ">
+        <Modal.Body className="bg-paleindigo ">
           <FilterReport handleClose={handleClose} />
         </Modal.Body>
       </Modal>

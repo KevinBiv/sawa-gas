@@ -12,7 +12,6 @@ function Navbar() {
       </button>
       <div className="">
         <img src={imgLogo} alt="logo" className="max-h-6 object-cover" />
-        {/* flex flex-col justify-center items-center m-3 1 p-6 */}
       </div>
     </div>
   );

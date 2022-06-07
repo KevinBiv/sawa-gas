@@ -62,7 +62,7 @@ function People() {
       </div>
 
       <div className=" rounded-1">
-        <div className="  overflow-auto ">
+        <div className="overflow-auto ">
           <table
             className="table table-borderless  space-y-2"
             id="people-table"

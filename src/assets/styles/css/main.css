@@ -148,7 +148,18 @@ body {
   background-color: rgba(30, 53, 92, 1) !important;
 }
 .react-datepicker__day--selected {
-  background-color: rgba(30, 53, 92, 1) !important;
+  background-color: #216ba5 !important;
+}
+
+.react-datepicker__day--keyboard-selected,
+.react-datepicker__quarter-text--keyboard-selected,
+.react-datepicker__year-text--keyboard-selected {
+  border-radius: 0.3rem;
+  background-color: #fff;
+  color: #8694af;
+}
+.react-datepicker__day--in-range {
+  background-color: #216ba5 !important;
 }
 .react-datepicker-popper {
   z-index: 10;

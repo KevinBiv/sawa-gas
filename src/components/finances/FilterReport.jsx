@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import moment from "moment";
-function FilterReport() {
+function FilterReport({ handleClose }) {
   const [sortDuration, setSortDuration] = useState([
     { name: "day", checked: false },
     { name: "week", checked: false },
@@ -13,6 +13,7 @@ function FilterReport() {
   const [selectedSortDuration, setSelectedSortDuration] = useState("week");
   const [dateSelected, setDateSelected] = useState({
     startDate: new Date(),
+    dateSelected: new Date(),
     weekRange: {
       from: moment().startOf("isoWeek").toDate(),
       to: moment().endOf("isoWeek").toDate(),
@@ -20,8 +21,8 @@ function FilterReport() {
 
     weekDays: {},
   });
+  console.log("date selected:", dateSelected, selectedSortDuration);
   const changeStartDate = (date) => {
-    console.log("date selected:", date, selectedSortDuration);
     setDateSelected({ ...dateSelected, dateSelected: date });
     if (selectedSortDuration === "week") {
       getWeekRange(date);
@@ -42,7 +43,7 @@ function FilterReport() {
       weekDays: days,
     });
   }
-  console.log("ddddddddddd", hidePicker);
+
   return (
     <div className="p-6 sm:p-10 space-y-6">
       <h5 className="font-black text-darkblue text-lg text-center">
@@ -58,7 +59,6 @@ function FilterReport() {
             value="day"
             selected={selectedSortDuration === "day" ? true : false}
             required
-            // onChange={(e) => setSelectedSortDuration(e.target.value)}
             onChange={(e) => {
               setHidePicker(false);
               setSelectedSortDuration(e.target.value);
@@ -77,7 +77,6 @@ function FilterReport() {
             value="week"
             selected={selectedSortDuration === "week" ? true : false}
             required
-            // onChange={(e) => setSelectedSortDuration(e.target.value)}
             onChange={(e) => {
               setHidePicker(false);
               setSelectedSortDuration(e.target.value);
@@ -99,7 +98,6 @@ function FilterReport() {
             value="month"
             selected={selectedSortDuration === "month" ? true : false}
             required
-            // onChange={(e) => setSelectedSortDuration(e.target.value)}
             onChange={(e) => {
               setHidePicker(false);
               setSelectedSortDuration(e.target.value);
@@ -137,7 +135,9 @@ function FilterReport() {
       <div className="flex justify-center">
         {!hidePicker ? (
           <DatePicker
-            selected={dateSelected?.startDate}
+            selected={
+              selectedSortDuration === "day" ? dateSelected?.dateSelected : null
+            }
             onChange={(date) => {
               if (selectedSortDuration === "year") {
                 changeStartDate(date);
@@ -149,7 +149,7 @@ function FilterReport() {
             startDate={
               selectedSortDuration === "week"
                 ? dateSelected.weekRange && dateSelected.weekRange.from
-                : dateSelected?.startDate
+                : null
             }
             endDate={
               selectedSortDuration === "week"
@@ -183,7 +183,7 @@ function FilterReport() {
         ) : null}
       </div>
       <button
-        //   onClick={() => setShowModal(true)}
+        onClick={() => handleClose()}
         className=" w-100 px-10 py-2 bg-ligherdarkblue hover:opacity-70 text-white text-sm rounded-md "
       >
         {" "}

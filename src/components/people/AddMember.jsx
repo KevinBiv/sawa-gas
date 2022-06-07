@@ -71,7 +71,11 @@ function AddMember({ handleClose }) {
             placeholder="Sawa ID"
           />
         </div>
-        <button className="bg-ligherdarkblue py-2 w-100 text-white text-sm">
+        <button
+          type="button"
+          onClick={() => handleClose()}
+          className="bg-ligherdarkblue py-2 w-100 text-white text-sm"
+        >
           Add Member
         </button>
       </form>
