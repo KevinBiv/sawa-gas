@@ -4,13 +4,10 @@ import WeeklyFilter from "../filters/weeklyFilter";
 import Shimmers from "../loaders/Shimmers";
 import moment from "moment";
 import { Bar, Line } from "react-chartjs-2";
+import StatisticsTimeFilter from "../filters/StatisticsTimeFilter";
 function LatestExpenses() {
-  const {
-    isFetchingIncomesStatistics,
-    isFetchingPatientsStatistics,
-    incomesStatistics,
-    expensesStatistics,
-  } = useSelector(({ Statistics }) => Statistics);
+  const { isFetchingIncomesStatistics, incomesStatistics, expensesStatistics } =
+    useSelector(({ Statistics }) => Statistics);
   const [weeklyDate, setWeeklyDate] = useState({
     startDate: new Date(),
     weekRange: {
@@ -28,12 +25,14 @@ function LatestExpenses() {
           <Shimmers height="300px" width="400px" className="overflow-hidden" />
         ) : (
           <div className="col-span-3 p-6 bg-white rounded-3">
-            <div className=" flex">
+            {/* <div className=" flex">
               <WeeklyFilter
                 weeklyDate={weeklyDate}
                 setweeklyDate={setWeeklyDate}
               />
-              <div></div>
+            </div> */}
+            <div>
+              <StatisticsTimeFilter />
             </div>
             <div>
               <Line
@@ -65,15 +64,18 @@ function LatestExpenses() {
                       min: 0,
                       max: 1000,
                       suggestedMax: 1000,
+
                       grid: {
                         display: true,
                       },
                       ticks: {
                         display: true,
+                        maxTicksLimit: 200,
+                        stepSize: 200,
                         color: "#8694AF",
                         callback: function (value, index, ticks) {
                           if (value === 1000) {
-                            return value + " M";
+                            return value / 1000 + " M";
                           } else {
                             return value + " K";
                           }
@@ -114,8 +116,12 @@ function LatestExpenses() {
                         label: function (context) {
                           var label = context.label;
                           var currentValue = context.raw;
-
-                          return currentValue + " K";
+                          if (currentValue >= 1000) {
+                            return currentValue / 1000 + " M";
+                          } else {
+                            return currentValue + " K";
+                          }
+                          // return currentValue + " K";
                         },
                       },
                     },
@@ -125,7 +131,7 @@ function LatestExpenses() {
             </div>
           </div>
         )}
-        {isFetchingPatientsStatistics ? (
+        {isFetchingIncomesStatistics ? (
           <Shimmers height="300px" width="400px" className="overflow-hidden" />
         ) : (
           <div className="bg-ligherdarkblue p-6 space-y-6 col-span-2 rounded-3">

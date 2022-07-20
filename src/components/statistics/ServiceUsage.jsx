@@ -8,12 +8,9 @@ import Shimmers from "../loaders/Shimmers";
 import WeeklyFilter from "../filters/weeklyFilter";
 import moment from "moment";
 function ServiceUsage() {
-  const {
-    isFetchingIncomesStatistics,
-    isFetchingPatientsStatistics,
-    incomesStatistics,
-    patientsStatistics,
-  } = useSelector(({ Statistics }) => Statistics);
+  const { isFetchingIncomesStatistics, incomesStatistics } = useSelector(
+    ({ Statistics }) => Statistics
+  );
   const [weeklyDate, setWeeklyDate] = useState({
     startDate: new Date(),
     weekRange: {
@@ -51,7 +48,7 @@ function ServiceUsage() {
       <h2 className="font-bold text-darkblue text-lg mt-2 mb-3.5">
         Services Usage
       </h2>
-      {isFetchingPatientsStatistics ? (
+      {isFetchingIncomesStatistics ? (
         <Shimmers height="300px" width="400px" className="overflow-hidden" />
       ) : (
         <div className="relative bg-white space-y-6 px-3.5 py-10 rounded-3">
@@ -122,7 +119,7 @@ function ServiceUsage() {
                     title: {
                       display: false,
                       color: "rgba(64, 137, 237, 1)",
-                      text: "Patients",
+                      text: "Services",
                     },
                   },
                   x: {
@@ -137,7 +134,7 @@ function ServiceUsage() {
                 plugins: {
                   title: {
                     display: false,
-                    text: "Patients",
+                    text: "Services",
                     align: "start",
                     color: "#6b7280",
                     font: { size: "12px", weight: "normal" },
@@ -151,7 +148,7 @@ function ServiceUsage() {
                       boxHeight: 0,
                     },
                     title: {
-                      text: patientsStatistics?.total_patients,
+                      text: incomesStatistics?.total_incomes,
                       hidden: false,
                     },
                   },

@@ -1,7 +1,6 @@
 import actionTypes from "../actions/types";
 
 const user = JSON.parse(localStorage.getItem("user"));
-console.log("user:", user);
 const initialState = {
   userInfo: user?.user ?? null,
   loggedIn: user ? true : false,

@@ -21,7 +21,6 @@ function FilterReport({ handleClose }) {
 
     weekDays: {},
   });
-  console.log("date selected:", dateSelected, selectedSortDuration);
   const changeStartDate = (date) => {
     setDateSelected({ ...dateSelected, dateSelected: date });
     if (selectedSortDuration === "week") {

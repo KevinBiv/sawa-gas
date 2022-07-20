@@ -45,7 +45,7 @@ function People() {
             Add
           </button>
           <div className="my-1 mx-2 md:mx-0 lg:my-0">
-            <select className=" rounded-sm relative block w-full px-3 py-2 placeholder-lightgray text-lightgray rounded-t-md focus:outline-none focus:ring-lightgreen focus:border-lightgreen focus:z-10 text-xs">
+            <select className="bg-white rounded-sm relative block w-full px-3 py-2 placeholder-lightgray text-lightgray rounded-t-md focus:outline-none focus:ring-lightgreen focus:border-lightgreen focus:z-10 text-xs">
               <option selected className="text-xs text-lightgray">
                 Department
               </option>
@@ -89,10 +89,7 @@ function People() {
                       (index === 0
                         ? " border-t-8 border-paleblue "
                         : " border-l-15 border-r-15  ") +
-                      (index % 2 == 0
-                        ? " bg-whitecolor "
-                        : " bg-paleblue rounded-xl ") +
-                      "items-center"
+                      "bg-whitecolor  hover:bg-paleblue rounded-xl items-center"
                     }
                     key={index}
                   >
@@ -115,13 +112,13 @@ function People() {
                       {person?.gender}
                     </td>
 
-                    <td className="font-bold text-xs pt-3 text-darkblue ">
+                    <td className="font-bold text-xs pt-3 text-darkblue w-52">
                       <div className="flex space-x-2">
                         <button
                           onClick={() => {
                             setOpenDeleteMemberModal(true);
                           }}
-                          className="w-100 text-sm  bg-red-500 opacity-90 hover:bg-red-600 text-white  rounded-sm py-1 px-3"
+                          className=" text-sm  bg-red-500 opacity-90 hover:bg-red-600 text-white  rounded-sm py-1 px-3"
                         >
                           remove
                         </button>
@@ -129,7 +126,7 @@ function People() {
                           onClick={() => {
                             setOpenUpdateMemberModal(true);
                           }}
-                          className="w-100 text-sm bg-ligherdarkblue text-white opacity-80 hover:opacity-100 rounded-sm py-1 px-3"
+                          className=" text-sm bg-ligherdarkblue text-white opacity-80 hover:opacity-100 rounded-sm py-1 px-3"
                         >
                           update
                         </button>

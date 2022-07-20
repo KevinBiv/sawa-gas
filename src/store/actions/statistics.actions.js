@@ -10,8 +10,3 @@ export const getIncomesStatistics = () => {
     dispatch({ type: actionTypes.getIncomesStatistics });
   };
 };
-export const getPatientsStatistics = () => {
-  return (dispatch) => {
-    dispatch({ type: actionTypes.getPatientsStatistics });
-  };
-};

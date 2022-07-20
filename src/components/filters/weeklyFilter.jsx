@@ -17,7 +17,7 @@ function WeeklyFilter({ weeklyDate, setweeklyDate }) {
     setweeklyDate({ ...weeklyDate, startDate: date });
     getWeekRange(date);
   };
-  console.log("dates:", weeklyDate);
+
   function getWeekRange(date) {
     var weekDaysRange = {
       from: moment(date).startOf("isoWeek").toDate(),

@@ -128,7 +128,7 @@ function DefaultSidebar() {
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <g clip-path="url(#clip0_8_515)">
+              <g clipPath="url(#clip0_8_515)">
                 <path
                   d="M19.4297 15.9204C19.4297 16.301 19.7728 16.6092 20.1965 16.6092H21.5366C21.9603 16.6092 22.3034 16.301 22.3034 15.9204V15.061H19.4297V15.9204Z"
                   fill="currentColor"

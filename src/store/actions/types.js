@@ -26,45 +26,6 @@ const actionTypes = {
   updateProfile: "UPDATE PROFILE",
   updateProfileSuccess: "UPDATE PROFILE SUCCESSFUL",
   updateProfileFail: "UPDATE PROFILE FAILED",
-  //Availability
-  createAvailability: "CREATE AVAILABILITY",
-  createAvailabilitySuccess: "CREATE AVAILABILITY SUCCESSFUL",
-  createAvailabilityFail: "CREATE AVAILABILITY FAILED",
-
-  getAvailability: "GET AVAILABILITY",
-  getAvailabilitySuccess: "GET AVAILABILITY SUCCESSFUL",
-  getAvailabilityFail: "GET AVAILABILITY FAILED",
-
-  updateAvailability: "UPDATE AVAILABILITY",
-  updateAvailabilitySuccess: "UPDATE AVAILABILITY SUCCESSFUL",
-  updateAvailabilityFail: "UPDATE AVAILABILITYE FAILED",
-  //Subscriptions
-  createSubscription: "CREATE SUBSCRIPTIONS",
-  createSubscriptionSuccess: "CREATE SUBSCRIPTIONS SUCCESSFUL",
-  createSubscriptionFail: "CREATE SUBSCRIPTIONS FAILED",
-
-  getSubscriptions: "GET SUBSCRIPTIONS",
-  getSubscriptionsSuccess: "GET SUBSCRIPTIONS SUCCESSFUL",
-  getSubscriptionsFail: "GET SUBSCRIPTIONS FAILED",
-
-  updateSubscription: "UPDATE SUBSCRIPTIONS",
-  updateSubscriptionSuccess: "UPDATE SUBSCRIPTIONS SUCCESSFUL",
-  updateSubscriptionFail: "UPDATE SUBSCRIPTIONS FAILED",
-
-  deleteSubscription: "DELETE SUBSCRIPTIONS",
-  deleteSubscriptionSuccess: "DELETE SUBSCRIPTIONS SUCCESSFUL",
-  deleteSubscriptionFail: "DELETE SUBSCRIPTIONS FAILED",
-  setSelectedSubscription: "SET SELECTED SUBSCRIPTIONS",
-  //Charts
-  getCharts: "GET CHARTS USER",
-  getChartsSuccess: "GET CHARTS SUCCESSFUL",
-  getChartsFail: "GET CHARTS FAILED",
-
-  sendChart: "SEND CHART USER",
-  sendChartSuccess: "SEND CHART SUCCESSFUL",
-  sendChartFail: "SEND CHART FAILED",
-
-  setSelectedChart: "SET SELECTED CHART",
 
   //Report
   getReport: "GET REPORT",
@@ -76,11 +37,6 @@ const actionTypes = {
   sendReportFail: "SEND REPORT FAILED",
 
   setSelectedReport: "SET SELECTED REPORT",
-
-  //Patients
-  getPatients: "GET PATIENTS",
-  getPatientsSuccess: "GET PATIENTS SUCCESSFUL",
-  getPatientsFail: "GET PATIENTS FAILED",
 
   //Services
   getServices: "GET SERVICES",
@@ -99,16 +55,7 @@ const actionTypes = {
   getIncomes: "GET INCOMES",
   getIncomesSuccess: "GET INCOMES SUCCESSFUL",
   getIncomesFail: "GET INCOMES FAILED",
-  //Nurses
-  getNurses: "GET NURSES",
-  getNursesSuccess: "GET NURSES SUCCESSFUL",
-  getNursesFail: "GET NURSES FAILED",
 
-  getPendingNurses: "GET PENDING NURSES",
-  getPendingNursesSuccess: "GET PENDING NURSES SUCCESSFUL",
-  getPendingNursesFail: "GET PENDING NURSES FAILED",
-
-  setSelectedNurse: "SET SELECTED NURSE",
   //Statistics
   getGeneralStatistics: "GET GENERAL STATISTICS",
   getGeneralStatisticsSuccess: "GET GENERAL STATISTICS SUCCESSFUL",
@@ -118,9 +65,6 @@ const actionTypes = {
   getIncomesStatisticsSuccess: "GET INCOME STATISTICS SUCCESSFUL",
   getIncomesStatisticsFail: "GET INCOME STATISTICS FAILED",
 
-  getPatientsStatistics: "GET PATIENTS STATISTICS",
-  getPatientsStatisticsSuccess: "GET PATIENTS STATISTICS SUCCESSFUL",
-  getPatientsStatisticsFail: "GET PATIENTS STATISTICS FAILED",
   //Styles
   setShowSidebar: "SET SHOW SIDEBAR",
 };

@@ -2,10 +2,9 @@ import actionTypes from "../actions/types";
 
 const initialState = {
   generalStatistics: {
-    patients: 145,
-    nurses: 210,
-    payments: 450,
-    reports: 12,
+    balance: 145,
+    people: 210,
+    expenses: 450,
   },
   incomesStatistics: {
     labels: ["Bus", "Bike", "Taxi", "Fuel", "Cab", "Bicycle", "School Bus"],
@@ -13,13 +12,9 @@ const initialState = {
   },
   expensesStatistics: {
     labels: ["Mon", "Tue", "Wed", "Thur", "Fri", "Sat", "Sun"],
-    income_numbers: [500, 300, 450, 400, 500, 600, 300, 700, 600],
+    income_numbers: [500, 300, 450, 400, 500, 600, 300],
   },
-  patientsStatistics: {
-    total_patients: 145,
-    labels: ["21", "22", "23", "24", "25", "26"],
-    income_numbers: [200, 150, 200, 300, 100, 50],
-  },
+
   totalExpensesStatistics: {
     total_expenses: 145,
     labels: ["cab", "taxi", "bus", "bike", "fuel", "taxi"],
@@ -28,7 +23,6 @@ const initialState = {
 
   isFetchingGeneralStatistics: false,
   isFetchingIncomesStatistics: false,
-  isFetchingPatientsStatistics: false,
   errors: null,
   message: null,
 };
@@ -70,25 +64,6 @@ export default (state = initialState, action) => {
         ...state,
         errors: action.payload,
         isFetchingIncomesStatistics: false,
-      };
-
-    case actionTypes.getPatientsStatistics:
-      return {
-        ...state,
-        isFetchingPatientsStatistics: true,
-        errors: null,
-      };
-    case actionTypes.getPatientsStatisticsSuccess:
-      return {
-        ...state,
-        patientsStatistics: action.payload,
-        isFetchingPatientsStatistics: false,
-      };
-    case actionTypes.getPatientsStatisticsFail:
-      return {
-        ...state,
-        errors: action.payload,
-        isFetchingPatientsStatistics: false,
       };
 
     default:

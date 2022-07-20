@@ -8,12 +8,9 @@ import Shimmers from "../loaders/Shimmers";
 import WeeklyFilter from "../filters/weeklyFilter";
 import moment from "moment";
 function IncomeStatistics() {
-  const {
-    isFetchingIncomesStatistics,
-    isFetchingPatientsStatistics,
-    incomesStatistics,
-    patientsStatistics,
-  } = useSelector(({ Statistics }) => Statistics);
+  const { isFetchingIncomesStatistics, incomesStatistics } = useSelector(
+    ({ Statistics }) => Statistics
+  );
   const [weeklyDate, setWeeklyDate] = useState({
     startDate: new Date(),
     weekRange: {
@@ -121,7 +118,7 @@ function IncomeStatistics() {
             </div>
           </div>
         )}
-        {isFetchingPatientsStatistics ? (
+        {isFetchingIncomesStatistics ? (
           <Shimmers height="300px" width="400px" className="overflow-hidden" />
         ) : (
           <div className="relative">
@@ -174,7 +171,7 @@ function IncomeStatistics() {
                       title: {
                         display: false,
                         color: "rgba(64, 137, 237, 1)",
-                        text: "Patients",
+                        text: "Services",
                       },
                     },
                     x: {
@@ -186,7 +183,7 @@ function IncomeStatistics() {
                   plugins: {
                     title: {
                       display: false,
-                      text: "Patients",
+                      text: "Services",
                       align: "start",
                       color: "#6b7280",
                       font: { size: "12px", weight: "normal" },
@@ -200,7 +197,7 @@ function IncomeStatistics() {
                         boxHeight: 0,
                       },
                       title: {
-                        text: patientsStatistics?.total_patients,
+                        text: incomesStatistics?.total_incomes,
                         hidden: false,
                       },
                     },
@@ -210,7 +207,7 @@ function IncomeStatistics() {
                           var label = context.label;
                           var currentValue = context.raw;
 
-                          return currentValue + " patients";
+                          return currentValue + " services";
                         },
                       },
                     },

@@ -1,4 +1,4 @@
-/*! tailwindcss v2.2.16 | MIT License | https://tailwindcss.com */
+/*! tailwindcss v2.2.19 | MIT License | https://tailwindcss.com */
 
 /*! modern-normalize v1.1.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
 
@@ -10246,8 +10246,7 @@ video {
 }
 
 .appearance-none {
-  -webkit-appearance: none;
-          appearance: none;
+  appearance: none;
 }
 
 .auto-cols-auto {
@@ -41754,8 +41753,7 @@ video {
   }
 
   .sm\:appearance-none {
-    -webkit-appearance: none;
-            appearance: none;
+    appearance: none;
   }
 
   .sm\:auto-cols-auto {
@@ -73250,8 +73248,7 @@ video {
   }
 
   .md\:appearance-none {
-    -webkit-appearance: none;
-            appearance: none;
+    appearance: none;
   }
 
   .md\:auto-cols-auto {
@@ -104746,8 +104743,7 @@ video {
   }
 
   .lg\:appearance-none {
-    -webkit-appearance: none;
-            appearance: none;
+    appearance: none;
   }
 
   .lg\:auto-cols-auto {
@@ -136242,8 +136238,7 @@ video {
   }
 
   .xl\:appearance-none {
-    -webkit-appearance: none;
-            appearance: none;
+    appearance: none;
   }
 
   .xl\:auto-cols-auto {
@@ -167738,8 +167733,7 @@ video {
   }
 
   .\32xl\:appearance-none {
-    -webkit-appearance: none;
-            appearance: none;
+    appearance: none;
   }
 
   .\32xl\:auto-cols-auto {

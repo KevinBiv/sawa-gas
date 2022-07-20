@@ -35,7 +35,7 @@ function Finances() {
             setSelectedDate={setSelectedDate}
           />
           <div>
-            <select className=" rounded-sm relative block w-full px-3 py-2 placeholder-lightgray text-lightgray rounded-t-md focus:outline-none focus:ring-lightgreen focus:border-lightgreen focus:z-10 text-xs">
+            <select className="bg-white rounded-sm relative block w-full px-3 py-2 placeholder-lightgray text-lightgray rounded-t-md focus:outline-none focus:ring-lightgreen focus:border-lightgreen focus:z-10 text-xs">
               <option selected className="text-xs text--lightgray">
                 Sort Department
               </option>
@@ -90,7 +90,7 @@ function Finances() {
                         // (index % 2 == 0
                         //   ? " bg-whitecolor "
                         //   : "  bg-whitecolor") +
-                        "items-center bg-whitecolor rounded-xl"
+                        "items-center bg-whitecolor  hover:bg-paleblue  rounded-xl"
                       }
                       key={index}
                     >

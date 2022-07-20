@@ -125,7 +125,7 @@ function TotalExpenses() {
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <g clip-path="url(#clip0_43_67)">
+              <g clipPath="url(#clip0_43_67)">
                 <path
                   d="M17.9045 23.0864C17.9045 23.6276 18.3429 24.0659 18.8841 24.0659H20.596C21.1372 24.0659 21.5756 23.6276 21.5756 23.0864V21.8643H17.9045V23.0864Z"
                   fill="#003F6B"

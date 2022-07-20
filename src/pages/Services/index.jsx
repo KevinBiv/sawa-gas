@@ -47,9 +47,7 @@ function Services() {
                 <td className="text-darkblue font-bold text-sm py-4">
                   Service{" "}
                 </td>
-                <td className="text-darkblue font-bold text-sm py-4">
-                  Amount Paid
-                </td>
+                <td className="text-darkblue font-bold text-sm py-4">Amount</td>
                 <td className="text-darkblue font-bold text-sm py-4">Status</td>
               </tr>
             </thead>
@@ -61,11 +59,12 @@ function Services() {
                 services.length !== 0 &&
                 slice.map((service, index) => (
                   <tr
-                    className={
-                      (index % 2 == 0
-                        ? " bg-whitecolor "
-                        : " bg-paleblue rounded-xl ") + "items-center"
-                    }
+                    // className={
+                    //   (index % 2 == 0
+                    //     ? " bg-whitecolor "
+                    //     : " bg-paleblue rounded-xl ") + "items-center"
+                    // }
+                    className="bg-whitecolor  hover:bg-paleblue rounded-xl items-center"
                     key={index}
                   >
                     {/* <td className="font-bold text-xs  py-4 text-blue-500"> {(payment.created_at&&payment.created_at.substring(0, 10))??"-"}</td> */}

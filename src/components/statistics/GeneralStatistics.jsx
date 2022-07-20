@@ -4,7 +4,7 @@ import DayFilter from "../filters/DayFilter";
 function GeneralStatistics() {
   const [selectedDate, setSelectedDate] = useState(new Date());
   return (
-    <div className=" col-span-2 grid grid-cols-1 md:grid-cols-3 gap-2 p-2 bg-white rounded-3">
+    <div className=" col-span-2 grid grid-cols-1 md:grid-cols-3 gap-2 px-2 py-4 bg-white rounded-3">
       <div className="flex space-x-3">
         <div className="py-1 px-2 rounded-circle bg-ligherdarkblue flex items-center">
           <svg

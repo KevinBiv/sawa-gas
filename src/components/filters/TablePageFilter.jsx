@@ -9,7 +9,6 @@ function TablePageFilter({ range, setPage, page, slice }) {
       setPage(page - 1);
     }
   }, [slice, page, setPage]);
-  console.log("page:", page);
   return (
     <div className="flex-1 flex justify-center items-center">
       <div className="bg-white py-2 px-10 rounded-xl space-x-3 flex items-center">
