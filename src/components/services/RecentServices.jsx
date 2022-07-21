@@ -16,7 +16,7 @@ function RecentServices() {
         <table className="expenses table table-borderless  space-y-2 ">
           <thead className="bg-white rounded-3  border-white  ">
             <tr>
-              <td className="text-lightergray font-semibold text-sm py-2">
+              <td className="text-lightergray font-semibold text-sm py-2 ">
                 Date
               </td>
               <td className="text-lightergray font-semibold text-sm py-2">
@@ -39,15 +39,12 @@ function RecentServices() {
               services.map((service, index) => (
                 <tr
                   className={
-                    (index % 2 == 0
-                      ? " "
-                      : " bg-whitecolor border-t-2 border-paleblue rounded-xl ") +
-                    " bg-whitecolor items-center"
+                    (index === 0 ? " border-paleblue " : " border-t-2 ") +
+                    "items-center bg-whitecolor  hover:bg-paleblue  rounded-xl"
                   }
                   key={index}
                 >
-                  {/* <td className="font-bold text-xs  py-4 text-blue-500"> {(payment.created_at&&payment.created_at.substring(0, 10))??"-"}</td> */}
-                  <td className="font-bold text-xs py-3 text-darkblue">
+                  <td className="font-bold text-xs py-3 text-darkblue ">
                     {service?.date}
                   </td>
                   <td className="font-bold text-xs py-3 text-darkblue">

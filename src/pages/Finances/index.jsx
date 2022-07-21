@@ -58,7 +58,6 @@ function Finances() {
           <div className=" px-3 py-3.5 lg:py-4 overflow-auto ">
             <table className="table table-borderless  space-y-2 ">
               <thead className="bg-darkblue rounded-md  border-darkblue ">
-                {/* relative */}
                 <tr className=" rounded-md border-paleblue">
                   <td className="text-white text-sm py-4">Date</td>
                   <td className="text-white text-sm py-4">Expense</td>
@@ -68,7 +67,6 @@ function Finances() {
                 </tr>
               </thead>
               <tbody className="bg-white rounded-2 border-white relative w-100 top-5">
-                {/* relative z-30 w-100 top-8 */}
                 {isFetchingFinances ? (
                   <TableRowShimmers cols={6} />
                 ) : (
@@ -76,26 +74,12 @@ function Finances() {
                   finances.length !== 0 &&
                   finances.map((finance, index) => (
                     <tr
-                      // className={
-                      //   (index === 0
-                      //     ? " border-t-8 border-paleblue "
-                      //     : " border-l-15 border-r-15  ") +
-                      //   (index % 2 == 0
-                      //     ? " bg-whitecolor "
-                      //     : " bg-paleblue rounded-xl ") +
-                      //   "items-center"
-                      // }
                       className={
                         (index === 0 ? " border-paleblue " : " border-t-2 ") +
-                        // (index % 2 == 0
-                        //   ? " bg-whitecolor "
-                        //   : "  bg-whitecolor") +
                         "items-center bg-whitecolor  hover:bg-paleblue  rounded-xl"
                       }
                       key={index}
                     >
-                      {/* <td className="font-bold text-xs  py-4 text-blue-500"> {(payment.created_at&&payment.created_at.substring(0, 10))??"-"}</td> */}
-
                       <td className="font-bold text-xs py-3 text-gray-700 ">
                         {finance?.date}
                       </td>
@@ -111,13 +95,7 @@ function Finances() {
                       </td>
 
                       <td className="font-bold text-xs pt-2 text-darkblue ">
-                        <button
-                          // onClick={() => {
-                          //   // dispatch(onSetSelectedNurse(finance));
-                          //   // history.push("/dashboard/finances/" + finance?.id);
-                          // }}
-                          className=" flex items-center justify-center px-6 text-sm text-white bg-ligherdarkblue opacity-80 hover:opacity-100  rounded-md py-1 "
-                        >
+                        <button className=" flex items-center justify-center px-6 text-sm text-white bg-ligherdarkblue opacity-80 hover:opacity-100  rounded-md py-1 ">
                           <svg
                             width="16"
                             height="16"
