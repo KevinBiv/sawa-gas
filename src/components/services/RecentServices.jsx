@@ -12,7 +12,7 @@ function RecentServices() {
       <h2 className="font-bold text-darkblue text-lg mt-2 mb-1.5">
         Recent used services
       </h2>
-      <div className="overflow-auto py-2">
+      <div className="overflow-auto py-2 px-3">
         <table className="expenses table table-borderless  space-y-2 ">
           <thead className="bg-white rounded-3  border-white  ">
             <tr>

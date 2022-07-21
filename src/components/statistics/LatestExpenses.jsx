@@ -134,7 +134,7 @@ function LatestExpenses() {
         {isFetchingIncomesStatistics ? (
           <Shimmers height="300px" width="400px" className="overflow-hidden" />
         ) : (
-          <div className="bg-ligherdarkblue p-6 space-y-6 col-span-2 rounded-3">
+          <div className="bg-ligherdarkblue px-7 py-6 space-y-6 col-span-2 rounded-3">
             <div>
               <h5 className=" text-white font-bold text-lg">Latest Invoices</h5>
               <hr className="w-10 text-white pt-0.5 " />
