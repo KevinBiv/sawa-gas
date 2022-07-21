@@ -3,6 +3,7 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import moment from "moment";
 import { FaRegCalendar } from "react-icons/fa";
+import { MdArrowDropDown } from "react-icons/md";
 function StatisticsTimeFilter() {
   const [hidePicker, setHidePicker] = useState(true);
   const [selectedSortDuration, setSelectedSortDuration] = useState("week");
@@ -50,10 +51,7 @@ function StatisticsTimeFilter() {
     <div>
       <div className="grid grid-cols-1 sm:justify-between sm:grid-cols-2 gap-2 pb-4">
         <div className="flex items-center space-x-3">
-          <FaRegCalendar
-            className="text-lightgray cursor-pointer"
-            onClick={() => openDatePicker()}
-          />
+          <FaRegCalendar className="text-lightgray " />
           {(() => {
             switch (selectedSortDuration) {
               case "week":
@@ -100,20 +98,24 @@ function StatisticsTimeFilter() {
             <div
               role="button"
               onClick={() => {
-                if (selectedSortDuration === "week" && hidePicker === false) {
+                if (selectedSortDuration === "year" && hidePicker === false) {
                   setHidePicker(true);
                 } else {
                   setHidePicker(false);
-                  setSelectedSortDuration("week");
+                  setSelectedSortDuration("year");
                 }
               }}
               className={
-                (selectedSortDuration === "week"
+                (selectedSortDuration === "year"
                   ? " text-darkblue "
-                  : "text-lightgray font-normal") + " font-bold text-sm"
+                  : "text-lightgray font-normal") +
+                " font-bold text-sm flex items-center"
               }
             >
-              <p className="text-sm">week</p>
+              <p className="text-sm">year</p>
+              {selectedSortDuration === "year" ? (
+                <MdArrowDropDown className="text-darkblue text-xl" />
+              ) : null}
             </div>
             <div
               role="button"
@@ -128,28 +130,37 @@ function StatisticsTimeFilter() {
               className={
                 (selectedSortDuration === "month"
                   ? " text-darkblue "
-                  : "text-lightgray font-normal") + " font-bold text-sm"
+                  : "text-lightgray font-normal") +
+                " font-bold text-sm flex items-center"
               }
             >
               <p className="text-sm">month</p>
+              {selectedSortDuration === "month" ? (
+                <MdArrowDropDown className="text-darkblue text-xl " />
+              ) : null}
             </div>
+
             <div
               role="button"
               onClick={() => {
-                if (selectedSortDuration === "year" && hidePicker === false) {
+                if (selectedSortDuration === "week" && hidePicker === false) {
                   setHidePicker(true);
                 } else {
                   setHidePicker(false);
-                  setSelectedSortDuration("year");
+                  setSelectedSortDuration("week");
                 }
               }}
               className={
-                (selectedSortDuration === "year"
+                (selectedSortDuration === "week"
                   ? " text-darkblue "
-                  : "text-lightgray font-normal") + " font-bold text-sm"
+                  : "text-lightgray font-normal") +
+                " font-bold text-sm flex items-center"
               }
             >
-              <p className="text-sm">year</p>
+              <p className="text-sm">week</p>
+              {selectedSortDuration === "week" ? (
+                <MdArrowDropDown className="text-darkblue text-xl" />
+              ) : null}
             </div>
           </div>
           <div className="flex justify-center">
