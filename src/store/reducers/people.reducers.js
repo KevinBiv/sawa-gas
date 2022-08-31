@@ -8,6 +8,8 @@ const initialState = {
       age: "28 Years",
       department: "Marketing",
       gender: "Female",
+      label: "Uwimana Jeanne",
+      value: "Uwimana Jeanne",
     },
     {
       id: "002",
@@ -15,6 +17,8 @@ const initialState = {
       age: "28 Years",
       department: "Marketing",
       gender: "Male",
+      label: "Umwami George",
+      value: "Umwami George",
     },
     {
       id: "003",
@@ -22,6 +26,8 @@ const initialState = {
       age: "28 Years",
       department: "Marketing",
       gender: "female",
+      label: "Kamikazi Sarah",
+      value: "Kamikazi Sarah",
     },
     {
       id: "004",
@@ -29,6 +35,8 @@ const initialState = {
       age: "28 Years",
       department: "Marketing",
       gender: "Female",
+      label: "Uwimana Jeanne",
+      value: "Uwimana Jeanne",
     },
     {
       id: "005",
@@ -36,6 +44,8 @@ const initialState = {
       age: "28 Years",
       department: "Marketing",
       gender: "Male",
+      label: "Umwami George",
+      value: "Umwami George",
     },
     {
       id: "006",
@@ -43,6 +53,8 @@ const initialState = {
       age: "28 Years",
       department: "Marketing",
       gender: "female",
+      label: "Kamikazi Sarah",
+      value: "Kamikazi Sarah",
     },
     {
       id: "007",
@@ -50,6 +62,8 @@ const initialState = {
       age: "28 Years",
       department: "Marketing",
       gender: "female",
+      label: "Kamikazi Sarah",
+      value: "Kamikazi Sarah",
     },
   ],
   isFetchingPeople: false,

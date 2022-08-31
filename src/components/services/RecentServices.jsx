@@ -39,7 +39,9 @@ function RecentServices() {
               services.map((service, index) => (
                 <tr
                   className={
-                    (index === 0 ? " border-paleblue " : " border-t-2 ") +
+                    (index === 0
+                      ? " border-paleblue "
+                      : " border-t-2 border-paleblue ") +
                     "items-center bg-whitecolor  hover:bg-paleblue  rounded-xl"
                   }
                   key={index}

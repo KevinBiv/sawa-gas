@@ -1,6 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import { IoCloseCircle } from "react-icons/io5";
+import Select from "react-select";
 function UpdateMember({ handleClose }) {
+  const [genderOptions, setGenderOptions] = useState([
+    { value: "Male", label: "Male", id: 1 },
+    { value: "Female", label: "Female", id: 2 },
+    { value: "Other", label: "Other", id: 3 },
+  ]);
+  const [selectedOption, setSelectedOption] = useState(null);
   return (
     <div className="bg-paleindigo space-y-8 p-5 ">
       <div className="flex justify-between items-center">
@@ -40,23 +47,15 @@ function UpdateMember({ handleClose }) {
           <label htmlFor="sex" className="sr-only">
             sex
           </label>
-          <select
+          <Select
+            className="text-xs text-lightgray w-100 focus:outline-none focus:ring-darkblue focus:border-darkblue focus:z-10"
+            defaultValue={selectedOption}
+            onChange={setSelectedOption}
+            options={genderOptions}
             id="sex"
-            className="text-xs px-7 py-3 border text-lightgray w-100 focus:outline-none focus:ring-darkblue focus:border-darkblue focus:z-10"
-          >
-            <option className="text-xs text-lightgray" selected>
-              Sex
-            </option>
-            <option className="text-xs text-lightgray" value="blue">
-              Male
-            </option>
-            <option className="text-xs text-lightgray" value="black">
-              Female
-            </option>
-            <option className="text-xs text-lightgray" value="white">
-              Other
-            </option>
-          </select>
+            isSearchable={true}
+            placeholder="sex"
+          />
         </div>
         <div className="flex items-center bg-white pl-3 rounded-1">
           <label htmlFor="sawa_id" className="sr-only">

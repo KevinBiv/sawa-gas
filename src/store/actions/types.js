@@ -43,6 +43,8 @@ const actionTypes = {
   getServicesSuccess: "GET SERVICES SUCCESSFUL",
   getServicesFail: "GET SERVICES FAILED",
 
+  setSelectedService: "SET SELECTED SERVICE",
+
   //Finances
   getFinances: "GET FINANCES",
   getFinancesSuccess: "GET FINANCES SUCCESSFUL",

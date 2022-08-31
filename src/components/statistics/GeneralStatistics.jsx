@@ -1,8 +1,10 @@
 import React, { useState } from "react";
+import { useHistory } from "react-router-dom";
 import DayFilter from "../filters/DayFilter";
 
 function GeneralStatistics() {
   const [selectedDate, setSelectedDate] = useState(new Date());
+  const history = useHistory();
   return (
     <div className=" col-span-2 grid grid-cols-1 md:grid-cols-3 gap-2 px-4 py-4 bg-white rounded-3">
       <div className="flex space-x-3">
@@ -20,7 +22,7 @@ function GeneralStatistics() {
             />
           </svg>
         </div>
-        <div>
+        <div role="button" onClick={() => history.push("/dashboard/finances")}>
           <p className="text-lightergray font-semibold text-xs">My Balance</p>
 
           <p className="font-bold text-darkblue text-xl">
@@ -48,7 +50,7 @@ function GeneralStatistics() {
             />
           </svg>
         </div>
-        <div>
+        <div role="button" onClick={() => history.push("/dashboard/people")}>
           <p className="text-lightergray font-semibold text-xs">My People</p>
           <p className="font-bold text-darkblue text-xl">87</p>
         </div>
@@ -70,7 +72,7 @@ function GeneralStatistics() {
             />
           </svg>
         </div>
-        <div>
+        <div role="button" onClick={() => history.push("/dashboard/finances")}>
           <p className="text-lightergray font-semibold text-xs">Expenses</p>
           <p className="font-bold text-darkblue text-xl">
             180,000<span className="text-xs">Rwf</span>

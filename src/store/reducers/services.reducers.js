@@ -10,7 +10,7 @@ const initialState = {
       staff_name: "Uwimana Jeanne",
       service_name: "Taxi Cab Payment",
       date: "03 June",
-      status: "paid",
+      status: "Completed",
     },
     {
       id: 2,
@@ -20,7 +20,7 @@ const initialState = {
       staff_name: "Uwimana Jeanne",
       service_name: "Motor ride Payment",
       date: "03 June",
-      status: "unpaid",
+      status: "Processing",
     },
     {
       id: 3,
@@ -30,7 +30,7 @@ const initialState = {
       staff_name: "Uwimana Jeanne",
       service_name: "Pubilc Bus Payment",
       date: "03 June",
-      status: "paid",
+      status: "Completed",
     },
     {
       id: 4,
@@ -40,7 +40,7 @@ const initialState = {
       staff_name: "Uwimana Jeanne",
       service_name: "Pubilc Bus Payment",
       date: "03 June",
-      status: "unpaid",
+      status: "Processing",
     },
     {
       id: 5,
@@ -50,7 +50,7 @@ const initialState = {
       staff_name: "Uwimana Jeanne",
       service_name: "Pubilc Bus Payment",
       date: "03 June",
-      status: "paid",
+      status: "Completed",
     },
     {
       id: 6,
@@ -60,12 +60,24 @@ const initialState = {
       staff_name: "Uwimana Jeanne",
       service_name: "Pubilc Bus Payment",
       date: "03 June",
-      status: "paid",
+      status: "Completed",
     },
   ],
+  carTypes: [
+    { id: 1, name: "car type 1", value: "car type 1", label: "car type 1" },
+    { id: 3, name: "car type 2", value: "car type 2", label: "car type 2" },
+    { id: 3, name: "car type 3", value: "car type 3", label: "car type 3" },
+  ],
+  carProviders: [
+    { id: 1, name: "car type 1", value: "car type 1", label: "car type 1" },
+    { id: 2, name: "car type 2", value: "car type 2", label: "car type 2" },
+    { id: 3, name: "car type 3", value: "car type 3", label: "car type 3" },
+  ],
+
   isFetchingServices: false,
   errors: null,
   message: null,
+  selectedService: null,
 };
 export default (state = initialState, action) => {
   switch (action.type) {
@@ -86,6 +98,12 @@ export default (state = initialState, action) => {
         ...state,
         errors: action.payload,
         isFetchingServices: false,
+      };
+
+    case actionTypes.setSelectedService:
+      return {
+        ...state,
+        selectedService: action.payload,
       };
     default:
       return state;

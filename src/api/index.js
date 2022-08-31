@@ -7,3 +7,9 @@ export const loginRequest = (data) =>
 export const getUserRequest = () => axiosInstance.get("/account/group/create");
 export const updateUserRequest = (data) =>
   axiosInstance.post("/account/group/create", data);
+
+//People
+
+//Services
+
+//Finances

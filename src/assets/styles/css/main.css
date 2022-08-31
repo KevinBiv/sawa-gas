@@ -216,3 +216,37 @@ body {
   width: 100%;
   z-index: 1;
 }
+
+/* Tabs */
+.custom-tab .nav-link {
+  color: rgba(143, 154, 173, 1);
+  border-radius: 10px;
+}
+.custom-tab.nav-tabs .nav-item.show .nav-link,
+.nav-tabs .nav-link.active {
+  color: #ffffff;
+  background-color: #0283b5;
+}
+/* React Select */
+.css-1s2u09g-control {
+  background-color: hsla(0, 0%, 100%, 1) !important;
+  border-color: hsla(0, 0%, 100%, 1) !important;
+  border-radius: 5px !important;
+  border-width: 1px !important;
+}
+.css-319lph-ValueContainer {
+  padding: 1rem 0.375px 1rem 1.75rem !important;
+}
+.css-14el2xx-placeholder {
+  color: hsla(217, 14%, 52%, 1) !important;
+  margin: 0 !important;
+}
+.css-6j8wv5-Input {
+  color: hsla(217, 14%, 52%, 1) !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+.css-qc6sy-singleValue {
+  color: hsla(217, 14%, 52%, 1) !important;
+  margin: 0 !important;
+}
