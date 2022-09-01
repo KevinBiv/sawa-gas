@@ -70,7 +70,7 @@ function RequestTransportCardTopUp({ handleCloseOrder, handleClose }) {
             Enter amount
           </label>
           <input
-            type="text"
+            type="number"
             name="amount"
             id="amount"
             autoComplete="amount"

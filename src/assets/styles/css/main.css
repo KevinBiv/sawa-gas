@@ -235,7 +235,10 @@ body {
   border-width: 1px !important;
 }
 .css-319lph-ValueContainer {
-  padding: 1rem 0.375px 1rem 1.75rem !important;
+  padding: 0.5rem 0.375px 0.5rem 1.75rem !important;
+}
+.charge .css-319lph-ValueContainer {
+  padding: 0.5rem 0.5rem 0.5rem 0.5rem !important;
 }
 .css-14el2xx-placeholder {
   color: hsla(217, 14%, 52%, 1) !important;
@@ -249,4 +252,11 @@ body {
 .css-qc6sy-singleValue {
   color: hsla(217, 14%, 52%, 1) !important;
   margin: 0 !important;
+}
+/* Modal */
+
+@media (min-width: 576px) {
+  .modal-dialog {
+    max-width: 80%;
+  }
 }

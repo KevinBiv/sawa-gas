@@ -14,6 +14,8 @@ import ServicesPreferences from "../components/registerSteps/ServicesPreferences
 import Services from "../pages/Services";
 import People from "../pages/People";
 import Finances from "../pages/Finances";
+import RechargeSuccessful from "../components/finances/recharge/RechargeSuccessful";
+import RechargeFailed from "../components/finances/recharge/RechargeFailed";
 
 const routes = [
   {
@@ -56,6 +58,18 @@ const routes = [
             component: Finances,
           },
         ],
+      },
+      {
+        name: "Services preferences",
+        path: "/recharge/success",
+        exact: true,
+        component: RechargeSuccessful,
+      },
+      {
+        name: "Services preferences",
+        path: "/recharge/failed",
+        exact: true,
+        component: RechargeFailed,
       },
       {
         name: "Services preferences",

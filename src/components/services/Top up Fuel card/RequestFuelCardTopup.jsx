@@ -119,7 +119,7 @@ function RequestFuelCardTopup({ handleCloseOrder, handleClose }) {
             Enter amount to pop up
           </label>
           <input
-            type="text"
+            type="number"
             name="amount"
             id="amount"
             autoComplete="amount"

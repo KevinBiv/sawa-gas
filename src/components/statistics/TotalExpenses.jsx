@@ -15,7 +15,7 @@ function TotalExpenses() {
   };
   return (
     <>
-      <div className=" grid grid-cols-1 sm:grid-cols-2 gap-2 rounded-3">
+      <div className=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-2 rounded-3">
         <div className="p-3 border-l-4 border-darkblue bg-white rounded-md">
           <div>
             <p className="text-lightergray font-semibold text-xs">My Balance</p>
@@ -34,7 +34,7 @@ function TotalExpenses() {
             </p>
           </div>
           <button
-            className="p-2 rounded-md bg-ligherdarkblue flex items-center"
+            className="p-2 rounded-md bg-ligherdarkblue bg-opacity-80 hover:bg-opacity-100 flex items-center"
             onClick={() => setRechargeModalOpen(true)}
           >
             <svg
