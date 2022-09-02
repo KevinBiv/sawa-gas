@@ -256,7 +256,7 @@ body {
 /* Modal */
 
 @media (min-width: 576px) {
-  .modal-dialog {
+ .recharge .modal-dialog {
     max-width: 80%;
   }
 }

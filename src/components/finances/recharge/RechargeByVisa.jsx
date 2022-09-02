@@ -91,14 +91,14 @@ function RechargeByVisa() {
               Enter expiration date of your card
             </label>
           </div>
-          <div className="flex items-center space-x-2">
+          <div className="sm:flex items-center space-y-2 sm:space-y-0 sm:space-x-2">
             <div className="flex-1 rounded-1  border border-lightgray rounded-md">
               <input
                 type="time"
                 name="start-date"
                 id="start-date"
                 autoComplete="start-date"
-                className=" appearance-none rounded-none p-2 placeholder-lightgray text-lightgray rounded-b-md focus:outline-none focus:ring-darkblue focus:border-darkblue focus:z-10 sm:text-xs"
+                className="w-full appearance-none rounded-none p-2 placeholder-lightgray text-lightgray rounded-b-md focus:outline-none focus:ring-darkblue focus:border-darkblue focus:z-10 sm:text-xs"
                 placeholder=""
               />
             </div>

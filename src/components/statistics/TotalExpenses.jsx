@@ -386,7 +386,7 @@ function TotalExpenses() {
           </div>
         </div>
       </div>
-      <Modal show={openRechargeModal} onHide={handleClose}>
+      <Modal show={openRechargeModal} onHide={handleClose} className="recharge">
         <RechargeForm handleClose={handleClose} />
       </Modal>
     </>
