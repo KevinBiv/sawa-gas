@@ -71,12 +71,12 @@ function Services() {
         <Tab eventKey="Fuel card" title="Fuel card">
           <FuelCardTopupRequests />
         </Tab>
-        <Tab eventKey="Car Rent" title="Car Rent">
+        {/* <Tab eventKey="Car Rent" title="Car Rent">
           <CarRentRequests />
         </Tab>
         <Tab eventKey="Bus Rent" title="Bus Rent">
           <BusRentRequests />
-        </Tab>
+        </Tab> */}
       </Tabs>
 
       <Modal show={showModal} onHide={handleClose}>

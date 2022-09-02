@@ -80,7 +80,7 @@ function SelectService({
           <p className="text-sm ">Rent an instant Car</p>
           <img src={carImg} className="object-cover h-14 w-14" alt="Car" />
         </button>
-        <button
+        {/* <button
           onClick={() => {
             setOpenFuelOderModel(true);
             handleClose();
@@ -179,7 +179,7 @@ function SelectService({
         >
           <p className="text-sm">Rent a bus for Mass Transportation</p>
           <img src={vanImg} className="object-cover h-14 w-14" alt="bus" />
-        </button>
+        </button> */}
       </div>
     </div>
   );
