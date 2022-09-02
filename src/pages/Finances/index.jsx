@@ -11,9 +11,6 @@ import FilterReport from "../../components/finances/FilterReport";
 import RechargeReport from "../../components/finances/RechargeReport";
 import ExpensesReport from "../../components/finances/ExpensesReport";
 function Finances() {
-  const { finances, isFetchingFinances } = useSelector(
-    ({ Finances }) => Finances
-  );
   const [searchText, setSearchText] = useState(null);
   const [selectedDate, setSelectedDate] = useState(null);
   const [showModal, setShowModal] = useState(false);

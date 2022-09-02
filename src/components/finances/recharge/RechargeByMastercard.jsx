@@ -149,8 +149,11 @@ function RechargeByMastercard() {
             />
           </div>
         </div>
-        <button className="text-sm bg-ligherdarkblue bg-opacity-80 hover:bg-opacity-100 text-whitecolor py-2.5 w-full rounded-md ">
-          Pay Now
+        <button
+          type="button"
+          className="text-sm bg-ligherdarkblue bg-opacity-80 hover:bg-opacity-100 text-whitecolor py-2.5 w-full rounded-md "
+        >
+          Pay Now{" "}
         </button>
       </form>
     </div>

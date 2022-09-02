@@ -1,7 +1,12 @@
 import actionTypes from "./types";
 
-export const getFinances = () => {
+export const getExpensesReport = () => {
   return (dispatch) => {
-    dispatch({ type: actionTypes.getFinances });
+    dispatch({ type: actionTypes.getExpensesReport });
+  };
+};
+export const getRechargeReport = () => {
+  return (dispatch) => {
+    dispatch({ type: actionTypes.getRechargeReport });
   };
 };

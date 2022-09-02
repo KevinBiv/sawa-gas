@@ -3,14 +3,13 @@ import { useDispatch, useSelector } from "react-redux";
 import NameFilter from "../../components/filters/NameFilter";
 import TableRowShimmers from "../../components/loaders/TableRowShimmers";
 import { Modal } from "react-bootstrap";
-import { BsFillStarFill } from "react-icons/bs";
 import { useHistory } from "react-router-dom";
 import DayFilter from "../../components/filters/DayFilter";
 import TotalExpenses from "../../components/statistics/TotalExpenses";
 import FilterReport from "../../components/finances/FilterReport";
 
 function ExpensesReport() {
-  const { finances, isFetchingFinances } = useSelector(
+  const { expensesReport, isFetchingExpensesReport } = useSelector(
     ({ Finances }) => Finances
   );
   const [searchText, setSearchText] = useState(null);
@@ -55,12 +54,12 @@ function ExpensesReport() {
             </tr>
           </thead>
           <tbody className="bg-white rounded-2 border-white relative w-100 top-5">
-            {isFetchingFinances ? (
+            {isFetchingExpensesReport ? (
               <TableRowShimmers cols={6} />
             ) : (
-              finances &&
-              finances.length !== 0 &&
-              finances.map((finance, index) => (
+              expensesReport &&
+              expensesReport.length !== 0 &&
+              expensesReport.map((report, index) => (
                 <tr
                   className={
                     (index === 0 ? " border-paleblue " : " border-t-2 ") +
@@ -69,17 +68,17 @@ function ExpensesReport() {
                   key={index}
                 >
                   <td className="font-bold text-xs py-3 text-gray-700 ">
-                    {finance?.date}
+                    {report?.date ?? "-"}
                   </td>
                   <td className="font-bold text-xs py-3 text-boldgray ">
-                    {finance?.expense}
+                    {report?.expense ?? "-"}
                   </td>
                   <td className="font-bold text-xs py-3 text-boldgray ">
-                    {finance?.volume}
+                    {report?.volume ?? "-"}
                   </td>
 
                   <td className="font-bold text-xs py-3 text-ligherdarkblue">
-                    {finance?.amount} Rwf
+                    {report?.amount ?? "-"} Rwf
                   </td>
 
                   <td className="font-bold text-xs pt-2 text-darkblue ">
@@ -109,7 +108,9 @@ function ExpensesReport() {
             )}
           </tbody>
         </table>
-        {finances && finances.length === 0 && !isFetchingFinances ? (
+        {expensesReport &&
+        expensesReport.length === 0 &&
+        !isFetchingExpensesReport ? (
           <p className=" my-20 bg-boldgray py-3 text-sm  text-center w-100">
             no finances yet !
           </p>

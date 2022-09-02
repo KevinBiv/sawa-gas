@@ -46,9 +46,13 @@ const actionTypes = {
   setSelectedService: "SET SELECTED SERVICE",
 
   //Finances
-  getFinances: "GET FINANCES",
-  getFinancesSuccess: "GET FINANCES SUCCESSFUL",
-  getFinancesFail: "GET FINANCES FAILED",
+  getRechargeReport: "GET RECHARGE REPORT FINANCES",
+  getRechargeReportSuccess: "GET RECHARGE REPORT SUCCESSFUL",
+  getRechargeReportFail: "GET RECHARGE REPORT FAILED",
+
+  getExpensesReport: "GET EXPENSES REPORT",
+  getExpensesReportSuccess: "GET EXPENSES REPORT SUCCESSFUL",
+  getExpensesReportFail: "GET EXPENSES REPORT FAILED",
   //PEOPLE
   getPeople: "GET PEOPLE",
   getPeopleSuccess: "GET PEOPLE SUCCESSFUL",
