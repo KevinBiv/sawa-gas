@@ -18,7 +18,14 @@ import RequestBusRent from "../../components/services/Rent bus/RequestBusRent";
 import RequestTransportCardTopUp from "../../components/services/Top up transport card/RequestTransportCardTopUp";
 import RequestFuelCardTopup from "../../components/services/Top up Fuel card/RequestFuelCardTopup";
 import RequestCarRent from "../../components/services/Rent car/RequestCarRent";
-function Services() {
+import StationsList from "../../components/stations/StationsList";
+import { useEffect } from "react";
+
+
+
+
+
+function Stations() {
   const { services, isFetchingServices } = useSelector(
     ({ Services }) => Services
   );
@@ -43,83 +50,47 @@ function Services() {
   };
   const history = useHistory();
   const dispatch = useDispatch();
+
+  // let map;
+  // useEffect(() => {
+  //   map = leaflet.map('map').setView([51.505, -0.09], 13);
+  // }, [])
+
+
   return (
     <div className="md:pt-14 pb-6  mx-6 sm:mx-10 space-y-6 service">
       <div className="flex justify-between items-center flex-wrap">
         <div>
           <h5 className="text-2xl text-darkblue font-bold">
-            My Transport Services
+            Gas Stations
           </h5>
         </div>
         <div className="flex md:space-x-4 items-center flex-wrap ">
           <button
-            onClick={() => setShowModal(true)}
-            className="text-whitecolor bg-ligherdarkblue opacity-80 hover:opacity-100 rounded-sm px-3 py-2 text-sm"
+            // onClick={() => setShowModal(true)}
+            className="text-whitecolor bg-ligherdarkblue opacity-80 hover:opacity-100 rounded-sm px-10 py-3 text-sm"
           >
-            Request a service
+            Create gas station
           </button>
         </div>
       </div>
-      <Tabs
-        defaultActiveKey="Transport card"
-        id="transport-services-tab"
-        className="mb-3 bg-white p-2 custom-tab text-sm"
-      >
-        <Tab eventKey="Transport card" title="Transport card">
-          <TransportCardTopUpRequests />
-        </Tab>
-        <Tab eventKey="Fuel card" title="Fuel card">
-          <FuelCardTopupRequests />
-        </Tab>
-        {/* <Tab eventKey="Car Rent" title="Car Rent">
-          <CarRentRequests />
-        </Tab>
-        <Tab eventKey="Bus Rent" title="Bus Rent">
-          <BusRentRequests />
-        </Tab> */}
-      </Tabs>
+      
+      <div className="grid lg:grid-cols-3 gap-4">
 
-      <Modal show={showModal} onHide={handleClose}>
-        <SelectService
-          handleClose={handleClose}
-          handleCloseOrder={handleCloseOrder}
-          openCarOderModel={openCarOderModel}
-          setOpenCarOderModel={setOpenCarOderModel}
-          openToUpOderModel={openToUpOderModel}
-          setOpenToUpOderModel={setOpenToUpOderModel}
-          openFuelOderModel={openFuelOderModel}
-          setOpenFuelOderModel={setOpenFuelOderModel}
-          openBusOderModel={openBusOderModel}
-          setOpenBusOderModel={setOpenBusOderModel}
-        />
-      </Modal>
+        <section className="col-span-1">
+          <StationsList />
+        </section>
 
-      <Modal show={openToUpOderModel} onHide={handleCloseOrder}>
-        <RequestTransportCardTopUp
-          handleClose={handleClose}
-          handleCloseOrder={handleCloseOrder}
-        />
-      </Modal>
-      <Modal show={openFuelOderModel} onHide={handleCloseOrder}>
-        <RequestFuelCardTopup
-          handleClose={handleClose}
-          handleCloseOrder={handleCloseOrder}
-        />
-      </Modal>
-      <Modal show={openCarOderModel} onHide={handleCloseOrder}>
-        <RequestCarRent
-          handleClose={handleClose}
-          handleCloseOrder={handleCloseOrder}
-        />
-      </Modal>
-      <Modal show={openBusOderModel} onHide={handleCloseOrder}>
-        <RequestBusRent
-          handleClose={handleClose}
-          handleCloseOrder={handleCloseOrder}
-        />
-      </Modal>
+        <section className="col-span-2 bg-white relative">
+          <div id="map" className="h-1/2 bg-black p-4">
+            <p>This is going to be a map</p>
+          </div>
+        </section>
+
+      </div>
+
     </div>
   );
 }
 
-export default Services;
+export default Stations;

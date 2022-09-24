@@ -11,11 +11,12 @@ import {
 import Signin from "../pages/auth/SignIn";
 import SignUp from "../pages/auth/SignUp";
 import ServicesPreferences from "../components/registerSteps/ServicesPreferences";
-import Services from "../pages/Services";
-import People from "../pages/People";
 import Finances from "../pages/Finances";
 import RechargeSuccessful from "../components/finances/recharge/RechargeSuccessful";
 import RechargeFailed from "../components/finances/recharge/RechargeFailed";
+import Reports from "../pages/Reports";
+import Profile from "../pages/Profile";
+import Stations from "../pages/Stations";
 
 const routes = [
   {
@@ -40,16 +41,16 @@ const routes = [
             component: Home,
           },
           {
-            name: "My services page",
-            path: "/dashboard/services",
+            name: "My stations page",
+            path: "/dashboard/stations",
             exact: true,
-            component: Services,
+            component: Stations,
           },
           {
-            name: "People page",
-            path: "/dashboard/people",
+            name: "Reports page",
+            path: "/dashboard/reports",
             exact: true,
-            component: People,
+            component: Reports,
           },
           {
             name: "Finance page",
@@ -57,6 +58,12 @@ const routes = [
             exact: true,
             component: Finances,
           },
+          {
+            name: "Profile page",
+            path: "/dashboard/profile",
+            exact: true,
+            component: Profile
+          }
         ],
       },
       {

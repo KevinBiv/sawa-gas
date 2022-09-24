@@ -13,8 +13,10 @@
     "chart.js": "^3.7.1",
     "chartjs-plugin-datalabels": "^2.0.0",
     "cors": "^2.8.5",
+    "express-favicon": "^2.0.1",
     "html2pdf.js": "^0.10.1",
     "jspdf": "^2.5.1",
+    "leaflet": "^1.9.1",
     "moment": "^2.29.1",
     "path": "^0.12.7",
     "react": "^17.0.2",
@@ -41,7 +43,7 @@
     "web-vitals": "^1.1.2"
   },
   "scripts": {
-    "start": "node server",
+    "start": "react-scripts start",
     "dev": "npm run watch:css && react-scripts start",
     "build": "cross-env NODE_ENV=production npm run watch:css && react-scripts build",
     "test": "react-scripts test",

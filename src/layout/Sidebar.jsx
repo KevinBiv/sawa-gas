@@ -72,14 +72,14 @@ function Sidebar() {
                   fill="currentColor"
                 />
               </svg>
-              <p className="text-xs font-semibold">My services</p>
+              <p className="text-xs font-semibold">Gas Stations</p>
 
               {/* <BsChat /> */}
             </NavLink>
           </div>
           <div className="flex">
             <NavLink
-              to="/dashboard/people"
+              to="/dashboard/finances"
               exact
               className="w-100 px-10 flex items-center  space-x-2 text-lightergray hover:border-r-4 hover:border-ligherdarkblue hover:text-ligherdarkblue hover:no-underline "
               activeClassName="text-ligherdarkblue no-underline border-r-4 border-ligherdarkblue"
@@ -101,12 +101,12 @@ function Sidebar() {
                   fill="currentColor"
                 />
               </svg>
-              <p className="text-xs font-semibold">My people</p>
+              <p className="text-xs font-semibold">Finances</p>
             </NavLink>
           </div>
           <div className="flex">
             <NavLink
-              to="/dashboard/finances"
+              to="/dashboard/reports"
               className="w-100 px-10 flex items-center space-x-2 text-lightergray hover:border-r-4 hover:border-ligherdarkblue hover:text-ligherdarkblue hover:no-underline "
               activeClassName="text-ligherdarkblue no-underline border-r-4 border-ligherdarkblue"
             >
@@ -123,12 +123,12 @@ function Sidebar() {
                   fill="currentColor"
                 />
               </svg>
-              <p className="text-xs font-semibold">Finances</p>
+              <p className="text-xs font-semibold">Reports</p>
             </NavLink>
           </div>
           <div className="flex">
             <NavLink
-              to="/dashboard/nurses"
+              to="/dashboard/profile"
               className="w-100 px-10 flex items-center space-x-2 text-lightergray hover:border-r-4 hover:border-ligherdarkblue hover:text-ligherdarkblue hover:no-underline "
               activeClassName="text-ligherdarkblue no-underline border-r-4 border-ligherdarkblue"
             >
@@ -198,7 +198,7 @@ function Sidebar() {
                 </defs>
               </svg>
 
-              <p className="text-xs font-semibold">Our fleet</p>
+              <p className="text-xs font-semibold">Profile</p>
             </NavLink>
           </div>
         </div>

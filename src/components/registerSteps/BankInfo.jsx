@@ -7,7 +7,7 @@ import { IoMdEyeOff } from "react-icons/io";
 
 import companyLogoVector from "../../assets/images/Vector (4).png";
 
-function AddressInfo({
+function BankInfo({
   fullnames,
   phoneNumber,
   setPhoneNumber,
@@ -36,10 +36,10 @@ function AddressInfo({
       <div className="space-y-6">
         <div>
           <label htmlFor="email">
-            Company Logo
+            Select bank
           </label>
-          <div className="flex items-center bg-white">
-            <input
+          <div>
+            <select
               id="email"
               name="email"
               type="email"
@@ -48,9 +48,10 @@ function AddressInfo({
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               className="appearance-none rounded-none relative block w-full px-3 py-2.5 placeholder-darkblue text-darkblue rounded-b-md focus:outline-none focus:ring-lightgreen focus:border-lightgreen focus:z-10 sm:text-sm"
-              placeholder="Upload your company’s logo"
-            />
-            <img src={companyLogoVector} alt="" className="text-gray-700 mx-3 text-xl" />
+              placeholder="enter a bank of your choice"
+            >
+                <option>enter a bank of your choice</option>
+            </select>
           </div>
           {errors?.email ? (
             <div className="rounded border border-danger px-3 py-2 mt-1 text-xs bg-red-100">
@@ -60,9 +61,9 @@ function AddressInfo({
         </div>
         <div>
           <label htmlFor="phoneNumber">
-            Create a password
+            Bank account
           </label>
-          <div className="flex items-center bg-white">
+          <div>
             <input
               id="phoneNumber"
               name="phoneNumber"
@@ -72,12 +73,7 @@ function AddressInfo({
               value={phoneNumber}
               onChange={(e) => setPhoneNumber(e.target.value)}
               className="appearance-none rounded-none relative block w-full px-3 py-2.5 placeholder-darkblue text-darkblue rounded-b-md focus:outline-none focus:ring-lightgreen focus:border-lightgreen focus:z-10 sm:text-sm"
-              placeholder="set up your password"
-            />
-            <IoMdEyeOff
-              role="button"
-              className="text-gray-700 mx-3 text-xl"
-              onClick={() => setShowPassword(!showPassword)}
+              placeholder="enter your bank account number"
             />
           </div>
           
@@ -90,9 +86,9 @@ function AddressInfo({
 
         <div>
           <label htmlFor="password">
-            Confirm your password
+            Headquarters
           </label>
-          <div className="flex items-center bg-white">
+          <div>
             <input
               id="password"
               name="password"
@@ -102,13 +98,7 @@ function AddressInfo({
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               className="flex-1 appearance-none rounded-none relative block w-full px-3 py-2 placeholder-darkblue text-gray-900 rounded-b-md focus:outline-none focus:ring-lightgreen focus:border-lightgreen focus:z-10 sm:text-sm"
-              placeholder="Re-enter your password"
-            />
-
-            <IoMdEyeOff
-              role="button"
-              className="text-gray-700 mx-3 text-xl"
-              onClick={() => setShowPassword(!showPassword)}
+              placeholder="enter location of your headquarters"
             />
           </div>
         </div>
@@ -124,7 +114,17 @@ function AddressInfo({
         </div>
       ) : null}
 
-      <div>
+        {/* <div>
+            <button
+            type="submit"
+            onClick={() => history.push("/preferences")}
+            className="group relative w-full flex justify-center py-2.5 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-ligherdarkblue hover:bg-opacity-80 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ligherdarkblue"
+            >
+            {isRegistering ? "Registering..." : "Register"}
+            </button>
+        </div> */}
+
+        <div>
         <button
           type="button"
           // onClick={() => {
@@ -149,8 +149,7 @@ function AddressInfo({
           Continue
         </button>
       </div>
-
-      
+        
     </form>
   );
   function onSubmit(e) {
@@ -171,4 +170,4 @@ function AddressInfo({
   }
 }
 
-export default AddressInfo;
+export default BankInfo;

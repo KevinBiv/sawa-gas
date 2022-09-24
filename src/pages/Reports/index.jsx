@@ -10,7 +10,12 @@ import TablePageFilter from "../../components/filters/TablePageFilter";
 import { generatePdfMembers } from "../../store/actions";
 import DeleteMember from "../../components/people/DeleteMember";
 import UpdateMember from "../../components/people/UpdateMember";
-function People() {
+
+
+import pdf from "../../assets/images/pdf.png";
+import word from "../../assets/images/word.png";
+
+function Reports() {
   const { people, isFetchingPeople } = useSelector(({ People }) => People);
   const [searchText, setSearchText] = useState(null);
   const [openAddMemberModal, setOpenAddMemberModal] = useState(false);
@@ -69,12 +74,13 @@ function People() {
           >
             <thead className="bg-darkblue rounded-2 ">
               <tr className="border-b-15 border-paleblue">
-                <td className="text-white text-sm py-4">ID</td>
-                <td className="text-white text-sm py-4">Full Names</td>
-                <td className="text-white text-sm py-4">Department </td>
-                <td className="text-white text-sm py-4">Age</td>
-                <td className="text-white text-sm py-4">Sex</td>
-                <td className="text-white text-sm py-4">Action</td>
+                <td className="text-white text-sm py-4">Date</td>
+                <td className="text-white text-sm py-4">Station ID</td>
+                <td className="text-white text-sm py-4">Diesel Sold</td>
+                <td className="text-white text-sm py-4">Petroleum Sold</td>
+                <td className="text-white text-sm py-4">Diesel Income</td>
+                <td className="text-white text-sm py-4">Petroleum Income</td>
+                <td className="text-white text-sm py-4">Download</td>
               </tr>
             </thead>
             <tbody className="bg-white rounded-2 border-r-15 border-white border-l-15 border-b-15">
@@ -95,40 +101,44 @@ function People() {
                   >
                     {/* <td className="font-bold text-xs  py-4 text-blue-500"> {(payment.created_at&&payment.created_at.substring(0, 10))??"-"}</td> */}
                     <td className="font-bold text-xs py-3 text-boldgray">
-                      00{person?.id}
+                      26 Feb
                     </td>
 
                     <td className="font-bold text-xs py-3 text-darkblue">
-                      {person?.full_names}
+                      Engine#12
                     </td>
                     <td className="font-bold text-xs py-3 text-boldgray">
-                      {person?.department}
+                      35 Liters
                     </td>
                     <td className="font-bold text-xs py-3 text-boldgray">
-                      {person?.age}
+                      42 Liters
                     </td>
 
                     <td className="font-bold text-xs py-3 text-boldgray">
-                      {person?.gender}
+                      61,500Rwf
+                    </td>
+
+                    <td className="font-bold text-xs py-3 text-boldgray">
+                      73,500Rwf
                     </td>
 
                     <td className="font-bold text-xs pt-3 text-darkblue w-52">
-                      <div className="flex space-x-2">
+                      <div className="flex">
                         <button
                           onClick={() => {
                             setOpenDeleteMemberModal(true);
                           }}
-                          className=" text-sm  bg-red-500 opacity-90 hover:bg-red-600 text-white  rounded-sm py-1 px-3"
+                          className=" text-sm opacity-90 text-white  rounded-sm py-1 px-3"
                         >
-                          remove
+                          <img src={pdf} alt="" />
                         </button>
                         <button
                           onClick={() => {
                             setOpenUpdateMemberModal(true);
                           }}
-                          className=" text-sm bg-ligherdarkblue text-white opacity-80 hover:opacity-100 rounded-sm py-1 px-3"
+                          className=" text-sm text-white opacity-80 hover:opacity-100 rounded-sm py-1 px-3"
                         >
-                          update
+                          <img src={word} alt="" />
                         </button>
                       </div>
                     </td>
@@ -230,4 +240,4 @@ function People() {
   );
 }
 
-export default People;
+export default Reports;

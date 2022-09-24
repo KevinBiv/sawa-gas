@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useHistory } from "react-router-dom";
-import Logo from "../../assets/images/sawaLogo.png";
 import Banner from "../../components/registerSteps/Banner";
+import topDots from "../../assets/images/dots 3.png";
 import { IoMdEyeOff } from "react-icons/io";
 import { loginUser } from "../../store/actions";
 function Signin() {
@@ -14,12 +14,16 @@ function Signin() {
   const dispatch = useDispatch();
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 min-h-screen">
-      <Banner />
       <div className="bg-darkwhite flex flex-col justify-center items-center py-10 px-10">
         <div className="max-w-md w-full space-y-8">
-          <div className="flex flex-col justify-center items-center">
-            <img src={Logo} alt="logo" className="w-2/5" />
-            <h2 className="text-2xl mt-8 text-darkblue font-bold">Sign In</h2>
+          <img
+          src={topDots}
+          alt="Icon"
+          className="absolute top-0 right-0 w-100"
+          />
+          <div className="flex flex-col justify-center ">
+            <h2 className="text-4xl mt-8 mb-2 text-darkblue font-bold">Login</h2>
+            <p className="text-base">Sign into your sawa mobility dashboard</p>
           </div>
           <form
             className="mt-8 space-y-6"
@@ -29,8 +33,8 @@ function Signin() {
             <input type="hidden" name="remember" defaultValue="true" />
             <div className="space-y-3">
               <div>
-                <label htmlFor="email-address" className="sr-only">
-                  Email address
+                <label htmlFor="email-address" className="text-base darkblue">
+                  Email
                 </label>
                 <input
                   id="email"
@@ -40,7 +44,7 @@ function Signin() {
                   onChange={(e) => setEmail(e.target.value)}
                   required
                   className="appearance-none rounded-none relative block w-full px-3 py-2 placeholder-darkblue text-gray-900 rounded-t-md focus:outline-none focus:ring-lightgreen focus:border-lightgreen focus:z-10 sm:text-sm"
-                  placeholder="Email address"
+                  placeholder="company@company.com"
                 />
                 {errors && errors?.email ? (
                   <div className="rounded border border-danger px-3 py-2 mt-1 mb-2 text-xs bg-red-100">
@@ -48,26 +52,28 @@ function Signin() {
                   </div>
                 ) : null}
               </div>
-              <div className="flex items-center bg-white">
-                <label htmlFor="password" className="sr-only">
+              <div>
+                <label htmlFor="password" className="text-base darkblue">
                   Password
                 </label>
-                <input
-                  id="password"
-                  name="password"
-                  type={showPassword ? "text" : "password"}
-                  autoComplete="current-password"
-                  required
-                  onChange={(e) => setPassword(e.target.value)}
-                  className="flex-1 bg-white appearance-none rounded-none relative block w-full px-3 py-2 placeholder-darkblue text-gray-900 rounded-b-md focus:outline-none focus:ring-lightgreen focus:border-lightgreen focus:z-10 sm:text-sm"
-                  placeholder="Enter password"
-                />
+                <div className="flex items-center bg-white">
+                  <input
+                    id="password"
+                    name="password"
+                    type={showPassword ? "text" : "password"}
+                    autoComplete="current-password"
+                    required
+                    onChange={(e) => setPassword(e.target.value)}
+                    className="flex-1 bg-white appearance-none rounded-none relative block w-full px-3 py-2 placeholder-darkblue text-gray-900 rounded-b-md focus:outline-none focus:ring-lightgreen focus:border-lightgreen focus:z-10 sm:text-sm"
+                    placeholder="Enter password"
+                  />
 
-                <IoMdEyeOff
-                  role="button"
-                  className="text-gray-700 mx-3 text-xl"
-                  onClick={() => setShowPassword(!showPassword)}
-                />
+                  <IoMdEyeOff
+                    role="button"
+                    className="text-gray-700 mx-3 text-xl"
+                    onClick={() => setShowPassword(!showPassword)}
+                  />
+                </div>
               </div>
               {errors && errors?.password ? (
                 <div className="rounded border border-danger px-3 py-2 mt-1 text-xs bg-red-100">
@@ -102,13 +108,14 @@ function Signin() {
             </div>
           </form>
           <div className="flex space-x-2 text-sm justify-center pt-10">
-            <p>Not a Member? </p>
+            <p>Don't have an account? </p>
             <Link to="/signup" className="text-ligherdarkblue">
               Register Now
             </Link>
           </div>
         </div>
       </div>
+      <Banner />
     </div>
   );
   function onSubmit(e) {

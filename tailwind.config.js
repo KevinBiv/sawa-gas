@@ -5,6 +5,7 @@ module.exports = {
   presets: [],
   darkMode: false, // or 'media' or 'class'
   theme: {
+    
     screens: {
       sm: "640px",
       md: "768px",
@@ -15,7 +16,7 @@ module.exports = {
     colors: {
       transparent: "transparent",
       current: "currentColor",
-
+      dgray: "#F4F7FF",
       black: colors.black,
       white: colors.white,
       gray: colors.coolGray,
@@ -29,15 +30,19 @@ module.exports = {
       whitecolor: "#FFFFFF",
       darkwhite: "#FAFAFF",
       lightgray: "#8694AF",
-      lightergray: "rgba(30, 53, 92, 0.5)",
+      lightergray: "rgba(30, 53, 92, 1)",
       boldgray: "rgba(115, 128, 149, 1)",
       lighdeepblue: "#145DA0",
       darkblue: "#1E355C",
       darkerblue: "#0C2D48",
       ligherdarkblue: "#2E8BC0",
+      signupgray: "#4d9cc9",
       paleblue: "#F1F5FF",
       paleindigo: "#E6EDFE",
       lightgreen: "#34BEB9",
+      lightwhite: "rgba(255, 255, 255, 18%)",
+      lightpurple: "#595D7AB5",
+      inputbordergray: "#D4D5DD"
     },
     spacing: {
       px: "1px",
@@ -428,6 +433,7 @@ module.exports = {
       none: "none",
       1: "repeat(1, minmax(0, 1fr))",
       2: "repeat(2, minmax(0, 1fr))",
+      "2-1": "2fr 1fr", 
       3: "repeat(3, minmax(0, 1fr))",
       4: "repeat(4, minmax(0, 1fr))",
       5: "repeat(5, minmax(0, 1fr))",
@@ -447,6 +453,13 @@ module.exports = {
       4: "repeat(4, minmax(0, 1fr))",
       5: "repeat(5, minmax(0, 1fr))",
       6: "repeat(6, minmax(0, 1fr))",
+    },
+    gridGap: {
+      1: "4px",
+      2: "8px",
+      3: "12px",
+      4: "16px",
+      5: "20px"
     },
     height: (theme) => ({
       auto: "auto",
@@ -572,6 +585,8 @@ module.exports = {
       "6xl": "72rem",
       "7xl": "80rem",
       full: "100%",
+      "1/5": "20%",
+      "4/5": "80%",
       min: "min-content",
       max: "max-content",
       prose: "65ch",
